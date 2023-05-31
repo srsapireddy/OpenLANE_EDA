@@ -298,7 +298,7 @@ Ex:
 ![power](https://github.com/srsapireddy/Images/blob/main/61.jpg?raw=true)  
 ![noise](https://github.com/srsapireddy/Images/blob/main/60.PNG?raw=true)  
 * De-coupling capacitors are huge capacitors that are filled with charge. The voltage across the de-coupling capacitor is like that across the power supply. Whenever the circuit switches, the de-coupling capacitance provides a power supply to the circuit. This means the de-coupling capacitor de-couples the circuit from the main supply. Whenever the switching happens, the de-coupling capacitor will send the current to the circuit. These decoupling capacitors are placed close to the circuit to reduce the voltage drop. The de-coupling capacitor supplies the amount of current needed by the circuit during switching. 
-We use the de-coupling capacitor to charge the circuit. Whenever there is a switching activity, the de-coupling capacitor loses some charge to the circuit. Whenever there is no switching activity, the de-coupling capacitor replenishes its charge from the power supply. 
+We use the de-coupling capacitor to charge the circuit. Whenever there is a switching activity, the de-coupling capacitor loses some charge to the circuit. Whenever there is no switching activity, the de-coupling capacitor replenishes its charge from the power supply.</br>
 ![Capacitors](https://github.com/srsapireddy/Images/blob/main/59.PNG?raw=true)  
 * This also reduces the crosstalk problem. 
 Power Planning
