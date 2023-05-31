@@ -409,6 +409,20 @@ Placement.
 * The internal routes of FF2 (Yellow) are in some layers, say metal 1 and metal 2. And the connection from 1 to 2 (green) will be on metal 3.
 * Based on the ideal conditions of the clock, we do a timing analysis. Based on this setup timing analysis, we will determine whether the placement is reasonable based on the given specifications.  
 
+### Need for library characterization:
+1. Logic Synthesis: Convert functionality into legal hardware. The output of logic synthesis is an arrangement of gates that represent the original functionality described using an RTL. This is the proper connection of the gates to represent the original functionality.2
+2. Floorplanning: We import the netlist that we get from logic synthesis and decide the size of the core and the die. So the width and height of the core and die are dependent on the number of gates and their sizes. 
+3. Placement: We place the logic cells in the chip in such a fashion that the initial timing is met. 
+4. CTS: We want the clock signal to be spread to the logic cells simultaneously at an equal time. The buffers in the figure will take care of the clock signal has got equal rise and fall times.
+5. Routing: Routing the cells. There are certain properties of the cell that should be taken care of while routing.
+6. STA: Here, we find the maximum achievable frequency of the circuit. 
+![library_2](https://github.com/srsapireddy/Images/blob/main/93.PNG?raw=true) 
+![library](https://github.com/srsapireddy/Images/blob/main/94.PNG?raw=true) 
+* One thing that is common across all stages is GATES or Cells. The collection of these cells is referred to as library. The EDA tool needs to understand are timing characteristics of the gate and how it is represented in a tool.
+![librar#](https://github.com/srsapireddy/Images/blob/main/95.PNG?raw=true) 
+
+
+
 
  
 
