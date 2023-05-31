@@ -378,7 +378,7 @@ We use the de-coupling capacitor to charge the circuit. Whenever there is a swit
 ![vertical](https://github.com/srsapireddy/Images/blob/main/85.png?raw=true) 
 * Tap Cells: Avoids latch-up conditions in the CMOS devices. They connect n-well to Vdd and substrate to the ground. </br>
 ![Tap](https://github.com/srsapireddy/Images/blob/main/86.png?raw=true) 
-* Standard cell placement during the floorplan stage
+* Standard cell are placed during the placement stage
 
 
 
