@@ -139,7 +139,7 @@ Example: Stopwatch app
   * OpenLANE also has the design exploration utility. This can be used to sweep the design configurations. And generates a report, as shown below. </br>
 ![Exploration](https://github.com/srsapireddy/Images/blob/main/25.PNG?raw=true) 
   * This report shows the different design metrics. We have more than 35 of them in a report. It also shows the number of violations after generating the final layout. It is recommended to explore the design first and then use the best configurations for a particular design to result in a clean layout.
-  * Also, design exploration can be used for regression testing (CI). So, we can run the design on several exploration configurations to get the best-optimized configurations. Currently, we have 70 designs. This utility will generate a report as shown below.
+  * Also, design exploration can be used for regression testing (CI). So, we can run the design on several exploration configurations to get the best-optimized configurations. Currently, we have 70 designs. This utility will generate a report as shown below. </br>
 ![testing](https://github.com/srsapireddy/Images/blob/main/26.PNG?raw=true) 
   * This report shows the design metrics given different configurations and the number of violations. The results will be compared to the best-known results. 
 
