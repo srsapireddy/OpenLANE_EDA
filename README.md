@@ -400,6 +400,13 @@ We use the de-coupling capacitor to charge the circuit. Whenever there is a swit
 Placement.
 ![Placement_5](https://github.com/srsapireddy/Images/blob/main/91.PNG?raw=true) 
 * We must place the physical view of the netlist for the placement. We placed the cells according to the logical connectivity and placed them close together concerning the input and output pin placement.
+
+* The cells are placed according to the input and output ports of the circuit, as shown in the figure. We estimate the wire length and capacitance, and based on that, we insert repeaters.
+* If we have a large wire, we have huge resistance and capacitance associated with that wire. To maintain the signal integrity, we will reproduce the signal using buffers which are called repeaters.
+![Placement_5](https://github.com/srsapireddy/Images/blob/main/92.png?raw=true) 
+* Based on the wire length estimation, we calculate the capacitance using the transition of a waveform using timing analysis. The higher the value of the capacitor, the amount of charge required to charge the capacitor will be high and have the worst slew.
+* We use buffers from Din2 to FF1, which will receive the proper signal even though we have a large wire length.
+
  
 
 
