@@ -466,7 +466,7 @@ Circuit Design: We should design PMOS and NMOS transistors in such a fashion to 
 Layout Design: 
 ![FLOW_5](https://github.com/srsapireddy/Images/blob/main/103.PNG?raw=true) 
 
-3.CDL File: Circuit Description Language
+3. CDL File: Circuit Description Language
 
 
 
