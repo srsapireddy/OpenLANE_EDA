@@ -172,6 +172,10 @@ Example: Stopwatch app
   * DRC – Magic has used for DRC and SPICE extraction from the layout.
   * LVS – Magic and Netgen are used for LVS. Extracted SPICE by MAGIC vs. Verilog netlist.
 
+## Open Source EDA Tools
+### Environment
+* PDK - Process Design Kit
+
 
 
 
