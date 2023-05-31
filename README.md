@@ -324,6 +324,11 @@ We use the de-coupling capacitor to charge the circuit. Whenever there is a swit
 ![current](https://github.com/srsapireddy/Images/blob/main/68.PNG?raw=true) 
 
 ### Pin placement and logical cell placement blockage
+ 
+* The connectivity information between the gates is coded using VHDL/ Verilog language called the “netlist.”
+* The placement of input and output ports depends according to the cell placement in the core. And no FFs can be placed in this area where the blocks are placed. The backend team must decide on the pin placement. 
+* The CLK ports are bigger in size than the data ports. The reason for this is the CLK is the one driving all the FFs in the core. So, we need the least resistance path for clocks 1 and 2. Bigger the size lowers the resistance. 
+* We do logical placement blockage for blocking the area so that the automated place and route tool doesn’t place cells in this area, as this area is reserved for the pin locations. 
 
 
 
