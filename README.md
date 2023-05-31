@@ -204,7 +204,7 @@ Here, sky130: process name, 130 nm
 ### Designing Preparation Step
 #### Running OpenLANE EDA </br>
 ![Running](https://github.com/srsapireddy/Images/blob/main/36.png?raw=true) 
-  - Without the interactive switch, the tool will run the complete flow.
+   - Without the interactive switch, the tool will run the complete flow.
 
 * Importing the required packages </br>
 ![packages](https://github.com/srsapireddy/Images/blob/main/37.png?raw=true) 
