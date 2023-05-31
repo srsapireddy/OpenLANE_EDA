@@ -372,9 +372,9 @@ We use the de-coupling capacitor to charge the circuit. Whenever there is a swit
 
 ![floorplan](https://github.com/srsapireddy/Images/blob/main/82.png?raw=true) 
 ### Review floorplan layout in MAGIC
-![layout](https://github.com/srsapireddy/Images/blob/main/83.png?raw=true) 
-![MAGIC](https://github.com/srsapireddy/Images/blob/main/84.png?raw=true) 
+![layout](https://github.com/srsapireddy/Images/blob/main/83.png?raw=true)
 * To check vertical metal type </br>
+![MAGIC](https://github.com/srsapireddy/Images/blob/main/84.png?raw=true) 
 ![vertical](https://github.com/srsapireddy/Images/blob/main/85.png?raw=true) 
 * Tap Cells: Avoids latch-up conditions in the CMOS devices. They connect n-well to Vdd and substrate to the ground. </br>
 ![Tap](https://github.com/srsapireddy/Images/blob/main/86.png?raw=true) 
