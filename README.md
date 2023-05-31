@@ -462,9 +462,9 @@ The library developer is responsible for taking these inputs and developing a li
 2.	Design steps: circuit design, layout design, and characterization
 Circuit Design: We should design PMOS and NMOS transistors in such a fashion to meet the library requirements. These are mostly based on SPICE simulations.
 ![FLOW_4](https://github.com/srsapireddy/Images/blob/main/102.PNG?raw=true) 
+![FLOW_5](https://github.com/srsapireddy/Images/blob/main/103.PNG?raw=true) 
 
 Layout Design: 
-![FLOW_5](https://github.com/srsapireddy/Images/blob/main/103.PNG?raw=true) 
 
 3. CDL File: Circuit Description Language
 
