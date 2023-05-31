@@ -354,7 +354,7 @@ We use the de-coupling capacitor to charge the circuit. Whenever there is a swit
 ![multiple](https://github.com/srsapireddy/Images/blob/main/75.png?raw=true) 
 
 * In OpenLANE flow, the vertical and horizontal metal is one more than what we specify here.
-* After changing the config.tcl file with core utilization of 65%, clock period 10 and vertical metal as 4, and horizontal metal as 3.
+* After changing the config.tcl file with core utilization of 65%, clock period 10 and vertical metal as 4, and horizontal metal as 3.</br>
 ![multiple](https://github.com/srsapireddy/Images/blob/main/76.png?raw=true) 
 
 * Command to run floorplan: `run_floorplan`
