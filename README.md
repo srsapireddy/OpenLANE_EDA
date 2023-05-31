@@ -266,7 +266,30 @@ Here, sky130: process name, 130 nm
 * When the aspect ratio is 1, the chip is squared in shape.
 Ex:
 ![Factor](https://github.com/srsapireddy/Images/blob/main/52.PNG?raw=true)  
+
 ### Concept of pre-placed cells
+![placed](https://github.com/srsapireddy/Images/blob/main/53.PNG?raw=true)  
+* The figure above shows that the utilization factor is 25%, and 75% is utilized for the optimization. 
+  - On top of this, we do the routing.
+![routing](https://github.com/srsapireddy/Images/blob/main/54.PNG?raw=true)  
+
+* It is supposed to be a squared chip where we have the aspect ratio as 1.
+
+#### Locations of pre-placed cells:
+* The cells can be divided into two blocks, as shown in the figure below. These blocks are implemented separately.
+![blocks](https://github.com/srsapireddy/Images/blob/main/55.PNG?raw=true)  
+![cells](https://github.com/srsapireddy/Images/blob/main/56.PNG?raw=true)  
+
+* These blocks are invisible if we look from the top. Looking into the main netlist. 
+![netlist](https://github.com/srsapireddy/Images/blob/main/57.PNG?raw=true)  
+
+* These blocks can be used multiple times in the netlist. This concept is useful when we want the blocks to be reused. Similarly, we can have other IPs also available.
+* All these blocks can be implemented once and can be instantiated multiple times on to a netlist.
+![instantiated](https://github.com/srsapireddy/Images/blob/main/58.PNG?raw=true)  
+* The placement of these cells on the top-level netlist is fixed. They are called pre-placed cells since they are placed before placement and routing. Once these locations are placed, they are not moved by automated placement or routing tools. 
+
+### De-coupling Capacitors
+
 
 
  
