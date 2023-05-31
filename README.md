@@ -431,8 +431,8 @@ Legalization: The standard cell should be placed inside the standard cell rows, 
 ![librar#](https://github.com/srsapireddy/Images/blob/main/96.png?raw=true) 
 * Then we need to check our design after placement:
 ![librar#](https://github.com/srsapireddy/Images/blob/main/97.png?raw=true) 
-* We know the placement where the standard cells are fixed. 
-* The power and ground network will be created during the floorplan. 
+* We know that in placement the standard cells are placed and fixed. 
+* The power and ground network will be created during the placement. 
 
 
 
