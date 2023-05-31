@@ -281,7 +281,7 @@ Ex:
 ![cells](https://github.com/srsapireddy/Images/blob/main/56.PNG?raw=true)  
 
 * These blocks are invisible if we look from the top. Looking into the main netlist. 
-![netlist](https://github.com/srsapireddy/Images/blob/main/57.PNG?raw=true)  
+![netlist](https://github.com/srsapireddy/Images/blob/main/57.png?raw=true)  
 
 * These blocks can be used multiple times in the netlist. This concept is useful when we want the blocks to be reused. Similarly, we can have other IPs also available.
 * All these blocks can be implemented once and can be instantiated multiple times on to a netlist.
