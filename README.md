@@ -334,27 +334,28 @@ We use the de-coupling capacitor to charge the circuit. Whenever there is a swit
 * Standard cells placement is done in the placement stage.
 ![multiple](https://github.com/srsapireddy/Images/blob/main/70.png?raw=true) 
 
-![multiple](https://github.com/srsapireddy/Images/blob/main/71.png?raw=true) 
 * Here we have all the variables for the floorplan stage in the READ.md file.
 * These variables are also called as switches in the floorplan stage.
-* ![multiple](https://github.com/srsapireddy/Images/blob/main/72.png?raw=true) 
+![multiple](https://github.com/srsapireddy/Images/blob/main/71.png?raw=true) 
  
 * All the default values of the variables are shown here.
 * To check all the variables associated with all PD stages.
-* ![multiple](https://github.com/srsapireddy/Images/blob/main/73.png?raw=true) 
+* ![multiple](https://github.com/srsapireddy/Images/blob/main/72.png?raw=true) 
+ 
  
 * Default parameters set for floorplan stage in OpenLANE
-* ![multiple](https://github.com/srsapireddy/Images/blob/main/74.png?raw=true) 
+![multiple](https://github.com/srsapireddy/Images/blob/main/73.png?raw=true)
+
  
 * The lowers priority will be given to system defaults (floorplan.tcl in configurations folder), and height priority will be given to config.tcl and then sky120A_fd_sc_hd_config.tcl for setting floorplan stage variables.
-![multiple](https://github.com/srsapireddy/Images/blob/main/75.png?raw=true) 
+![multiple](https://github.com/srsapireddy/Images/blob/main/74.png?raw=true) 
 
 * Contents of config.tcl file
-![multiple](https://github.com/srsapireddy/Images/blob/main/76.png?raw=true) 
+![multiple](https://github.com/srsapireddy/Images/blob/main/75.png?raw=true) 
 
 * In OpenLANE flow, the vertical and horizontal metal is one more than what we specify here.
 * After changing the config.tcl file with core utilization of 65%, clock period 10 and vertical metal as 4, and horizontal metal as 3.
-![multiple](https://github.com/srsapireddy/Images/blob/main/77.png?raw=true) 
+![multiple](https://github.com/srsapireddy/Images/blob/main/76.png?raw=true) 
 
 * Command to run floorplan: `run_floorplan`
 
