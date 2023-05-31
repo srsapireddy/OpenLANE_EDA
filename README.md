@@ -29,7 +29,7 @@ Adding on, I would suggest anyone interested to go through these 2 courses, whic
 * The interface between RISC-V architecture and the layout is hardware description language. We implement RISC-V specifications in RTL. 
 
 ### From software applications to hardware
-* The application software enters a block called system software. The system software converts the application software into binary language. 
+* The application software enters a block called system software. The system software converts the application software into binary language. </br>
 ![software](https://github.com/srsapireddy/Images/blob/main/5.PNG?raw=true)
 ### The flow of System Software:
  
@@ -58,19 +58,19 @@ Example: Stopwatch app
     -	Device Models
     -	Digital Standard Cell Libraries
     -	I/0 Libraries
-
- ![foss](https://github.com/srsapireddy/Images/blob/main/9.PNG?raw=true)
+![foss](https://github.com/srsapireddy/Images/blob/main/9.PNG?raw=true)
  
 * Google releaseD open-source PDK for ASIC implementation using open-source or close source tools.
  ![distribution](https://github.com/srsapireddy/Images/blob/main/10.PNG?raw=true)
 * The fabrication process of SkyWater 130 nm is cheaper than advanced nodes. It covers over 6% of IC technology nodes used in the market. 
- ![130nm](https://github.com/srsapireddy/Images/blob/main/11.PNG?raw=true)
+![130nm](https://github.com/srsapireddy/Images/blob/main/11.PNG?raw=true)
  
 ### ASIC Flow objective: RTL to GDS II - Also called Automated PnR and/or Physical Implementation.
 ![tools](https://github.com/srsapireddy/Images/blob/main/12.PNG?raw=true)
 #### Simplified RTL to GDSII Flow
- 
+![flow](https://github.com/srsapireddy/Images/blob/main/13.PNG?raw=true) 
 #### 1. Synthesis
+![Synthesis](https://github.com/srsapireddy/Images/blob/main/14.PNG?raw=true) 
 * Converts RTL to a circuit out of components from the standard cell library (SCL). The resulting circuit is referred to as a gate-level netlist. Gate level netlist is functional equivalent to RTL. </br>
 * The library building blocks, or the cells, have regular layouts. Typically, the cell layout is enclosed by a fixed-height rectangle. The cell width is variable but discrete. It is an integer of multiple units called site width.
 * Standard cells have a regular layout – Each has different views/ models.
@@ -79,23 +79,30 @@ Example: Stopwatch app
 * GDS View, LEF view- abstract view.
 
 #### 2. Floor planning and power planning
+![fp](https://github.com/srsapireddy/Images/blob/main/15.PNG?raw=true) 
 * The objective here is to plan the silicon area and create robust power distribution to the circuits. 
 * Chip floor-planning: Partition the chip die between different system building blocks and place the I/P pads.
 * Macro Floor Planning: Dimensions, pin locations, rows or routing tracks are definition.
+![pp](https://github.com/srsapireddy/Images/blob/main/16.PNG?raw=true) 
 * In power planning the power network is constructed.
 * A chip is powered by multiple VDD and GND pins. The power pins are connected to all the components through rings and horizontal/ vertical power straps. Such parallel structures are meant to reduce the resistance hence the IR Drop, and to address the electromigration problem. Usually, the power distribution network uses upper metal layers as they are thicker than the lower metal layers. Hence have less resistance. 
 
 #### 3. Placement: 
+![Placement](https://github.com/srsapireddy/Images/blob/main/17.PNG?raw=true) 
 * Place the cells on the floorplan rows aligned with the site rows. Connected cells are placed very close to each other to reduce the interconnect delay and allow successful routing afterward. 
 * Done in two steps: 
   * Global - Tries to find the optimal placement of all the cells. Such positions are not necessarily legal. So cells may overlap or go off the sites. 
   * Detailed - The positions obtained from the global placement are minimally altered to be legal. 
+![Placement_2](https://github.com/srsapireddy/Images/blob/main/18.PNG?raw=true) 
  
 #### 4. Clock Tree Distribution:
+![CTS](https://github.com/srsapireddy/Images/blob/main/19.PNG?raw=true) 
 * Deliver the clock to all sequential elements (eg, FF) with minimum skew.
 * Clock skew – The arrival of the clock to the different components at different times.
 
 #### 5. Routing: 
+![Routing](https://github.com/srsapireddy/Images/blob/main/20.PNG?raw=true)
+
 * Given the placement and fixed number of metal layers, it’s required to find a valid pattern of horizontal and vertical wires to implement the nets that connect the cells together. The routing uses the available metal layers defined by the PDK. The PDK defines the pitch, tracks, and minimum width. Also, it defines the vias that are used to connect the wire signals present on the different metal layers. 
 
 * The Skywater 130 nm PDK defines six routing layers. The lowest layer is called the local interconnect layer (TiN layer). All the other metal layers are aluminum layers.  
@@ -113,22 +120,27 @@ Example: Stopwatch app
 ### 2.3. Introduction to OpenLANE and Strive chipsets
 * OpenLANE started as an open-source flow for a true open-source tape-out experiment.
 * striVe is a family of open sourcing everything, including SoCs. (Open PDK, Open EDA, Open RTL)
- 
+![striVe](https://github.com/srsapireddy/Images/blob/main/21.PNG?raw=true)
+
 * OpenLANE main goal: To produce a clean GDSII with no human intervention. Tuned for SkyWater 130nm Open PDK. Also, support XFAB180 and GF130G. It can harden Macros and Chips to generate the final layout.
 * Two modes of operation: 
   * autonomous – push button flow 
   * Interactive – run commends one by one to check intermediate steps.
 
 ### 4. OpenLANE ASIC DESIGN FLOW
- 
+![ASIC](https://github.com/srsapireddy/Images/blob/main/22.png?raw=true) 
 ### RTL Design
   * The flow starts with the design RTL and generating the final layout in GDSII format. OpenLANE is based on several open-source projects. 
-  * The flow starts with the RTL synthesis. The RTL is fed to yosys with the design constraints. Yosys translates the RTL to logic circuits. These circuits can be optimized and mapped into a standard cell library using the ABC tool. ABC should be guided during the optimization. This guidance will come in the form of the ABC script. OpenLANE comes with several open-source scripts. We refer to them as synthesis strategies. We have strategies to target the least area and for the best timing. Different designs can use different strategies to achieve the best objective. For this, we have synthesis exploration utility. This is used to generate a report that shows the design delay concerning the area effected by synthesis strategy.
+![source](https://github.com/srsapireddy/Images/blob/main/23.PNG?raw=true) 
+  * The flow starts with the RTL synthesis. The RTL is fed to yosys with the design constraints. Yosys translates the RTL to logic circuits. These circuits can be optimized and mapped into a standard cell library using the ABC tool. ABC should be guided during the optimization. This guidance will come in the form of the ABC script. OpenLANE comes with several open-source scripts. We refer to them as synthesis strategies. We have strategies to target the least area and for the best timing. Different designs can use different strategies to achieve the best objective. For this, we have synthesis exploration utility. This is used to generate a report that shows the design delay concerning the area effected by synthesis strategy. </br>
+![strategies](https://github.com/srsapireddy/Images/blob/main/24.PNG?raw=true) 
 
 ### Design Exploration Utility
   * OpenLANE also has the design exploration utility. This can be used to sweep the design configurations. And generates a report, as shown below.
+![Exploration](https://github.com/srsapireddy/Images/blob/main/25.PNG?raw=true) 
   * This report shows the different design metrics. We have more than 35 of them in a report. It also shows the number of violations after generating the final layout. It is recommended to explore the design first and then use the best configurations for a particular design to result in a clean layout.
   * Also, design exploration can be used for regression testing (CI). So, we can run the design on several exploration configurations to get the best-optimized configurations. Currently, we have 70 designs. This utility will generate a report as shown below.
+![testing](https://github.com/srsapireddy/Images/blob/main/26.PNG?raw=true) 
   * This report shows the design metrics given different configurations and the number of violations. The results will be compared to the best-known results. 
 
 ### Design for Test
@@ -145,11 +157,13 @@ Example: Stopwatch app
 * Dealing with Antenna Rules Violations:
   * When a metal wire segment is fabricated, it can act as an antenna.
     -	Reactive ion etching causes charge to accumulate on the wire.
-    -	Transistor gates can be damaged during fabrication.    
+    -	Transistor gates can be damaged during fabrication.   
+![ANTENNA](https://github.com/srsapireddy/Images/blob/main/27.PNG?raw=true)  
  * Usually, this is the job of the router.
    * Solutions:
      1. Bridging – Attaches a higher layer intermediary. Requires the router awareness.
      2.  Antenna diode – Add antenna diode cell to leak away charges. Antenna diodes are provided by the SCL. 
+![diode](https://github.com/srsapireddy/Images/blob/main/28.PNG?raw=true)  
 * Fake Antenna Diode Cells are used for every cell input after placement and run antenna checker (Magic) on the routed layout. If the checker reports a violation, we replace the fake diode with the real one. 
 
 ### STA, DRC and LVS
