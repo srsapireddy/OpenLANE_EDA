@@ -321,7 +321,7 @@ We use the de-coupling capacitor to charge the circuit. Whenever there is a swit
 ![multiple](https://github.com/srsapireddy/Images/blob/main/66.PNG?raw=true) 
 
 * Then the current demanded by the circuit can be taken from the nearest power supply. Or it will drop the current to the nearest ground. This is the reason we have multiple power and ground pins in chips.
-![current](https://github.com/srsapireddy/Images/blob/main/67.PNG?raw=true) 
+![current](https://github.com/srsapireddy/Images/blob/main/68.PNG?raw=true) 
 
 ### Pin placement and logical cell placement blockage
 
