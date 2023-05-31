@@ -1,4 +1,4 @@
-# OpenLANE Workshop VSD
+# OpenLANE VSD
 * This repository will reflect the work done in the Advanced Physical Design Flow workshop, offered by the folks at VSD. It's a 5 day workshop that aims to educate us on the intricacies of Open Source EDA tools and PDKs as used by industry leaders. Furthermore, it uses Openlane flow to help understand the flow of work when it comes to VLSI designs, starting from the RTL level to the GSDII stage, performing the synthesis, placement, floorplanning, routing and sta.
 
 ## Taking the First Steps
@@ -7,7 +7,7 @@ The beauty of open-source is that it's freely avaialable to everyone. OpenLANE i
 ### Prerequisites:
 1. Ubuntu OS
 2. 40GB+ Disk Space. (If you're comfortable with Virtual Box, you can make use of Partition GUIs to allocate the necessary memory)
-Adding on, I would suggest anyone interested to go through these 2 courses, which were extremely helpful in guiding me through the entire installation and testing process. Both courses are freely avaialable on Udemy, offered by VSD.
+Adding on, I would suggest anyone interested to go through these 2 courses, which were extremely helpful in guiding me through the entire installation and testing process. Both courses are freely avaialable on Udemy.
 
 ## Day 1
 ### 1. How to Talk to Computers?
