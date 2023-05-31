@@ -221,6 +221,14 @@ Here, sky130: process name, 130 nm
   - Here the tech.lef (layer level information) and cell level lef merged into one.
 
 #### Reviewing files after design prep and run synthesis
+Here the runs directory has been created after running command `run-synthesis`.
+tmp folder: where the temporary files are stored, and the rest of the folders will be empty.
+![runs](https://github.com/srsapireddy/Images/blob/main/42.png?raw=true)  
+ 
+config.tcl: show all the default parameters taken by the run.
+For synthesis: this will run the yosys and abc 
+![synthesis](https://github.com/srsapireddy/Images/blob/main/43.png?raw=true)  
+OpenLANE project Git link: https://github.com/efabless/openlane
 
 
 
