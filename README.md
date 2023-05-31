@@ -237,6 +237,41 @@ Here, sky130: process name, 130 nm
 * To check the synthesis statistic report  </br>
 ![report](https://github.com/srsapireddy/Images/blob/main/45.png?raw=true)  
 
+## DAY 2
+### Utilization factor and aspect ratio
+* Define the width and height of the core and die. This is the first step in the physical design flow.
+![report](https://github.com/srsapireddy/Images/blob/main/46.png?raw=true)  
+* Netlist defines the connectivity between all the components. 
+* In defining the dimensions of the chip, it mostly depends on the dimensions of the logic gates. 
+
+![Utilization](https://github.com/srsapireddy/Images/blob/main/47.png?raw=true)  
+* To get the dimensions of the core and die, we are interested in the dimensions of the standard cells, not considering the wires in between them.
+* Standard cells are given rough dimensions as shown below.
+
+![calculate](https://github.com/srsapireddy/Images/blob/main/48.png?raw=true)  
+* Let’s calculate the area occupied by the below netlist on a silicon wafer by bringing the cells together.
+ 
+* What is the core and die section of a chip?
+![core](https://github.com/srsapireddy/Images/blob/main/49.png?raw=true)  
+  * Core: where we place the fundamental logic.
+  * Die piece of the area where our circuit is built so that our circuit will not exceed this area. We imprint this die multiple times on a silicon wafer to increase its throughput. 
+![die](https://github.com/srsapireddy/Images/blob/main/50.png?raw=true)  
+ 
+* As we can see that the netlist of 4 sq units occupies a complete area of the core. This means we have utilized the core 100%. 
+![units](https://github.com/srsapireddy/Images/blob/main/51.png?raw=true)  
+
+* Utilization Factor: Area occupied by netlist/ Total area of the core = 4 x 1sq.unit/ 2 unit x 2 unit = 1
+  * In practice, we go for a 50 to 60% utilization.
+* Aspect Ratio = Height/ width = 2 unit/ 2 unit = 1
+* When the aspect ratio is 1, the chip is squared in shape.
+Ex:
+![Factor](https://github.com/srsapireddy/Images/blob/main/52.png?raw=true)  
+### Concept of pre-placed cells
+
+
+ 
+
+
 
 
 
