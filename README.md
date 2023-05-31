@@ -406,6 +406,9 @@ Placement.
 ![Placement_5](https://github.com/srsapireddy/Images/blob/main/92.png?raw=true) 
 * Based on the wire length estimation, we calculate the capacitance using the transition of a waveform using timing analysis. The higher the value of the capacitor, the amount of charge required to charge the capacitor will be high and have the worst slew.
 * We use buffers from Din2 to FF1, which will receive the proper signal even though we have a large wire length.
+* The internal routes of FF2 (Yellow) are in some layers, say metal 1 and metal 2. And the connection from 1 to 2 (green) will be on metal 3.
+* Based on the ideal conditions of the clock, we do a timing analysis. Based on this setup timing analysis, we will determine whether the placement is reasonable based on the given specifications.  
+
 
  
 
