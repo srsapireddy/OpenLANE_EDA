@@ -301,6 +301,29 @@ We use the de-coupling capacitor to charge the circuit. Whenever there is a swit
 * This also reduces the crosstalk problem. 
 
 ### Power Planning
+* Consider a scenario where a signal is sent from the driver to load. We must ensure the load receives the exact shape of the signal. 
+* Tapping of blocks to Vdd, and all the block ground lines are tapped to the ground.
+![Power](https://github.com/srsapireddy/Images/blob/main/62.PNG?raw=true) 
+
+* To retain the same signal from the driver to the load, we need the power supply. In this region, we don’t have any de-coupling capacitor that will take the power supply switching. So, there is a possibility of voltage drop across the line (shown in orange). Let’s assume that the line from driver to load is a 16-bit bus. 
+![supply](https://github.com/srsapireddy/Images/blob/main/63.PNG?raw=true) 
+
+* The capacitors shown here are charged to Vdd for logic 1 and GND for logic 0. When we pass this 16-bit bus as input to the inverter, we get the inverted output. So all the capacitors with logic 0 as output is discharged, and with logic 1 will be charged to Vdd. 
+![discharged](https://github.com/srsapireddy/Images/blob/main/64.PNG?raw=true) 
+
+* We have a single ground line for the 16-bit bus. Due to this, there is a bump over the ground line. If the size of the bump exceeds the noise margin, it will enter an undefined state. Due to the undefined state, it might logic 1 or logic 0. This phenomenon is called a ground bounce. 
+* When all the capacitance is charged from logic 0 to logic 1 we have a voltage droop as all the capacitors are demanding the power supply at the same time. Here the voltage droop can get into to undefined region.
+![logic](https://github.com/srsapireddy/Images/blob/main/65.PNG?raw=true) 
+
+* The problem arises as the power supply is provided from one point. 
+  * Solution:
+    - Instead of having single power supply we need to have multiple power supplies.
+![multiple](https://github.com/srsapireddy/Images/blob/main/66.PNG?raw=true) 
+
+* Then the current demanded by the circuit can be taken from the nearest power supply. Or it will drop the current to the nearest ground. This is the reason we have multiple power and ground pins in chips.
+![current](https://github.com/srsapireddy/Images/blob/main/67.PNG?raw=true) 
+
+### Pin placement and logical cell placement blockage
 
 
 
