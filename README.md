@@ -230,6 +230,12 @@ Here, sky130: process name, 130 nm
 ![synthesis](https://github.com/srsapireddy/Images/blob/main/43.png?raw=true)  
 * OpenLANE project Git link: https://github.com/efabless/openlane
 
+* Calculating the D-Flip Flop count for the design: 1613/14876= 10.8%
+
+* If we check the synthesis folder for results after running run_synthesis we can see that there is a new file generated named picorv32a.synthesios.v
+![results](https://github.com/srsapireddy/Images/blob/main/44.png?raw=true)  
+* To check the synthesis statistic report
+![report](https://github.com/srsapireddy/Images/blob/main/45.png?raw=true)  
 
 
 
