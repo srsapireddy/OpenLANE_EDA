@@ -428,9 +428,10 @@ Legalization: The standard cell should be placed inside the standard cell rows, 
 2.	Detailed placement
 * Command: `run_placement`
 * Then global placement happens. In OpenLANE, the placement takes place using a half-parameter wire length. Our objective is to reduce the overflow. If the overflow value converges, we can assume the placement is right.
+* Command to run magic layout: `magic -T /home/vsduser/Desktop/work/tools/openlane_working_dir/pdks/sky130A/bibs.tech/magic/sky130A.tech lef read ../../tmp/merged.lef def read picorv32a.floorplan.def`
 ![librar#](https://github.com/srsapireddy/Images/blob/main/96.png?raw=true) 
 * Then we need to check our design after placement:
-![librar#](https://github.com/srsapireddy/Images/blob/main/97.png?raw=true) 
+![librar#](https://github.com/srsapireddy/Images/blob/main/98.PNG?raw=true) 
 * We know that in placement the standard cells are placed and fixed. 
 * The power and ground network will be created during the placement. 
 
