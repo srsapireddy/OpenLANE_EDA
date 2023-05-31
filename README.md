@@ -380,6 +380,35 @@ We use the de-coupling capacitor to charge the circuit. Whenever there is a swit
 ![Tap](https://github.com/srsapireddy/Images/blob/main/86.png?raw=true) 
 * Standard cell are placed during the placement stage
 
+### Placement and Routing
+* Here binding the netlist with physical cells takes place. All the gates have a physical view while representing the core like an FF, which is square in shape.
+* In the real world, we give physical dimensions for all the gates by giving width and height. So every component of the netlist is given a proper width and height.
+![Placement_1](https://github.com/srsapireddy/Images/blob/main/87.PNG?raw=true) 
+* And the block already has the proper shape.
+![Placement_2](https://github.com/srsapireddy/Images/blob/main/88.PNG?raw=true) 
+
+* The dimensions of the cells in a design are present in a library. Library also have the timing information of all the gates. 
+  * Library files are divided into two categories:
+    1.	Library files containing the shapes and sizes of cells.
+    2.	Timing information of the cells.
+* It also contains the various shapes of all the gates. Gates that are bigger and have the least resistance path. And it will be faster.
+![Placement_3](https://github.com/srsapireddy/Images/blob/main/89.PNG?raw=true) 
+
+### Placement
+![Placement_4](https://github.com/srsapireddy/Images/blob/main/90.PNG?raw=true) 
+* The library has various flavors of cells in the library. We select these cells based on the timing conditions (delay information) and the size of the floorplan requirements. 
+Placement.
+![Placement_5](https://github.com/srsapireddy/Images/blob/main/91.PNG?raw=true) 
+* We must place the physical view of the netlist for the placement. We placed the cells according to the logical connectivity and placed them close together concerning the input and output pin placement.
+ 
+
+
+
+
+
+
+
+
 
 
 
