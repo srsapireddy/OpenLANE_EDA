@@ -435,6 +435,40 @@ Legalization: The standard cell should be placed inside the standard cell rows, 
 * We know that in placement the standard cells are placed and fixed. 
 * The power and ground network will be created during the placement. 
 
+* Standard cells are placed in a section called a library. We also have DECAP cells and MACROS placed in the library. 
+![librar#](https://github.com/srsapireddy/Images/blob/main/98.png?raw=true) 
+
+* The library also contains different gates with different functionality. It also got cells of different sizes. 
+Based on the sizes of cells, we can decide the drive strength of cells. The bigger cells have larger drive strength. For example, the smaller buffers have the least drive strength. It also contains cells with different threshold voltages. The variation in threshold voltage decides the speed of the cell. For example, a 0.4 Vth inverter takes more time to switch than a 0.3 Vth inverter.
+![librar#](https://github.com/srsapireddy/Images/blob/main/98.png?raw=true) 
+
+CELL DESIGN FLOW
+A cell, for example, an inverter, should follow a cell design flow.
+Steps:
+1.	Inputs: PDKs (DRC and LVS rules, SPICE models, library, and user-defined specs) 
+![FLOW_](https://github.com/srsapireddy/Images/blob/main/99.PNG?raw=true) 
+SPICE model parameters: We get these parameters from the foundry.
+![FLOW_2](https://github.com/srsapireddy/Images/blob/main/100.PNG?raw=true) 
+
+### Library and User-defined Specs:
+* The separation between the power rail and the ground rail decides the cell height. The cell width is dependent on the timing information. This depends on the drive strength of the cell. Lowering the value of the drive strength of the cell can drive a few other cells at the output. 
+
+* The library developer must consider the supply voltage to design the cell, and they also need to take care of noise margin levels to take care of the supply voltage of the cell.
+* Certain libraries should be built on certain metal layers. This should be taken into consideration.
+* Pin locations are also important for developing a library. 
+![FLOW_3](https://github.com/srsapireddy/Images/blob/main/101.PNG?raw=true) 
+ 
+The library developer is responsible for taking these inputs and developing a library cell that adheres to these inputs.
+2.	Design steps: circuit design, layout design, and characterization
+Circuit Design: We should design PMOS and NMOS transistors in such a fashion to meet the library requirements. These are mostly based on SPICE simulations.
+![FLOW_4](https://github.com/srsapireddy/Images/blob/main/102.PNG?raw=true) 
+
+Layout Design: 
+![FLOW_5](https://github.com/srsapireddy/Images/blob/main/103.PNG?raw=true) 
+
+3.CDL File: Circuit Description Language
+
+
 
 
 
