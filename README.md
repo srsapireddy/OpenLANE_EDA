@@ -130,7 +130,7 @@ Example: Stopwatch app
 ### 4. OpenLANE ASIC DESIGN FLOW
 ![ASIC](https://github.com/srsapireddy/Images/blob/main/22.png?raw=true) 
 ### RTL Design
-  * The flow starts with the design RTL and generating the final layout in GDSII format. OpenLANE is based on several open-source projects. 
+  * The flow starts with the design RTL and generating the final layout in GDSII format. OpenLANE is based on several open-source projects. </br>
 ![source](https://github.com/srsapireddy/Images/blob/main/23.PNG?raw=true) 
   * The flow starts with the RTL synthesis. The RTL is fed to yosys with the design constraints. Yosys translates the RTL to logic circuits. These circuits can be optimized and mapped into a standard cell library using the ABC tool. ABC should be guided during the optimization. This guidance will come in the form of the ABC script. OpenLANE comes with several open-source scripts. We refer to them as synthesis strategies. We have strategies to target the least area and for the best timing. Different designs can use different strategies to achieve the best objective. For this, we have synthesis exploration utility. This is used to generate a report that shows the design delay concerning the area effected by synthesis strategy. </br>
 ![strategies](https://github.com/srsapireddy/Images/blob/main/24.PNG?raw=true) 
