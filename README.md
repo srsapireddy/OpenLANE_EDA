@@ -32,18 +32,18 @@ Adding on, I would suggest anyone interested to go through these 2 courses, whic
 
 ### The flow of System Software:
  
-1. OPERATING SYSTEM Handles IO operations and allocates memory and low-level system functions. Converts the app into an assembly language program and finally into the binary language program so that the hardware understands it. 
-The output of the operating system is the small functions in C, C++, Java, and VB. 
+1. OPERATING SYSTEM 
+* OSHandles IO operations and allocates memory and low-level system functions. Converts the app into an assembly language program and finally into the binary language program so that the hardware understands it. 
+The output of the operating system is the small functions in C, C++, Java, and VB.   
+
+2. COMPILER 
 * These functions are taken by the respective compiler and convert them into instructions. The syntax of the instructions will depend on the type of hardware used (If the hardware is ARM, then the instructions will be in the ARM format) - .exe file. 
+* The instructions here will act as the abstract ISA between the hardware and the C programs. 
+* We need an RTL to implement instruction specifications. The RTL is converted into a synthesized netlist (high-level specification into synthesized netlist). This will be in the form of gates. Above netlist generation, we follow physical design implementation.
+
+3. ASSEMBLER
 * The job of the assembler is to take the instructions and convert them into binary numbers (machine language program). Based on machine language programs, the hardware executes the functions and accordingly generates the output. </br>
 Example: Stopwatch app
- 
-* The instructions here will act as the abstract ISA between the hardware and the C programs. 
- 
-* We need an RTL to implement instruction specifications. The RTL is converted into a synthesized netlist (high-level specification into synthesized netlist). This will be in the form of gates. Above netlist generation, we follow physical design implementation.  
-
-2. COMPILER </br>
-3. ASSEMBLER
 
 ### 2. SOC DESIGN AND OPENLANE
 #### Introduction to all components of open-source digital ASIC design
@@ -112,13 +112,13 @@ Example: Stopwatch app
   * autonomous – push button flow 
   * Interactive – run commends one by one to check intermediate steps.
 
-#### 4. OpenLANE ASIC DESIGN FLOW
+### 4. OpenLANE ASIC DESIGN FLOW
  
 ### RTL Design
   * The flow starts with the design RTL and generating the final layout in GDSII format. OpenLANE is based on several open-source projects. 
   * The flow starts with the RTL synthesis. The RTL is fed to yosys with the design constraints. Yosys translates the RTL to logic circuits. These circuits can be optimized and mapped into a standard cell library using the ABC tool. ABC should be guided during the optimization. This guidance will come in the form of the ABC script. OpenLANE comes with several open-source scripts. We refer to them as synthesis strategies. We have strategies to target the least area and for the best timing. Different designs can use different strategies to achieve the best objective. For this, we have synthesis exploration utility. This is used to generate a report that shows the design delay concerning the area effected by synthesis strategy.
 
-## Design Exploration Utility
+### Design Exploration Utility
   * OpenLANE also has the design exploration utility. This can be used to sweep the design configurations. And generates a report, as shown below.
   * This report shows the different design metrics. We have more than 35 of them in a report. It also shows the number of violations after generating the final layout. It is recommended to explore the design first and then use the best configurations for a particular design to result in a clean layout.
   * Also, design exploration can be used for regression testing (CI). So, we can run the design on several exploration configurations to get the best-optimized configurations. Currently, we have 70 designs. This utility will generate a report as shown below.
