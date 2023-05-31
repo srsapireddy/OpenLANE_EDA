@@ -421,6 +421,20 @@ Placement.
 * One thing that is common across all stages is GATES or Cells. The collection of these cells is referred to as library. The EDA tool needs to understand are timing characteristics of the gate and how it is represented in a tool.
 ![librar#](https://github.com/srsapireddy/Images/blob/main/95.PNG?raw=true) 
 
+### OpenLANE Placement
+* Placement takes place in 2 stages:
+1.	Global Placement: Corse placement and there is no legalization. 
+Legalization: The standard cell should be placed inside the standard cell rows, with no overlaps. We require legalization from a timing point of view. 
+2.	Detailed placement
+* Command: `run_placement`
+* Then global placement happens. In OpenLANE, the placement takes place using a half-parameter wire length. Our objective is to reduce the overflow. If the overflow value converges, we can assume the placement is right.
+![librar#](https://github.com/srsapireddy/Images/blob/main/96.png?raw=true) 
+* Then we need to check our design after placement:
+![librar#](https://github.com/srsapireddy/Images/blob/main/97.png?raw=true) 
+* We know the placement where the standard cells are fixed. 
+* The power and ground network will be created during the floorplan. 
+
+
 
 
 
