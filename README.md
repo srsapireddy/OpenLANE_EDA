@@ -202,21 +202,21 @@ Here, sky130: process name, 130 nm
 ![tool_directory](https://github.com/srsapireddy/Images/blob/main/35.png?raw=true)
 
 ### Designing Preparation Step
-#### Running OpenLANE EDA
+#### Running OpenLANE EDA </br>
 ![Running](https://github.com/srsapireddy/Images/blob/main/36.png?raw=true) 
   * Without the interactive switch, the tool will run the complete flow.
 
-* Importing the required packages
+* Importing the required packages </br>
 ![packages](https://github.com/srsapireddy/Images/blob/main/37.png?raw=true) 
   * All the designs run by OpenLANE will be extracted from the design folder.
  
-* Here we consider the picorv32a design
+* Here we consider the picorv32a design </br>
 ![picorv32a](https://github.com/srsapireddy/Images/blob/main/38.png?raw=true) 
   - src: where the Verilog file for our RTL will be present. As well as the SDC information.
   - config.tcl: by default, characteristics of the design information are mentioned. This will override the default OpenLANE settings. 
 
 ![design](https://github.com/srsapireddy/Images/blob/main/39.png?raw=true) 
-* Setting up the file system for the design:
+* Setting up the file system for the design: </br>
 ![Setting](https://github.com/srsapireddy/Images/blob/main/40.png?raw=true) 
   - Here the tech.lef (layer level information) and cell level lef merged into one.
 
