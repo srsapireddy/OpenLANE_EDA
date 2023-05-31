@@ -370,6 +370,15 @@ We use the de-coupling capacitor to charge the circuit. Whenever there is a swit
 * Command to run magic layout: `magic -T /home/vsduser/Desktop/work/tools/openlane_working_dir/pdks/sky130A/bibs.tech/magic/sky130A.tech lef read ../../tmp/merged.lef def read picorv32a.floorplan.def`
 ![multiple](https://github.com/srsapireddy/Images/blob/main/81.PNG?raw=true) 
 
+![floorplan](https://github.com/srsapireddy/Images/blob/main/82.png?raw=true) 
+### Review floorplan layout in MAGIC
+![layout](https://github.com/srsapireddy/Images/blob/main/83.png?raw=true) 
+![MAGIC](https://github.com/srsapireddy/Images/blob/main/84.png?raw=true) 
+* To check vertical metal type
+![vertical](https://github.com/srsapireddy/Images/blob/main/85.png?raw=true) 
+* Tap Cells: Avoids latch-up conditions in the CMOS devices. They connect n-well to Vdd and substrate to the ground. 
+![Tap](https://github.com/srsapireddy/Images/blob/main/86.png?raw=true) 
+* Standard cell placement during the floorplan stage
 
 
 
