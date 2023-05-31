@@ -11,25 +11,26 @@ Adding on, I would suggest anyone interested to go through these 2 courses, whic
 
 ## Day 1
 ### 1. How to Talk to Computers?
-
+![package](https://github.com/srsapireddy/Images/blob/main/1.PNG?raw=true)
 * The chip will be sitting at the center of the package. Chip is connected to the package, as shown in the figure. 
   * PADS – To send the signals inside the chip inside or outside the chip. </br>
   * CORE – Where all the digital logic is placed.
   * DIE – The size of the entire chip. Die will be manufactured on the silicon wafer.
-
+![core](https://github.com/srsapireddy/Images/blob/main/2.PNG?raw=true)
 * Other details
   * Foundry – Place where the chips get manufactured.
   * IP (Intelligent Properties) – An Intellectual Property (IP) core in Semiconductors is a reusable unit of logic or functionality or a cell or a layout design that is normally developed with the idea of licencing to multiple vendor for using as building blocks in different chip designs. 
   * Macros – Digital logic blocks
   * RISC-V Instruction Set Architecture 
   * ISA – The way we interact with computers.
- 
+![macrovsip](https://github.com/srsapireddy/Images/blob/main/3.PNG?raw=true)
 * Suppose we want a C program to run on a particular layout. The C program is compiled into an assembly language program (RISC-V assembly language program). This assembly language program is converted into a machine language program (binary language program).  The bits here will be executed in a layout, and we will get the required output.
+![riscvisa](https://github.com/srsapireddy/Images/blob/main/4.PNG?raw=true)
 * The interface between RISC-V architecture and the layout is hardware description language. We implement RISC-V specifications in RTL. 
 
 ### From software applications to hardware
 * The application software enters a block called system software. The system software converts the application software into binary language. 
-
+![software](https://github.com/srsapireddy/Images/blob/main/5.PNG?raw=true)
 ### The flow of System Software:
  
 1. OPERATING SYSTEM 
@@ -39,12 +40,14 @@ The output of the operating system is the small functions in C, C++, Java, and V
 2. COMPILER 
 * These functions are taken by the respective compiler and convert them into instructions. The syntax of the instructions will depend on the type of hardware used (If the hardware is ARM, then the instructions will be in the ARM format) - .exe file. 
 * The instructions here will act as the abstract ISA between the hardware and the C programs. 
+* ![stopwatch](https://github.com/srsapireddy/Images/blob/main/7.PNG?raw=true)
 * We need an RTL to implement instruction specifications. The RTL is converted into a synthesized netlist (high-level specification into synthesized netlist). This will be in the form of gates. Above netlist generation, we follow physical design implementation.
+![stopwatch](https://github.com/srsapireddy/Images/blob/main/8.PNG?raw=true)
 
 3. ASSEMBLER
 * The job of the assembler is to take the instructions and convert them into binary numbers (machine language program). Based on machine language programs, the hardware executes the functions and accordingly generates the output. </br>
 Example: Stopwatch app
-
+![stopwatch](https://github.com/srsapireddy/Images/blob/main/6.PNG?raw=true)
 ### 2. SOC DESIGN AND OPENLANE
 #### Introduction to all components of open-source digital ASIC design
 * Digital ASIC design requires RTL IPs, EDA Tools (qflow, OpenROAD, OpenLANE), and PDK data.
@@ -55,12 +58,16 @@ Example: Stopwatch app
     -	Device Models
     -	Digital Standard Cell Libraries
     -	I/0 Libraries
-    -	…
+
+ ![foss](https://github.com/srsapireddy/Images/blob/main/9.PNG?raw=true)
  
 * Google releaseD open-source PDK for ASIC implementation using open-source or close source tools.
+ ![distribution](https://github.com/srsapireddy/Images/blob/main/10.PNG?raw=true)
 * The fabrication process of SkyWater 130 nm is cheaper than advanced nodes. It covers over 6% of IC technology nodes used in the market. 
+ ![130nm](https://github.com/srsapireddy/Images/blob/main/11.PNG?raw=true)
  
 ### ASIC Flow objective: RTL to GDS II - Also called Automated PnR and/or Physical Implementation.
+![tools](https://github.com/srsapireddy/Images/blob/main/12.PNG?raw=true)
 #### Simplified RTL to GDSII Flow
  
 #### 1. Synthesis
