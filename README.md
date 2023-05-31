@@ -257,7 +257,7 @@ Here, sky130: process name, 130 nm
   * Die piece of the area where our circuit is built so that our circuit will not exceed this area. We imprint this die multiple times on a silicon wafer to increase its throughput. 
 ![die](https://github.com/srsapireddy/Images/blob/main/50.PNG?raw=true)  
  
-* As we can see that the netlist of 4 sq units occupies a complete area of the core. This means we have utilized the core 100%. 
+* As we can see that the netlist of 4 sq units occupies a complete area of the core. This means we have utilized the core 100%. </br>
 ![units](https://github.com/srsapireddy/Images/blob/main/51.PNG?raw=true)  
 
 * Utilization Factor: Area occupied by netlist/ Total area of the core = 4 x 1sq.unit/ 2 unit x 2 unit = 1
