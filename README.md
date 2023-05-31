@@ -217,7 +217,7 @@ Here, sky130: process name, 130 nm
 
 ![design](https://github.com/srsapireddy/Images/blob/main/39.png?raw=true) 
 * Setting up the file system for the design: </br>
-![Setting](https://github.com/srsapireddy/Images/blob/main/40.png?raw=true) 
+![Setting]([https://github.com/srsapireddy/Images/blob/main/40.png?raw=true](https://github.com/srsapireddy/Images/blob/main/41.PNG?raw=true)) 
   - Here the tech.lef (layer level information) and cell level lef merged into one.
 
 #### Reviewing files after design prep and run synthesis
