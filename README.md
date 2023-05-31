@@ -359,6 +359,15 @@ We use the de-coupling capacitor to charge the circuit. Whenever there is a swit
 
 * Command to run floorplan: `run_floorplan`
 
+### Floorplan Files
+![multiple](https://github.com/srsapireddy/Images/blob/main/77.png?raw=true) 
+* Check for the variable settings
+![multiple](https://github.com/srsapireddy/Images/blob/main/78.png?raw=true) 
+* The highest priority will be given to sky130_sky130_fd_sc_hd_config.tcl. So, the core utilization should be changed here—then config.tcl, and then the system default variable values will be given priority for setting variables in .tcl files.
+* To check the floorplan results – looking at the def file, we don’t know where what is placed.
+![multiple](https://github.com/srsapireddy/Images/blob/main/79.png?raw=true) 
+* To see the actual layout after the floorplan
+![multiple](https://github.com/srsapireddy/Images/blob/main/80.png?raw=true) 
 
 
 
