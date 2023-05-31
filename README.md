@@ -177,7 +177,7 @@ Example: Stopwatch app
 * PDK - Process Design Kit
 * PDK has the timing libraries, the LEF files, TECH files, and Cell LEF. 
 open_pdks directory: These foundry files are compatible and made to work with commercial EDA tools. Open PDK mitigates the issue by using scripts and files to convert the foundry level PDKs to be compatible with the opensource EDA tools (like MAGIC, NetGen)
-  * sky130A directory: The PDK that is made compatible with our open-source environment. Here sky130A is the PDK variant.
+  * sky130A directory: The PDK that is made compatible with our open-source environment. Here sky130A is the PDK variant. </br>
   ![sky130A](https://github.com/srsapireddy/Images/blob/main/29.png?raw=true)
   * libs.ref: contains all the process-specific files (timing, lef and cell lef)
   * libs.tech: specific to the tool
