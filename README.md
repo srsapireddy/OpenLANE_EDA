@@ -62,7 +62,7 @@ Example: Stopwatch app
  
 * Google releaseD open-source PDK for ASIC implementation using open-source or close source tools.
  ![distribution](https://github.com/srsapireddy/Images/blob/main/10.PNG?raw=true)
-* The fabrication process of SkyWater 130 nm is cheaper than advanced nodes. It covers over 6% of IC technology nodes used in the market. 
+* The fabrication process of SkyWater 130 nm is cheaper than advanced nodes. It covers over 6% of IC technology nodes used in the market. </br>
 ![130nm](https://github.com/srsapireddy/Images/blob/main/11.PNG?raw=true)
  
 ### ASIC Flow objective: RTL to GDS II - Also called Automated PnR and/or Physical Implementation.
