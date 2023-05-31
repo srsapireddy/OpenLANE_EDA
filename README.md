@@ -199,7 +199,7 @@ Here, sky130: process name, 130 nm
 * lef files
 
 * Tool environment directory:
-![tool_directory](https://github.com/srsapireddy/Images/blob/main/34.png?raw=true)
+![tool_directory](https://github.com/srsapireddy/Images/blob/main/35.png?raw=true)
 
 
 
