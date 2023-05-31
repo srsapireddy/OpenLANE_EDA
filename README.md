@@ -368,7 +368,7 @@ We use the de-coupling capacitor to charge the circuit. Whenever there is a swit
 ![multiple](https://github.com/srsapireddy/Images/blob/main/79.png?raw=true) 
 * To see the actual layout after the floorplan
 * Command to run magic layout: `magic -T /home/vsduser/Desktop/work/tools/openlane_working_dir/pdks/sky130A/bibs.tech/magic/sky130A.tech lef read ../../tmp/merged.lef def read picorv32a.floorplan.def`
-![multiple](https://github.com/srsapireddy/Images/blob/main/80.png?raw=true) 
+![multiple](https://github.com/srsapireddy/Images/blob/main/81.PNG?raw=true) 
 
 
 
