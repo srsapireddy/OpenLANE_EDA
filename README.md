@@ -480,7 +480,7 @@ Circuit Design: We should design PMOS and NMOS transistors in such a fashion to 
 * From the layout, we can calculate cell width and cell height.
 * Then we need to extract parasitic out of the layout and characterize that in terms of timing.
 
-3.CDL File: Circuit Description Language
+3. CDL File: Circuit Description Language
 * Output from a layout is GDSII, LEF (defines the width and height of the cell), extracted spice netlist (.cir)- R, C of every element in the circuit.
 
 ### Typical characterization flow
