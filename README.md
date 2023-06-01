@@ -240,7 +240,7 @@ Here, sky130: process name, 130 nm
 ![calculate](https://github.com/srsapireddy/Images/blob/main/48.PNG?raw=true)  
 * Let’s calculate the area occupied by the below netlist on a silicon wafer by bringing the cells together. </br>
  
-* What is the core and die section of a chip?
+* What is the core and die section of a chip? </br>
 ![core](https://github.com/srsapireddy/Images/blob/main/49.PNG?raw=true)  
   * Core: where we place the fundamental logic.
   * Die piece of the area where our circuit is built so that our circuit will not exceed this area. We imprint this die multiple times on a silicon wafer to increase its throughput. 
