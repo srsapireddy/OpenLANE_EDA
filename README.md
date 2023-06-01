@@ -519,9 +519,9 @@ Timing threshold definitions: variables related to waveform
 ![Timing_7](https://github.com/srsapireddy/Images/blob/main/118.PNG?raw=true)
 
 * Below are the timing variables for slew. This is two inverters in series, red is output of first inverter and blue is output of second inverter:
-![Timing_9](https://github.com/srsapireddy/Images/blob/main/119.PNG?raw=true)
+![Timing_9](https://github.com/srsapireddy/Images/blob/main/119.png?raw=true)
 * Below are the timing variables for propagation delay. The red is input waveform and blue is output waveform of the buffer. The left side is rise delay and right side is fall delay.
-![Timing_10](https://github.com/srsapireddy/Images/blob/main/120.PNG?raw=true)
+![Timing_10](https://github.com/srsapireddy/Images/blob/main/120.png?raw=true)
 * Negative propagation delay is unexpected. That means the output comes before the input so designer needs to choose correct threshold point to produce positive delay. Delay threshold is usually 50% and slew rate threshold is usually 20%-80%.
 
 
