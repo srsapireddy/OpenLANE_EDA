@@ -436,7 +436,6 @@ Legalization: The standard cell should be placed inside the standard cell rows, 
 * The power and ground network will be created during the placement. 
 
 * Standard cells are placed in a section called a library. We also have DECAP cells and MACROS placed in the library. 
-![librar#](https://github.com/srsapireddy/Images/blob/main/98.png?raw=true) 
 
 * The library also contains different gates with different functionality. It also got cells of different sizes. 
 Based on the sizes of cells, we can decide the drive strength of cells. The bigger cells have larger drive strength. For example, the smaller buffers have the least drive strength. It also contains cells with different threshold voltages. The variation in threshold voltage decides the speed of the cell. For example, a 0.4 Vth inverter takes more time to switch than a 0.3 Vth inverter.
