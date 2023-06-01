@@ -441,7 +441,7 @@ Legalization: The standard cell should be placed inside the standard cell rows, 
 Based on the sizes of cells, we can decide the drive strength of cells. The bigger cells have larger drive strength. For example, the smaller buffers have the least drive strength. It also contains cells with different threshold voltages. The variation in threshold voltage decides the speed of the cell. For example, a 0.4 Vth inverter takes more time to switch than a 0.3 Vth inverter.
 
 
-CELL DESIGN FLOW
+### CELL DESIGN FLOW
 A cell, for example, an inverter, should follow a cell design flow.
 Steps:
 1.	Inputs: PDKs (DRC and LVS rules, SPICE models, library, and user-defined specs) 
@@ -463,10 +463,27 @@ Circuit Design: We should design PMOS and NMOS transistors in such a fashion to 
 ![FLOW_4](https://github.com/srsapireddy/Images/blob/main/102.PNG?raw=true) 
 ![FLOW_5](https://github.com/srsapireddy/Images/blob/main/103.PNG?raw=true) 
 
-Layout Design: 
+* Characterization: This is a step to get timing, noise, and power information (power.libs) and circuit functionality.
 
-3. CDL File: Circuit Description Language
+* Layout Design: 
+![layout_6](https://github.com/srsapireddy/Images/blob/main/104.PNG?raw=true) 
+* First, we need to implement the function and derive the pmos and nmos network graphs. 
+* Art of layout – Euler’s path + stick diagram
+* Euler’s path: The path that is traced out only once.
+![layout_6](https://github.com/srsapireddy/Images/blob/main/105.PNG?raw=true) 
+* Based on Euler’s path we need to draw a stick diagram out of it. 
+![layout_6](https://github.com/srsapireddy/Images/blob/main/106.PNG?raw=true) 
+* Then we convert this stick diagram into a layout that adheres to the DRC rules given by the foundry.
+![layout_6](https://github.com/srsapireddy/Images/blob/main/107.PNG?raw=true) 
 
+* Typical layout from MAGIC Design tool
+* From the layout, we can calculate cell width and cell height.
+* Then we need to extract parasitic out of the layout and characterize that in terms of timing.
+
+3.CDL File: Circuit Description Language
+* Output from a layout is GDSII, LEF (defines the width and height of the cell), extracted spice netlist (.cir)- R, C of every element in the circuit.
+
+### Typical characterization flow
 
 
 
