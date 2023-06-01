@@ -472,9 +472,9 @@ Circuit Design: We should design PMOS and NMOS transistors in such a fashion to 
 * Euler’s path: The path that is traced out only once.
 ![layout_6](https://github.com/srsapireddy/Images/blob/main/105.PNG?raw=true) 
 * Based on Euler’s path we need to draw a stick diagram out of it. 
-![layout_6](https://github.com/srsapireddy/Images/blob/main/106.PNG?raw=true) 
+![layout_6](https://github.com/srsapireddy/Images/blob/main/106.png?raw=true) 
 * Then we convert this stick diagram into a layout that adheres to the DRC rules given by the foundry.
-![layout_6](https://github.com/srsapireddy/Images/blob/main/107.PNG?raw=true) 
+![layout_6](https://github.com/srsapireddy/Images/blob/main/107.png?raw=true) 
 
 * Typical layout from MAGIC Design tool
 * From the layout, we can calculate cell width and cell height.
