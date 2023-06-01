@@ -484,6 +484,20 @@ Circuit Design: We should design PMOS and NMOS transistors in such a fashion to 
 * Output from a layout is GDSII, LEF (defines the width and height of the cell), extracted spice netlist (.cir)- R, C of every element in the circuit.
 
 ### Typical characterization flow
+![characterization_1](https://github.com/srsapireddy/Images/blob/main/108.PNG?raw=true) 
+![characterization_2](https://github.com/srsapireddy/Images/blob/main/109.PNG?raw=true) 
+Steps:
+1.	Read the model file.
+2.	Read extracted SPICE netlist.
+3.	Recognize the behavior of the buffer.
+4.	Read the subcircuits of the inverter.
+5.	Attach the necessary power sources.
+6.	Apply the stimulus.
+7.	Vary output load capacitance.
+8.	Provide necessary simulation commands.
+9.	Feed in all these inputs through a configuration file to characterization software called GUNA.
+![characterization_3](https://github.com/srsapireddy/Images/blob/main/110.png?raw=true) 
+* GUNA – Generates timing, noise, and power.libs
 
 
 
