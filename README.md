@@ -238,7 +238,7 @@ Here, sky130: process name, 130 nm
 * Standard cells are given rough dimensions as shown below.
 
 ![calculate](https://github.com/srsapireddy/Images/blob/main/48.PNG?raw=true)  
-* Let’s calculate the area occupied by the below netlist on a silicon wafer by bringing the cells together.
+* Let’s calculate the area occupied by the below netlist on a silicon wafer by bringing the cells together. </br>
  
 * What is the core and die section of a chip?
 ![core](https://github.com/srsapireddy/Images/blob/main/49.PNG?raw=true)  
