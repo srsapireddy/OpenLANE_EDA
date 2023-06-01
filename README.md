@@ -499,6 +499,27 @@ Steps:
 ![characterization_3](https://github.com/srsapireddy/Images/blob/main/110.png?raw=true) 
 * GUNA – Generates timing, noise, and power.libs
 
+Timing Characterization
+Timing threshold definitions: variables related to waveform
+- slew_low_rise_thr: points toward the lower side of the power supply. (About 20%)
+![Timing_1](https://github.com/srsapireddy/Images/blob/main/111.PNG?raw=true)
+- slew_high_rise_thr: points towards the higher side of the power supply. (About 20%)
+![Timing_2](https://github.com/srsapireddy/Images/blob/main/112.PNG?raw=true)
+- slew_low_fall_thr
+![Timing_3](https://github.com/srsapireddy/Images/blob/main/113.PNG?raw=true)
+- slew_high_fall_thr
+![Timing_4](https://github.com/srsapireddy/Images/blob/main/114.PNG?raw=true)
+- in_rise_thr: Related to the input waveform. The threshold for the input waveform delay.  (About 50%)
+![Timing_5](https://github.com/srsapireddy/Images/blob/main/115.PNG?raw=true)
+- in_fall_thr
+![Timing_6](https://github.com/srsapireddy/Images/blob/main/116.PNG?raw=true)
+- out_rise_thr: Related to the output waveform. The threshold for the output waveform delay.  (About 50%)
+![Timing_8](https://github.com/srsapireddy/Images/blob/main/117.PNG?raw=true)
+- out_fall_thr
+![Timing_7](https://github.com/srsapireddy/Images/blob/main/118.PNG?raw=true)
+
+
+
 
 
 
