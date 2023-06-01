@@ -440,7 +440,7 @@ Legalization: The standard cell should be placed inside the standard cell rows, 
 
 * The library also contains different gates with different functionality. It also got cells of different sizes. 
 Based on the sizes of cells, we can decide the drive strength of cells. The bigger cells have larger drive strength. For example, the smaller buffers have the least drive strength. It also contains cells with different threshold voltages. The variation in threshold voltage decides the speed of the cell. For example, a 0.4 Vth inverter takes more time to switch than a 0.3 Vth inverter.
-![librar#](https://github.com/srsapireddy/Images/blob/main/99.png?raw=true) 
+
 
 CELL DESIGN FLOW
 A cell, for example, an inverter, should follow a cell design flow.
