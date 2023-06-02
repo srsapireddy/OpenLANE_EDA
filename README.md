@@ -542,6 +542,18 @@ Here we take the example of the inverter and assume the Cload value is 10fF.
 3. Identify the nodes: Those two points between which there is a component.
 4. Name nodes </br>
 ![VTC_2](https://github.com/srsapireddy/Images/blob/main/128.png?raw=true)
+![VTC_2](https://github.com/srsapireddy/Images/blob/main/129.png?raw=true)
+
+### Running ngspice
+![VTC_2](https://github.com/srsapireddy/Images/blob/main/130.png?raw=true)
+* SPICE waveform conditions: Wn=Wp=0.375u, Ln,p=0.25u device (Wn/Ln=Wp/Lp=1.5)
+![VTC_2](https://github.com/srsapireddy/Images/blob/main/131.png?raw=true)
+* SPICE waveform conditions: Wn=0.375u, Wp=0.9375u, Ln,p=0.25u device (Wn/Ln=1.5, Wp/Lp=2.5)
+![VTC_2](https://github.com/srsapireddy/Images/blob/main/132.png?raw=true)
+ 
+
+
+
  
 
 
