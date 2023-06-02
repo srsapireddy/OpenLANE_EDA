@@ -670,7 +670,7 @@ PMOS </br>
 * To know the logical function of the cell, we need to extract the SPICE. Then, we do simulations using ngspice tool. 
 
 ### Extracting SPICE:
-![Image](https://github.com/srsapireddy/Images/blob/main/156.jpg?raw=true)
+![Image](https://github.com/srsapireddy/Images/blob/main/156.png?raw=true)
 ### Checking extracted file:
 ![Image](https://github.com/srsapireddy/Images/blob/main/157.png?raw=true)
 * We use this extracted file to create a spice file using ngspice tool:
