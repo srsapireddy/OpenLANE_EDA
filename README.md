@@ -434,8 +434,8 @@ Based on the sizes of cells, we can decide the drive strength of cells. The bigg
 A cell, for example, an inverter, should follow a cell design flow.
 Steps:
 1.	Inputs: PDKs (DRC and LVS rules, SPICE models, library, and user-defined specs) 
-![FLOW_](https://github.com/srsapireddy/Images/blob/main/99.PNG?raw=true) 
-SPICE model parameters: We get these parameters from the foundry.
+![FLOW_](https://github.com/srsapireddy/Images/blob/main/99.PNG?raw=true) </br> 
+SPICE model parameters: We get these parameters from the foundry.</br> 
 ![FLOW_2](https://github.com/srsapireddy/Images/blob/main/100.PNG?raw=true) 
 
 ### Library and User-defined Specs:
