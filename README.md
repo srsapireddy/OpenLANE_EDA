@@ -243,7 +243,7 @@ Here, sky130: process name, 130 nm
 * What is the core and die section of a chip? </br>
 ![core](https://github.com/srsapireddy/Images/blob/main/49.PNG?raw=true)  
   * Core: where we place the fundamental logic.
-  * Die piece of the area where our circuit is built so that our circuit will not exceed this area. We imprint this die multiple times on a silicon wafer to increase its throughput. 
+  * Die piece of the area where our circuit is built so that our circuit will not exceed this area. We imprint this die multiple times on a silicon wafer to increase its throughput. </br>
 ![die](https://github.com/srsapireddy/Images/blob/main/50.PNG?raw=true)  
  
 * As we can see that the netlist of 4 sq units occupies a complete area of the core. This means we have utilized the core 100%. </br>
