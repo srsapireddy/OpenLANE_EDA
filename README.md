@@ -571,10 +571,10 @@ Here we take the example of the inverter and assume the Cload value is 10fF.
   - Fall delay = around 71 ps delay (subtracting x values)
   - ![Dynamic_6](https://github.com/srsapireddy/Images/blob/main/138.png?raw=true)
 
-### Standard cell design and characterization using openlane flow GitHub repo: https://github.com/nickson-jose/vsdstdcelldesign
-* Copying sky130A.tech files to git repo folder
+### Standard cell design and characterization using openlane flow GitHub repo: </br> https://github.com/nickson-jose/vsdstdcelldesign
+* Copying sky130A.tech files to git repo folder </br>
 ![Dynamic_7](https://github.com/srsapireddy/Images/blob/main/139.png?raw=true)
-* Verify if the tech file is copied
+* Verify if the tech file is copied </br>
 ![Dynamic_8](https://github.com/srsapireddy/Images/blob/main/140.png?raw=true)
 * Open inverter circuit with MAGIC layout tool with sky130A.tech file
  - Command: `magic -T sky130A.tech sky130_inv.mag &`
