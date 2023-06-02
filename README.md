@@ -648,7 +648,7 @@ NMOS
 PMOS
 * To check whether the drain of PMOS is connected to the drain of NMOS. (Press s 3 times)
 ![Image](https://github.com/srsapireddy/Images/blob/main/152.png?raw=true)
-* According to the CMOS definition, the source of the PMOS should be connected to VDD and the source to the ground.
+* According to the CMOS definition, the source of the PMOS should be connected to VDD and the source to the ground. </br>
 ![Image](https://github.com/srsapireddy/Images/blob/main/153.png?raw=true)
 ![Image](https://github.com/srsapireddy/Images/blob/main/154.png?raw=true)
 * Refer to the GitHub link for more information on how to build a CMOS.
