@@ -532,6 +532,21 @@ Timing threshold definitions: variables related to waveform
 ![Placer_6](https://github.com/srsapireddy/Images/blob/main/126.png?raw=true)
 * From the layout, we can see that the IO pins are stacked on top of one another.
 
+### VTC – SPICE Simulations (Spice deck creation for CMOS inverter)
+* SPICE deck
+![VTC_1](https://github.com/srsapireddy/Images/blob/main/127.png?raw=true)
+1. connectivity information about the netlist. It also has the inputs that are to be provided to the simulation and tap points from where we collect the output.
+In the SPICE deck, we need to mention the connectivity of the substrate too. 
+Here we take the example of the inverter and assume the Cload value is 10fF.
+2. Define component values: The values for PMOS and NMOS. Ideally, the size of PMOS should be bigger than the NMOS. Define the values of input gate voltage. The voltages are kept in the multiples of channel length. Also, assume the supply voltage is 2.5V.
+3. Identify the nodes: Those two points between which there is a component.
+4. Name nodes
+![VTC_2](https://github.com/srsapireddy/Images/blob/main/128.png?raw=true)
+ 
+
+
+
+
 
 
 
