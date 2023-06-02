@@ -642,9 +642,9 @@ Mask 15 is for second Aluminum contact layer. Mask 16 is for making contact to t
   - ndiff: green color
   - pdiff:   brown color
 * When a poly crosses a ndiff it’s a nmos. Similarly, when a ploy crosses a pdiff it’s a pmos.
-![Image](https://github.com/srsapireddy/Images/blob/main/150.png?raw=true)
+![Image](https://github.com/srsapireddy/Images/blob/main/150.png?raw=true) </br>
 NMOS
-![Image](https://github.com/srsapireddy/Images/blob/main/151.png?raw=true)
+![Image](https://github.com/srsapireddy/Images/blob/main/151.png?raw=true) </br>
 PMOS
 * To check whether the drain of PMOS is connected to the drain of NMOS. (Press s 3 times)
 ![Image](https://github.com/srsapireddy/Images/blob/main/152.png?raw=true)
