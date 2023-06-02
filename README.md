@@ -655,6 +655,32 @@ PMOS </br>
 * For placement of any macro, we don’t need information on the logic. We only need to know the boundaries (LEF file).
 * LEF also serves to protect the IP. LEF is also called as frame view.
 
+* N-substrate diff: The N-SUBSTRATE DIFFUSION layer represents the substrate region where N-type (negative charge carriers) diffusion occurs. This diffusion process creates the N-well, commonly used in complementary MOS (CMOS) technology, to form the body of P-channel transistors.
+* N-substrate contact: In CMOS technology, the N-well is a substrate region doped with N-type impurities to create a well of positive charge carriers. The N-SUBSTRATE CONTACT is a contact structure that establishes an electrical connection between the metal layer and the N-well region. It allows for the routing of signals or the application of voltage to the N-well.
+* metal 1: In an NMOS (N-channel Metal-Oxide-Semiconductor) transistor, Metal 1 connections refer to the metal layer used for routing signals and providing interconnections in the integrated circuit layout. Metal 1 is typically the first metal layer above the active transistor area. In NMOS transistors, Metal 1 connections are used to establish electrical connections to various transistor components, such as the source, drain, and gate. These connections are typically made using metal traces or wires patterned on the integrated circuit layout.
+* nwell: nwell refers to the N-type well region that is created within the P-type substrate.
+![Image](https://github.com/srsapireddy/Images/blob/main/155.jpg?raw=true)
+* licon is the connectivity between the iocali layer and metal 1.  There need to be a contact between the nwell and licon. The crossed line is the n-substrate contact (first contact). This is the contact between nwell and locali.
+* PMOS: Nwell -> above that locali layer -> above that metal 1
+* Nwell and locali connection by nsubstrate contact. 
+* For locali and Metal 1, we have licon.
+* Since nmos has not well, it is directly we have direct psubstrate. We have first contact between psubstrate and locali. Then the contact between locali and metal 1.
+ 
+* We need to ensure that the final design is DRC clean.
+* To know the logical function of the cell, we need to extract the SPICE. Then, we do simulations using ngspice tool. 
+
+### Extracting SPICE:
+![Image](https://github.com/srsapireddy/Images/blob/main/156.jpg?raw=true)
+### Checking extracted file:
+![Image](https://github.com/srsapireddy/Images/blob/main/157.png?raw=true)
+* We use this extracted file to create a spice file using ngspice tool:
+![Image](https://github.com/srsapireddy/Images/blob/main/158.png?raw=true)
+### Check the spice file:
+![Image](https://github.com/srsapireddy/Images/blob/main/159.png?raw=true)
+
+
+
+
 
 
 
