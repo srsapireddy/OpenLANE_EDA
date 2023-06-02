@@ -634,6 +634,26 @@ Mask 14 is for second contact hole
 Mask 15 is for second Aluminum contact layer. Mask 16 is for making contact to topmost layer.
 ![Cell_8](https://github.com/srsapireddy/Images/blob/main/149.png?raw=true)
 
+### MAGIC Inverter Layout
+* In MAGIC the first layer is the local interconnect layer (locali). 
+  - metal 1: purple color
+  - metal 2: pink color
+  - nwell: solid dashed lines
+  - ndiff: green color
+  - pdiff:   brown color
+* When a poly crosses a ndiff it’s a nmos. Similarly, when a ploy crosses a pdiff it’s a pmos.
+![Image](https://github.com/srsapireddy/Images/blob/main/150.png?raw=true)
+NMOS
+![Image](https://github.com/srsapireddy/Images/blob/main/151.png?raw=true)
+PMOS
+* To check whether the drain of PMOS is connected to the drain of NMOS. (Press s 3 times)
+![Image](https://github.com/srsapireddy/Images/blob/main/152.png?raw=true)
+* According to the CMOS definition, the source of the PMOS should be connected to VDD and the source to the ground.
+![Image](https://github.com/srsapireddy/Images/blob/main/153.png?raw=true)
+![Image](https://github.com/srsapireddy/Images/blob/main/154.png?raw=true)
+* Refer to the GitHub link for more information on how to build a CMOS.
+* For placement of any macro, we don’t need information on the logic. We only need to know the boundaries (LEF file).
+* LEF also serves to protect the IP. LEF is also called as frame view.
 
 
 
