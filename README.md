@@ -550,7 +550,37 @@ Here we take the example of the inverter and assume the Cload value is 10fF.
 ![VTC_2](https://github.com/srsapireddy/Images/blob/main/131.png?raw=true)
 * SPICE waveform conditions: Wn=0.375u, Wp=0.9375u, Ln,p=0.25u device (Wn/Ln=1.5, Wp/Lp=2.5)
 ![VTC_2](https://github.com/srsapireddy/Images/blob/main/132.png?raw=true)
- 
+
+### CMOS robustness depends on:
+* Switching threshold = Vin is equal to Vout. This the point where both PMOS and NMOS is in saturation or kind of turned on, and leakage current is high. If PMOS is thicker than NMOS, the CMOS will have higher switching threshold (1.2V vs 1V) while threshold will be lower when NMOS becomes thicker.
+* Propagation delay = rise or fall delay
+* DC transfer analysis is used for finding switching threshold. SPICE DC analysis below uses DC input of 2.5V. Simulation operation is DC sweep from 0V to 2.5V by 0.05V steps
+
+### Dynamic Simulation of CMOS Inverter
+![Dynamic_1](https://github.com/srsapireddy/Images/blob/main/133.png?raw=true)
+* Here we do a transient analysis of a CMOS inverter with a pulse as an input waveform.
+![Dynamic_2](https://github.com/srsapireddy/Images/blob/main/134.png?raw=true)
+* Calculating rise delay: Here, we need to find a point where output rises
+![Dynamic_3](https://github.com/srsapireddy/Images/blob/main/135.png?raw=true)
+* Select points at 1.25V on the graph for input pulse and output waveform.
+  - Rise delay = around 148 ps delay (subtracting x values)
+  - ![Dynamic_4](https://github.com/srsapireddy/Images/blob/main/136.png?raw=true)
+
+* Calculating fall delay: Here, we need to find a point where output falls
+![Dynamic_5](https://github.com/srsapireddy/Images/blob/main/137.png?raw=true)
+  - Fall delay = around 71 ps delay (subtracting x values)
+  - ![Dynamic_6](https://github.com/srsapireddy/Images/blob/main/138.png?raw=true)
+
+### Standard cell design and characterization using openlane flow GitHub repo: https://github.com/nickson-jose/vsdstdcelldesign
+* Copying sky130A.tech files to git repo folder
+![Dynamic_7](https://github.com/srsapireddy/Images/blob/main/139.png?raw=true)
+* Verify if the tech file is copied
+![Dynamic_8](https://github.com/srsapireddy/Images/blob/main/140.png?raw=true)
+* Open inverter circuit with MAGIC layout tool with sky130A.tech file
+ - Command: `magic -T sky130A.tech sky130_inv.mag &`
+![Dynamic_9](https://github.com/srsapireddy/Images/blob/main/141.png?raw=true)
+
+
 
 
 
