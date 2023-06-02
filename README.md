@@ -678,7 +678,42 @@ PMOS </br>
 ### Check the spice file:
 ![Image](https://github.com/srsapireddy/Images/blob/main/159.png?raw=true)
 
-
+### Lab steps to create final SPICE deck using sky130 tech
+* The alphabets represented in the SPICE file are nodes. For PMOS, the gate is connected to node A, the drain is connected to node Y, and the source is connected to VPWR.
+* For NMOS, the drain is connected to Y, the gate is connected to A, and the source/ substrate is to VGND.
+* VGND should be connected to VSS. The supply voltage should be connected to VSS. We create a new node 0 and connect VDD = 3.3V and pulse signal Vg.
+![Image](https://github.com/srsapireddy/Images/blob/main/160.png?raw=true)
+* The minimum value of the layout window using single grid in layout:
+![Image](https://github.com/srsapireddy/Images/blob/main/161.png?raw=true)
+* Set the scale concerning grid box size (scale=0.01u) in the SPICE file.
+* We must also include the PMOS and NMOS lib files in the SPICE file.
+![Image](https://github.com/srsapireddy/Images/blob/main/162.png?raw=true)
+* We must also include the definitions for the supply voltages and commands for transient analysis.
+* We also need to change the model files in SPICE file for PMOS and NMOS.
+![Image](https://github.com/srsapireddy/Images/blob/main/163.png?raw=true)
+![Image](https://github.com/srsapireddy/Images/blob/main/164.png?raw=true)
+* Then run the SPICE file using ngspice
+![Image](https://github.com/srsapireddy/Images/blob/main/165.png?raw=true)
+![Image](https://github.com/srsapireddy/Images/blob/main/166.png?raw=true)
+* To remove the spikes, we need to change the cload.
+![Image](https://github.com/srsapireddy/Images/blob/main/167.png?raw=true)
+![Image](https://github.com/srsapireddy/Images/blob/main/168.png?raw=true)
+ 
+### Characterizing a cell means finding 4 parameters.
+1.rise transition: the time taken for the output waveform to transit from 20% of the maximum value to 80% of the VDD. 
+![Image](https://github.com/srsapireddy/Images/blob/main/169.png?raw=true)
+For 20%
+![Image](https://github.com/srsapireddy/Images/blob/main/170.png?raw=true)
+For 80%
+![Image](https://github.com/srsapireddy/Images/blob/main/171.png?raw=true)
+* The difference between x0 values gives the rise transition. Around 0.64ns
+2. fall transition: the time taken for the output to fall from 80% to 20%.
+3. fall cell delay (propagation delay): the difference between the period when the output has fallen to 50% and when the input raised to 50%.
+![Image](https://github.com/srsapireddy/Images/blob/main/172.png?raw=true)
+![Image](https://github.com/srsapireddy/Images/blob/main/173.png?raw=true)
+* Around 0.061ns
+4. rise cell delay (propagation delay): the time difference between the  50% of the output
+We need to use the layout and create a LEF file and use this file in openlane and plug it in PICORV 32 core.
 
 
 
