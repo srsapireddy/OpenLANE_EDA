@@ -294,7 +294,7 @@ We use the de-coupling capacitor to charge the circuit. Whenever there is a swit
 * Tapping of blocks to Vdd, and all the block ground lines are tapped to the ground.
 ![Power](https://github.com/srsapireddy/Images/blob/main/62.PNG?raw=true) 
 
-* To retain the same signal from the driver to the load, we need the power supply. In this region, we don’t have any de-coupling capacitor that will take the power supply switching. So, there is a possibility of voltage drop across the line (shown in orange). Let’s assume that the line from driver to load is a 16-bit bus. 
+* To retain the same signal from the driver to the load, we need the power supply. In this region, we don’t have any de-coupling capacitor that will take the power supply switching. So, there is a possibility of voltage drop across the line (shown in orange). Let’s assume that the line from driver to load is a 16-bit bus. </br>
 ![supply](https://github.com/srsapireddy/Images/blob/main/63.PNG?raw=true) 
 
 * The capacitors shown here are charged to Vdd for logic 1 and GND for logic 0. When we pass this 16-bit bus as input to the inverter, we get the inverted output. So all the capacitors with logic 0 as output is discharged, and with logic 1 will be charged to Vdd. 
