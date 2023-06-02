@@ -513,6 +513,25 @@ Timing threshold definitions: variables related to waveform
 ![Timing_10](https://github.com/srsapireddy/Images/blob/main/120.png?raw=true)
 * Negative propagation delay is unexpected. That means the output comes before the input so designer needs to choose correct threshold point to produce positive delay. Delay threshold is usually 50% and slew rate threshold is usually 20%-80%.
 
+### IO Placer
+* PnR is an iterative flow.
+* Run synthesis and floorplan steps.
+* How to change input and output pins along the core?
+* After floorplan input and output pins are placed randomly around the core area.
+![Placer_1](https://github.com/srsapireddy/Images/blob/main/121.png?raw=true)
+* Open the MAGIC layout tool to check the floorplan of the design
+![Placer_2](https://github.com/srsapireddy/Images/blob/main/122.png?raw=true)
+* From the figure, we can see that the pins are placed at equal distances with respect to each other.
+![Placer_3](https://github.com/srsapireddy/Images/blob/main/123.png?raw=true)
+* IO placer supports 4 strategies to place our IO pins.
+![Placer_4](https://github.com/srsapireddy/Images/blob/main/124.png?raw=true)
+![Placer_5](https://github.com/srsapireddy/Images/blob/main/125.png?raw=true)
+* From floorplan.tcl we can see that the IO pins are placed with mode 1 with `set ::env(FP_IO_MODE)` variable. With mode 1 all IO’s are placed with equal distance.
+* Set this variable to 2 and run the floorplan again.
+* Then again check the IO placement with the MAGIC layout tool.
+![Placer_6](https://github.com/srsapireddy/Images/blob/main/126.png?raw=true)
+* From the layout, we can see that the IO pins are stacked on top of one another.
+
 
 
 
