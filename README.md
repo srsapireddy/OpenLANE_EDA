@@ -894,6 +894,30 @@ SU = Setup uncertainty due to jitter which is temporary variation of clock perio
 * Crosstalk = Clock shielding prevents crosstalk to nearby nets by breaking the coupling capacitance between the victim (clock net) and aggressor (nets near the clock net), the shield might be connected to VDD or ground since those will not switch. Shielding can also be done on critical data nets.
 ![Image](https://github.com/srsapireddy/Images/blob/main/227.png?raw=true)
 
+### Run CTS using Triton CTS
+Overwriting Verilog file
+![Image](https://github.com/srsapireddy/Images/blob/main/228.png?raw=true)
+We always have a tradeoff between timing, power, and area. 
+Then all steps from synthesis to placement.
+Then run `run_cts`
+For each stage, we need to check the quality of the results. Lowering the value of qor degraded the results. Higher values produce smaller runtimes but worst qor.
+In the CTS stage, clock buffers get added. This will modify our netlist. After running CTS, we get a new .v file in the synthesis folder.
+![Image](https://github.com/srsapireddy/Images/blob/main/229.png?raw=true)
+CTS variables.
+
+Verify CTS runs
+CTS procs: where the command gets to run from.
+![Image](https://github.com/srsapireddy/Images/blob/main/230.png?raw=true)
+or_cts.tcl file contents. Where the CTS commends gets executed
+![Image](https://github.com/srsapireddy/Images/blob/main/231.png?raw=true)
+Checking procs in openlane tool:
+![Image](https://github.com/srsapireddy/Images/blob/main/232.png?raw=true)
+
+
+
+
+
+
  
  
 
