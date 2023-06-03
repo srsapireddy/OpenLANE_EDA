@@ -862,7 +862,7 @@ SU = Setup uncertainty due to jitter which is temporary variation of clock perio
 * The delay of any cell is a function of input slew (input transition) and output load. More the values, more the delay.
 * Optimizing the fanout value:
 * Set parameter for fanout:
- 
+![Image](https://github.com/srsapireddy/Images/blob/main/223.png?raw=true)
 * Then run synthesis, floorplan, and placement to check slack.
 * Commands
   - report_net -connections _02682_
