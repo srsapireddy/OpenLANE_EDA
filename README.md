@@ -823,10 +823,10 @@ We have varying input transitions at the input of the buffer and varying output 
 ### Fixing Slack
 SYNTH_BUFFERING: Find any high fanout nets. We want high fanout nets to be buffers.
 SYNTH_SIZING: Upsizing or downsizing a buffer based on delay strategy.
-SYNTH_DRIVING_CELL: Cell that drives the input port.
-![Image](https://github.com/srsapireddy/Images/blob/main/211.png?raw=true)
+SYNTH_DRIVING_CELL: Cell that drives the input port. </br>
+![Image](https://github.com/srsapireddy/Images/blob/main/211.png?raw=true)  </br>
 Settings to reduce tns and wns.
-Run synthesis, floorplan and placement steps.
+Run synthesis, floorplan and placement steps.  </br>
 ![Image](https://github.com/srsapireddy/Images/blob/main/212.png?raw=true)
 ![Image](https://github.com/srsapireddy/Images/blob/main/213.png?raw=true)
  
@@ -834,7 +834,7 @@ Check if vsd inverter is added after floorplan stage.
 Check layout after placement stage
 ![Image](https://github.com/srsapireddy/Images/blob/main/214.png?raw=true)
 ![Image](https://github.com/srsapireddy/Images/blob/main/215.png?raw=true)
-![Image](https://github.com/srsapireddy/Images/blob/main/216.png?raw=true)
+![Image](https://github.com/srsapireddy/Images/blob/main/216.png?raw=true)  </br>
 We can see that vsd inverter is inserted after placement stage.
 Abatement between the cells takes place to share power and ground between the cells.
 ![Image](https://github.com/srsapireddy/Images/blob/main/217.png?raw=true)
