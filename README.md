@@ -715,6 +715,52 @@ For 80%
 4. rise cell delay (propagation delay): the time difference between the  50% of the output
 We need to use the layout and create a LEF file and use this file in openlane and plug it in PICORV 32 core.
 
+### MAGIC VLSI Layout Tool (efabless): http://opencircuitdesign.com/
+
+### Downloading required files:
+![Image](https://github.com/srsapireddy/Images/blob/main/174.png?raw=true)
+* .mag files are layout files in MAGIC format.
+* .magicrc files are the startup file for the MAGIC. It tells where to find the technology files.
+
+### Opening MAGIC tool:
+![Image](https://github.com/srsapireddy/Images/blob/main/175.png?raw=true)
+* Open met3.mag file using MAGIC:
+![Image](https://github.com/srsapireddy/Images/blob/main/176.png?raw=true)
+* Reference: https://skywater-pdk.readthedocs.io/en/main/rules/periphery.html#m3
+* Click: to redirect to the console window.
+![Image](https://github.com/srsapireddy/Images/blob/main/177.png?raw=true)
+* By doing this we can see the rules which are violated.
+![Image](https://github.com/srsapireddy/Images/blob/main/178.png?raw=true)
+* Open file poly.mag
+![Image](https://github.com/srsapireddy/Images/blob/main/179.png?raw=true)
+* Considering poly.9
+* Poly resistor spacing to poly or spacing (no overlap) to diff/tap 0.480 µm
+* Reference: https://skywater-pdk.readthedocs.io/en/main/rules/periphery.html#poly
+
+![Image](https://github.com/srsapireddy/Images/blob/main/180.png?raw=true)
+* To check the layer type
+![Image](https://github.com/srsapireddy/Images/blob/main/181.png?raw=true)
+* Checking rule violation
+
+![Image](https://github.com/srsapireddy/Images/blob/main/182.png?raw=true)
+![Image](https://github.com/srsapireddy/Images/blob/main/183.png?raw=true)
+* DRC section starts on 4072 line
+![Image](https://github.com/srsapireddy/Images/blob/main/184.png?raw=true)
+* Search for poly rules
+![Image](https://github.com/srsapireddy/Images/blob/main/185.png?raw=true)
+* Adding spacing to add whats missing in the file
+* Changing all the contact rules pertaining to poly
+![Image](https://github.com/srsapireddy/Images/blob/main/186.png?raw=true)
+![Image](https://github.com/srsapireddy/Images/blob/main/187.png?raw=true)
+![Image](https://github.com/srsapireddy/Images/blob/main/188.png?raw=true)
+ 
+
+ 
+
+ 
+
+
+
 
 
 
