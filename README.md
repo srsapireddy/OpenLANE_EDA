@@ -731,14 +731,14 @@ We need to use the layout and create a LEF file and use this file in openlane an
 ![Image](https://github.com/srsapireddy/Images/blob/main/177.png?raw=true)
 * By doing this we can see the rules which are violated.
 ![Image](https://github.com/srsapireddy/Images/blob/main/178.png?raw=true)
-* Open file poly.mag
+* Open file poly.mag </br>
 ![Image](https://github.com/srsapireddy/Images/blob/main/179.png?raw=true)
 * Considering poly.9
 * Poly resistor spacing to poly or spacing (no overlap) to diff/tap 0.480 µm
 * Reference: https://skywater-pdk.readthedocs.io/en/main/rules/periphery.html#poly
 
 ![Image](https://github.com/srsapireddy/Images/blob/main/180.png?raw=true)
-* To check the layer type
+* To check the layer type </br>
 ![Image](https://github.com/srsapireddy/Images/blob/main/181.png?raw=true)
 * Checking rule violation
 
@@ -746,7 +746,7 @@ We need to use the layout and create a LEF file and use this file in openlane an
 ![Image](https://github.com/srsapireddy/Images/blob/main/183.png?raw=true)
 * DRC section starts on 4072 line
 ![Image](https://github.com/srsapireddy/Images/blob/main/184.png?raw=true)
-* Search for poly rules
+* Search for poly rules </br>
 ![Image](https://github.com/srsapireddy/Images/blob/main/185.png?raw=true)
 * Adding spacing to add whats missing in the file
 * Changing all the contact rules pertaining to poly
