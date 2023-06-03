@@ -753,6 +753,59 @@ We need to use the layout and create a LEF file and use this file in openlane an
 ![Image](https://github.com/srsapireddy/Images/blob/main/186.png?raw=true)
 ![Image](https://github.com/srsapireddy/Images/blob/main/187.png?raw=true)
 ![Image](https://github.com/srsapireddy/Images/blob/main/188.png?raw=true)
+
+DAY 4
+### Lab steps to convert grid info to track information
+* Open inverter mag file
+![Image](https://github.com/srsapireddy/Images/blob/main/189.png?raw=true)
+* LEF file have the information about the input, power, and ground ports.
+* We need to extract LEF file from the .mag file.
+1.The input port and output port must lie on the vertical and horizontal tracks.
+2.Width of the standard cell must be in odd multiples of the track pitch.
+3.Height should be in the order of vertical pitch.
+* What is a track?
+  - Tracks are used during the routing stage. Routes can go over the tracks. Routes are the metal traces. PnR is an automated flow. We need to specify where our routes are to go. Tracks give that specification. Using these tracks, PnR can route the metal layers.
+![Image](https://github.com/srsapireddy/Images/blob/main/190.png?raw=true)
+* Press g to get the grid view.
+![Image](https://github.com/srsapireddy/Images/blob/main/191.png?raw=true)
+* Input A and output Y are on the horizontal and vertical tracks as shown in figure. This ensures that the route can reach that port for X and Y directions.
+![Image](https://github.com/srsapireddy/Images/blob/main/192.png?raw=true)
+
+### Convert magic layout to std cell LEF
+* The width of the standard cell should be in the odd multiples of the X-pitch.
+* Port information is required only when we need to extract the LEF file. When we extract the LEF file, these ports are defined as pins of the macro.
+* Converting labels to ports:
+![Image](https://github.com/srsapireddy/Images/blob/main/193.png?raw=true)
+* How does the tool know A is input and Y is an output port?
+* We use port class and port use attributes.
+* Once these parameters are set, we can extract the LEF file from a cell/ macro.
+* Before extracting the LEF, we need to give the cell a custom name.
+![Image](https://github.com/srsapireddy/Images/blob/main/194.png?raw=true)
+![Image](https://github.com/srsapireddy/Images/blob/main/195.png?raw=true)
+ 
+* Creating a LEF file
+![Image](https://github.com/srsapireddy/Images/blob/main/196.png?raw=true)
+![Image](https://github.com/srsapireddy/Images/blob/main/197.png?raw=true)
+
+### Plugging this LEF file into PICORV32A – move the LEF file into src folder
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
  
 
  
