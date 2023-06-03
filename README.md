@@ -809,7 +809,22 @@ DAY 4
 ![Image](https://github.com/srsapireddy/Images/blob/main/205.png?raw=true)
 * Here we have spitted the load of 4 Flops using 2 buffers. And the load of two buffers is given to the first buffer. We need to swap the buffers to gates, as shown. This technique is called clock gating. 
 We have varying input transitions at the input of the buffer and varying output load at the output of any buffer. So, we have a variety of delays. To solve this, we have delay tables.
-![Image](https://github.com/srsapireddy/Images/blob/main/206.png?raw=true)
+![Image](https://github.com/srsapireddy/Images/blob/main/206.png?raw=true) </br>
+
+![Image](https://github.com/srsapireddy/Images/blob/main/207.png?raw=true)
+* There are advantages of these AND gates in clock tree to reduce the power dissipation.
+![Image](https://github.com/srsapireddy/Images/blob/main/208.png?raw=true)
+* Here we have spitted the load of 4 Flops using 2 buffers. And the load of two buffers is given to the first buffer. We need to swap the buffers to gates, as shown. This technique is called clock gating. 
+* We have varying input transitions at the input of the buffer and varying output load at the output of any buffer. So, we have a variety of delays. To solve this, we have delay tables.
+![Image](https://github.com/srsapireddy/Images/blob/main/209.png?raw=true)
+* Here x = W/L of PMOS and NMOS. If we increase the PMOS size and NMOS size, we are reducing the resistance. By this, we are varying the RC constant. 
+* ![Image](https://github.com/srsapireddy/Images/blob/main/210.png?raw=true)
+* ![Image](https://github.com/srsapireddy/Images/blob/main/211.png?raw=true)
+ 
+ 
+
+
+
 
 
 
