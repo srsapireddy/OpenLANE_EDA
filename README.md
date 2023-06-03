@@ -913,6 +913,21 @@ or_cts.tcl file contents. Where the CTS commends gets executed
 Checking procs in openlane tool:
 ![Image](https://github.com/srsapireddy/Images/blob/main/232.png?raw=true)
 
+### Setup Timing Analysis (Real Clocks)
+* Setup and hold analysis with the real clock will now include clock buffer delays:
+
+* In setup analysis, the point is that the data must arrive first before the clock rising edge to latch that data properly. Setup violation happens when the path is slow. This is affected by parameters such as combinational delay, clock buffer delay, period, setup time, and setup uncertainty (jitter).
+
+* Hold analysis is the delay that the MUX2 model inside the flip-flop needs to move the data to the outside. This is when the launch flop must hold the data before it reaches the capture flop. Hold analysis is done on the same rising clock edge for launch and capture flop, unlike setup analysis, which spans between two rising clock edges. Hold violation happens when the path is too fast. This is affected by parameters such as combinational delay, clock buffer delays, and hold time. (Time period and setup uncertainty does not matter since launch and capture flops will receive the same rising clock edges for hold analysis). FF2 holds the data until it sends the data outside. It should not receive any data at this time.
+![Image](https://github.com/srsapireddy/Images/blob/main/233.png?raw=true)
+* The goal is to have a positive slack on setups and hold analysis.
+![Image](https://github.com/srsapireddy/Images/blob/main/234.png?raw=true)
+ 
+* Skew = |delta 1 – delta 2|
+
+
+
+
 
 
 
