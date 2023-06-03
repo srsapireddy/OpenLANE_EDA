@@ -788,6 +788,31 @@ DAY 4
 ![Image](https://github.com/srsapireddy/Images/blob/main/197.png?raw=true)
 
 ### Plugging this LEF file into PICORV32A – move the LEF file into src folder
+![Image](https://github.com/srsapireddy/Images/blob/main/198.png?raw=true)
+* We need to have a library which has our cell definition for synthesis.
+* Here the tool should map vsdinverter cell to the synthesis flow.
+![Image](https://github.com/srsapireddy/Images/blob/main/199.png?raw=true)
+![Image](https://github.com/srsapireddy/Images/blob/main/200.png?raw=true)
+
+* We need to modify our config.tcl file next.
+![Image](https://github.com/srsapireddy/Images/blob/main/201.png?raw=true)
+* Run openlane flow
+![Image](https://github.com/srsapireddy/Images/blob/main/202.png?raw=true)
+
+* Then `run_synthesis`
+![Image](https://github.com/srsapireddy/Images/blob/main/203.png?raw=true)
+* We can see that 1554 instances of our custom cell is added to the picorv32a design.
+
+### Introduction to delay tables
+![Image](https://github.com/srsapireddy/Images/blob/main/204.png?raw=true)
+* There are advantages of these AND gates in clock tree to reduce the power dissipation.
+![Image](https://github.com/srsapireddy/Images/blob/main/205.png?raw=true)
+* Here we have spitted the load of 4 Flops using 2 buffers. And the load of two buffers is given to the first buffer. We need to swap the buffers to gates, as shown. This technique is called clock gating. 
+We have varying input transitions at the input of the buffer and varying output load at the output of any buffer. So, we have a variety of delays. To solve this, we have delay tables.
+![Image](https://github.com/srsapireddy/Images/blob/main/206.png?raw=true)
+
+
+
 
 
 
