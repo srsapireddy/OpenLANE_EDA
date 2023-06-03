@@ -857,6 +857,22 @@ SU = Setup uncertainty due to jitter which is temporary variation of clock perio
 ![Image](https://github.com/srsapireddy/Images/blob/main/221.png?raw=true)
 ![Image](https://github.com/srsapireddy/Images/blob/main/222.png?raw=true)
 
+### Optimize synthesis to reduce setup violations
+* Hold analysis have significance after CTS.
+* The delay of any cell is a function of input slew (input transition) and output load. More the values, more the delay.
+* Optimizing the fanout value:
+* Set parameter for fanout:
+ 
+* Then run synthesis, floorplan, and placement to check slack.
+* Commands
+  - report_net -connections _02682_
+  - replace_cell _41882_ sky130_fd_sc_hd__buf_4
+  - report_checks -fields {cap slew nets} -digits 4
+  - report_checks -from _18671_ -to _18739_ -fields {cap slew nets} -digits 4
+  - report_wns
+  - report_tns
+  - report_worst_slack -max
+  - write_verilog designs/picorv32a/runs/RUN_2022.09.14_05.18.35/results/synthesis/picorv32.v
 
  
  
