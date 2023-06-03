@@ -839,6 +839,33 @@ We can see that vsd inverter is inserted after placement stage.
 Abatement between the cells takes place to share power and ground between the cells.
 ![Image](https://github.com/srsapireddy/Images/blob/main/217.png?raw=true)
 
+### Static Timing Analysis (With Ideal Clocks)
+* In ideal clock network clock tree is not yet built.
+* Identifying combinational path:
+* Pre-layout STA will not yet include effects of clock buffers and net-delay due to RC parasitics (wire delay will be derived from PDK library wire model).
+![Image](https://github.com/srsapireddy/Images/blob/main/218.png?raw=true)
+* Setup timing analysis equation is:
+
+Θ < T - S - SU
+Θ = Combinational delay which includes clk to Q delay of launch flop and internal propagation delay of all gates between launch and capture flop
+T = Time period, also called the required time
+S = Setup time. As demonstrated below, signal must settle on the middle (input of Mux 2) before clock transits to 1 so the delay due to Mux 1 must be considered, this delay is the setup time.
+![Image](https://github.com/srsapireddy/Images/blob/main/219.png?raw=true)
+SU = Setup uncertainty due to jitter which is temporary variation of clock period. This is due to non-idealities of PLL/clock source.
+
+![Image](https://github.com/srsapireddy/Images/blob/main/220.png?raw=true)
+![Image](https://github.com/srsapireddy/Images/blob/main/221.png?raw=true)
+![Image](https://github.com/srsapireddy/Images/blob/main/222.png?raw=true)
+ 
+ 
+ 
+
+
+
+
+
+
+
 
 
 
