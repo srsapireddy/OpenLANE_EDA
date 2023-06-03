@@ -756,7 +756,7 @@ We need to use the layout and create a LEF file and use this file in openlane an
 
 DAY 4
 ### Lab steps to convert grid info to track information
-* Open inverter mag file
+* Open inverter mag file </br>
 ![Image](https://github.com/srsapireddy/Images/blob/main/189.png?raw=true)
 * LEF file have the information about the input, power, and ground ports.
 * We need to extract LEF file from the .mag file.
@@ -783,7 +783,7 @@ DAY 4
 ![Image](https://github.com/srsapireddy/Images/blob/main/194.png?raw=true)
 ![Image](https://github.com/srsapireddy/Images/blob/main/195.png?raw=true)
  
-* Creating a LEF file
+* Creating a LEF file </br>
 ![Image](https://github.com/srsapireddy/Images/blob/main/196.png?raw=true)
 ![Image](https://github.com/srsapireddy/Images/blob/main/197.png?raw=true)
 
