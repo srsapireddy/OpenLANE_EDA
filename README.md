@@ -874,7 +874,26 @@ SU = Setup uncertainty due to jitter which is temporary variation of clock perio
   - report_worst_slack -max
   - write_verilog designs/picorv32a/runs/RUN_2022.09.14_05.18.35/results/synthesis/picorv32.v
 
- 
+### Clock Tree Synthesis
+![Image](https://github.com/srsapireddy/Images/blob/main/224.png?raw=true)
+* H-Tree takes a particular clock route and calculates the distance from clk to all the endpoints. Then come to the midpoint of the tree and build a tree from that point. Using this strategy, the clk reaches to flops almost simultaneously. The skew value will be close to zero.
+* There will be a huge number of capacitances in clk paths. Due to this, there will be a huge transition problem. The solution to this is to add repeaters.
+![Image](https://github.com/srsapireddy/Images/blob/main/224.png?raw=true)
+* The repeaters we use for clock and data paths are different. Here the repeaters have equal rise and fall times.
+![Image](https://github.com/srsapireddy/Images/blob/main/225.png?raw=true)
+
+###Timing Analysis with Real Clock
+* Clock Net Shielding:  Clock nets are considered critical nets in the design. By shielding, we protect the clock nets from the outside world. 
+* Glitch: Any activity in one wire will impact the net without shielding because of the coupling capacitance.
+![Image](https://github.com/srsapireddy/Images/blob/main/226.png?raw=true)
+* Shielding protect the design from glitches. Shielding will be connected with VDD or GND so that there are no glitches and crosstalk.
+* There are three parameters that we need to consider when building a clock tree:
+
+* Clock Skew = In order to have minimum skew between clock endpoints, clock tree is used. This results in equal wirelength (thus equal latency/delay) for every path of the clock.
+* Clock Slew = Due to wire resistance and capacitance of the clock nets, there will be slew in signal at the clock endpoint where signal is not the same with the original input clock signal anymore. This can be solved by clock buffers. Clock buffer differs in regular cell buffers since clock buffers has equal rise and fall time.
+* Crosstalk = Clock shielding prevents crosstalk to nearby nets by breaking the coupling capacitance between the victim (clock net) and aggressor (nets near the clock net), the shield might be connected to VDD or ground since those will not switch. Shielding can also be done on critical data nets.
+![Image](https://github.com/srsapireddy/Images/blob/main/227.png?raw=true)
+
  
  
 
