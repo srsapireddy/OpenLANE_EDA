@@ -969,8 +969,8 @@ Checking procs in openlane tool:
 * Reading typical lib (screenshot with errors)
 ![Image](https://github.com/srsapireddy/Images/blob/main/247.png?raw=true)
 * Slack for typical corner: </br>
-![Image](https://github.com/srsapireddy/Images/blob/main/248.png?raw=true)
-![Image](https://github.com/srsapireddy/Images/blob/main/249.png?raw=true)
+![Image](https://github.com/srsapireddy/Images/blob/main/248.png?raw=true) </br>
+![Image](https://github.com/srsapireddy/Images/blob/main/249.png?raw=true) </br>
 * Both are met.
 * When openlane is building the CTS, it will try to meet the skew value from left to right clkbuf_1 to clkbuf_8. We want the skew values to be 10% of the clock period.
 * If we want to replace any element in tcl. `lreplace ::env(CTS_CLKBUFFER_LIST) 0 0`. This command removes the clock buffer 1. lreplace does not modify the list.
@@ -990,26 +990,26 @@ DAY 5
 * Routing means finding the best possible way to connect two components/cells.
 * Most of the routing tools are based on Lee's Algorithm. For more info on the algorithm, please refer here.
 * Routes with a minimum number of bends are preferred by the tool.
-* Two stages of Routing: Global and Detailed Routing.
+* Two stages of Routing: Global and Detailed Routing. </br>
 ![Image](https://github.com/srsapireddy/Images/blob/main/250.png?raw=true)
 
 ### DRC
 * There should be a minimum distance between wires when we route wires.
-* Rule: The optical wavelength of the wire is so small that the minimum width of the wire should be a minimum value. Wire width should be at least the minimum value. 
+* Rule: The optical wavelength of the wire is so small that the minimum width of the wire should be a minimum value. Wire width should be at least the minimum value.  </br>
 ![Image](https://github.com/srsapireddy/Images/blob/main/251.png?raw=true)
-* Rule: The minimum pitch between two wires. The center-to-center distance between two wires. What we see on the mask, we see the patterns on the silicon.
+* Rule: The minimum pitch between two wires. The center-to-center distance between two wires. What we see on the mask, we see the patterns on the silicon. </br>
 ![Image](https://github.com/srsapireddy/Images/blob/main/252.png?raw=true)
-* Rule: Minimum spacing between two wires at least this much. It can be more than this but it cant be less than this.
+* Rule: Minimum spacing between two wires at least this much. It can be more than this but it cant be less than this. </br>
 ![Image](https://github.com/srsapireddy/Images/blob/main/253.png?raw=true)
-* Rule:
+* Rule: </br>
 ![Image](https://github.com/srsapireddy/Images/blob/main/254.png?raw=true) 
 * This might lead to functionality failure.
-* Solution: Consider the two nets are of metal 2. One more layer will be introduced on top of it, which is metal 3. Upper metals are wider than lower metals. 
+* Solution: Consider the two nets are of metal 2. One more layer will be introduced on top of it, which is metal 3. Upper metals are wider than lower metals. </br>
 ![Image](https://github.com/srsapireddy/Images/blob/main/255.png?raw=true)
-* Via width should be some minimum value. To connect two different metal layers.
+* Via width should be some minimum value. To connect two different metal layers. </br>
 ![Image](https://github.com/srsapireddy/Images/blob/main/256.png?raw=true)
 * Minimum spacing between two vias rule.
-* Then we need to do parasitic extraction to get the resistance and capacitance values of the wires.
+* Then we need to do parasitic extraction to get the resistance and capacitance values of the wires. </br>
 ![Image](https://github.com/srsapireddy/Images/blob/main/257.png?raw=true)
 
 ### Routing Stage and TritonRoute:
@@ -1019,12 +1019,12 @@ DAY 5
 * Detailed Routing - Uses the global routing guide to connect the pins with the least amount of wire and bends. The tool used is TritonRoute.
 
 ### Triton Route
-![Image](https://github.com/srsapireddy/Images/blob/main/258.png?raw=true)
-![Image](https://github.com/srsapireddy/Images/blob/main/259.png?raw=true)
-![Image](https://github.com/srsapireddy/Images/blob/main/260.png?raw=true)
+![Image](https://github.com/srsapireddy/Images/blob/main/258.png?raw=true) </br>
+![Image](https://github.com/srsapireddy/Images/blob/main/259.png?raw=true) </br>
+![Image](https://github.com/srsapireddy/Images/blob/main/260.png?raw=true) </br>
 
 * Performs detailed routing and honors the pre-processed route guides (made by global route) and uses MILP-based (Mixed Integer Linear Programming algorithm) panel routing scheme(uses panel as the grid guide for routing) with intra-layer parallel routing (routing happens simultaneously in a single layer) and inter-layer sequential layer (routing starts from bottom metal layer to top metal layer sequentially and not simultaneously).
-* The honors preferred the direction of a layer. Metal layer direction alternates (metal layer direction is specified in the LEF file, e.g., met1 Horizontal, met2 Vertical, etc.) to reduce overlapping wires between layers and reduce potential capacitance, which can degrade the signal.
+* The honors preferred the direction of a layer. Metal layer direction alternates (metal layer direction is specified in the LEF file, e.g., met1 Horizontal, met2 Vertical, etc.) to reduce overlapping wires between layers and reduce potential capacitance, which can degrade the signal. </br>
 ![Image](https://github.com/srsapireddy/Images/blob/main/261.png?raw=true)
 
 ### Acknowledgements
