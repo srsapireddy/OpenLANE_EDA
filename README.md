@@ -1035,7 +1035,7 @@ DAY 5
 ![Image](https://github.com/srsapireddy/Images/blob/main/263.png?raw=true)
 * To run Power Distribution Network: run `gen_pdn`
 * Then run `run_routing`
-* This will do both global and detailed routing, taking multiple optimization iterations until the DRC violation is reduced to zero.
+* This will do both global and detailed routing, taking multiple optimization iterations until the DRC violation is reduced to zero. </br>
 ![Image](https://github.com/srsapireddy/Images/blob/main/264.png?raw=true)
 
 ### Checking Layout in MAGIC:
