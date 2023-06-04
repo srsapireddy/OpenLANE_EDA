@@ -925,6 +925,55 @@ Checking procs in openlane tool:
  
 * Skew = |delta 1 – delta 2|
 
+### Analyze timing with a real clock using OpenSTA
+* Run `openroad` to do timing analysis. OpenSTA is integrated inside the openroad.
+* Here we need to read lef and def files to create db.
+![Image](https://github.com/srsapireddy/Images/blob/main/235.png?raw=true)
+![Image](https://github.com/srsapireddy/Images/blob/main/236.png?raw=true)
+ 
+* Create a db
+![Image](https://github.com/srsapireddy/Images/blob/main/237.png?raw=true)
+* Check if db is created
+![Image](https://github.com/srsapireddy/Images/blob/main/238.png?raw=true)
+* Read db , Verilog, and library files
+![Image](https://github.com/srsapireddy/Images/blob/main/239.png?raw=true)
+* read_liberty $::env(LIB_SYNTH_COMPLETE) // we are not using LIB_MAX & LIB_MIN because we ran our cts for one corner that is the typical corner.
+![Image](https://github.com/srsapireddy/Images/blob/main/240.png?raw=true)
+* Read sdc file
+![Image](https://github.com/srsapireddy/Images/blob/main/241.png?raw=true)
+### SDC FILE UPDATED
+![Image](https://github.com/srsapireddy/Images/blob/main/242.png?raw=true)
+* PATH: picorv32a/src/my_base.sdc
+* To calculate actual cell delay in clock path:
+![Image](https://github.com/srsapireddy/Images/blob/main/243.png?raw=true)
+* Check Slack:
+* Hold Slack:
+![Image](https://github.com/srsapireddy/Images/blob/main/244.png?raw=true)
+* Setup Slack:
+![Image](https://github.com/srsapireddy/Images/blob/main/245.png?raw=true)
+* We have built the clock tree for typical but analyzing for min_max corners.
+* Exit from the openroad
+* Here we need to include the typical library for typical analysis.
+![Image](https://github.com/srsapireddy/Images/blob/main/246.png?raw=true)
+* Reading typical lib (screenshot with errors)
+![Image](https://github.com/srsapireddy/Images/blob/main/247.png?raw=true)
+* Slack for typical corner:
+![Image](https://github.com/srsapireddy/Images/blob/main/248.png?raw=true)
+![Image](https://github.com/srsapireddy/Images/blob/main/249.png?raw=true)
+* Both are met.
+* When openlane is building the CTS, it will try to meet the skew value from left to right clkbuf_1 to clkbuf_8. We want the skew values to be 10% of the clock period.
+* If we want to replace any element in tcl. `lreplace ::env(CTS_CLKBUFFER_LIST) 0 0`. This command removes the clock buffer 1. lreplace does not modify the list.
+* To modify the list, we have to `set ::env(CTS_CLKBUFFER_LIST) [lreplace ::env(CTS_CLKBUFFER_LIST) 0 0]`
+* The check `echo ::env(CTS_CLKBUFFER_LIST) `
+* Then again, run `run_cts`
+* To kill the process: type `top` then ‘kill -9 process_id’
+* To check current def run `echo $::env(CURRENT_DEF)`
+* To set current def run ` echo $::env(CURRENT_DEF) path_to_current_def_file`
+* Then again, run `run_cts`
+* Then open openroad in openlane, create db, and follow the steps again with the updated db. But the area increased for the design.
+* Check skew: `report_clock_skew -hold/setup` 
+* To insert back buffer:  `set ::env(CTS_CLKBUFFER_LIST) [linsert ::env(CTS_CLKBUFFER_LIST) 0 sky_130_fd_sc_hd___clkbuf_1]`
+
 
 
 
