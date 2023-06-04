@@ -931,25 +931,25 @@ Checking procs in openlane tool:
 ![Image](https://github.com/srsapireddy/Images/blob/main/235.png?raw=true)
 ![Image](https://github.com/srsapireddy/Images/blob/main/236.png?raw=true)
  
-* Create a db
+* Create a db </br>
 ![Image](https://github.com/srsapireddy/Images/blob/main/237.png?raw=true)
-* Check if db is created
+* Check if db is created  </br>
 ![Image](https://github.com/srsapireddy/Images/blob/main/238.png?raw=true)
 * Read db , Verilog, and library files
 ![Image](https://github.com/srsapireddy/Images/blob/main/239.png?raw=true)
-* read_liberty $::env(LIB_SYNTH_COMPLETE) // we are not using LIB_MAX & LIB_MIN because we ran our cts for one corner that is the typical corner.
+* read_liberty $::env(LIB_SYNTH_COMPLETE) // we are not using LIB_MAX & LIB_MIN because we ran our cts for one corner that is the typical corner. </br>
 ![Image](https://github.com/srsapireddy/Images/blob/main/240.png?raw=true)
-* Read sdc file
+* Read sdc file </br>
 ![Image](https://github.com/srsapireddy/Images/blob/main/241.png?raw=true)
 ### SDC FILE UPDATED
 ![Image](https://github.com/srsapireddy/Images/blob/main/242.png?raw=true)
 * PATH: picorv32a/src/my_base.sdc
 * To calculate actual cell delay in clock path:
 ![Image](https://github.com/srsapireddy/Images/blob/main/243.png?raw=true)
-* Check Slack:
-* Hold Slack:
+* Check Slack: </br>
+* Hold Slack: </br>
 ![Image](https://github.com/srsapireddy/Images/blob/main/244.png?raw=true)
-* Setup Slack:
+* Setup Slack: </br>
 ![Image](https://github.com/srsapireddy/Images/blob/main/245.png?raw=true)
 * We have built the clock tree for typical but analyzing for min_max corners.
 * Exit from the openroad
@@ -957,7 +957,7 @@ Checking procs in openlane tool:
 ![Image](https://github.com/srsapireddy/Images/blob/main/246.png?raw=true)
 * Reading typical lib (screenshot with errors)
 ![Image](https://github.com/srsapireddy/Images/blob/main/247.png?raw=true)
-* Slack for typical corner:
+* Slack for typical corner: </br>
 ![Image](https://github.com/srsapireddy/Images/blob/main/248.png?raw=true)
 ![Image](https://github.com/srsapireddy/Images/blob/main/249.png?raw=true)
 * Both are met.
