@@ -1028,7 +1028,7 @@ DAY 5
 ![Image](https://github.com/srsapireddy/Images/blob/main/261.png?raw=true) </br>
 
 ### Power Distribution Networking and Routing
-* The power and ground rails have a pitch of 2.72um because the customized inverter cell has a height of 2.72, or else the power and ground rails will not be able to power up the cell. Looking at the LEF file `runs/[date]/tmp/merged.lef`, all the cells have a height of 2.72um with a difference in width.
+* The power and ground rails have a pitch of 2.72um because the customized inverter cell has a height of 2.72, or else the power and ground rails will not be able to power up the cell. Looking at the LEF file `runs/[date]/tmp/merged.lef`, all the cells have a height of 2.72um with a difference in width. </br>
 ![Image](https://github.com/srsapireddy/Images/blob/main/262.png?raw=true)
 * The power and ground flow from power/ground pads to power/ground ring to power/ground straps to power/ground rails.
 * To run from the previous day: `prep -design picorv32a -tag date`
