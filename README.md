@@ -1058,14 +1058,6 @@ DAY 5
 * Finally, run: `run_magic`. This will create the GDS file under: `runs/[date]/results/signoff/picorv32.gds`
 ![Image](https://github.com/srsapireddy/Images/blob/main/269.png?raw=true) 
 
-
-
-
- 
-
-
-
-
 ### Acknowledgements
 Kunal Ghosh - Co-founder of VSD </br>
 Nickson Jose - Workshop Instructor
