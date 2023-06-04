@@ -1049,13 +1049,13 @@ DAY 5
 * SPEF: Standard Parasitic Extraction Format
 * Multi-corner STA will be done with the extracted SPEF.
 * SPEF extraction and multi-corner STA will be done on all three corners (min, max, typical).
-* The extracted SPEF can be located under `runs/[date]/results/routing` and the STA log files under `runs/[date]/logs/signoff`.
+* The extracted SPEF can be located under `runs/[date]/results/routing`
 
 * Timing ECO should be followed to reduce slack to desired level.
 ![Image](https://github.com/srsapireddy/Images/blob/main/267.png?raw=true)
 ![Image](https://github.com/srsapireddy/Images/blob/main/268.png?raw=true)
 
-* Finally, run: `run_magic`. This will create the GDS file under: `runs/[date]/results/signoff/picorv32.gds`
+* Finally, run: `run_magic`. This will create the GDS file under: `runs/[date]/results/routing/picorv32.gds`
 ![Image](https://github.com/srsapireddy/Images/blob/main/269.png?raw=true) 
 
 ### Acknowledgements
