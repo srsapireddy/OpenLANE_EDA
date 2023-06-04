@@ -966,7 +966,7 @@ Checking procs in openlane tool:
 * Exit from the openroad
 * Here we need to include the typical library for typical analysis.
 ![Image](https://github.com/srsapireddy/Images/blob/main/246.png?raw=true) </br>
-* Reading typical lib (screenshot with errors) </br>
+* Reading typical lib (screenshot - USE SYNTH_COMPLETE OR SYNTH_TYPICAL variable) </br>
 ![Image](https://github.com/srsapireddy/Images/blob/main/247.png?raw=true) </br>
 * Slack for typical corner: </br>
 ![Image](https://github.com/srsapireddy/Images/blob/main/248.png?raw=true) </br>
