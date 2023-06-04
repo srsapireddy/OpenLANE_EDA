@@ -1041,7 +1041,7 @@ DAY 5
 ### Checking Layout in MAGIC:
 * power rail, ground rail, input net route and output net route for a cell: 
 ![Image](https://github.com/srsapireddy/Images/blob/main/265.png?raw=true)
-* Final Layout: magic -T /home/vsduser/Desktop/OpenLane/pdks/sky130A/libs.tech/magic/sky130A.tech lef read ../../tmp/merged.lef def read picorv32.def
+* Final Layout: magic -T /home/vsduser/Desktop/OpenLane/pdks/sky130A/libs.tech/magic/sky130A.tech lef read ../../tmp/merged.lef def read picorv32.def </br>
 ![Image](https://github.com/srsapireddy/Images/blob/main/266.png?raw=true)
  
 ### SPEF Extraction and GDSII Streaming:
