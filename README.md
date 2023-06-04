@@ -1011,7 +1011,22 @@ DAY 5
 * Minimum spacing between two vias rule.
 * Then we need to do parasitic extraction to get the resistance and capacitance values of the wires.
 ![Image](https://github.com/srsapireddy/Images/blob/main/257.png?raw=true)
- 
+
+### Routing Stage and TritonRoute:
+* OpenLane routing stage consists of two stages:
+
+* Global Routing - Form routing guides that can route all the nets. The tool used is FastRoute
+* Detailed Routing - Uses the global routing guide to connect the pins with the least amount of wire and bends. The tool used is TritonRoute.
+
+### Triton Route
+![Image](https://github.com/srsapireddy/Images/blob/main/258.png?raw=true)
+![Image](https://github.com/srsapireddy/Images/blob/main/259.png?raw=true)
+![Image](https://github.com/srsapireddy/Images/blob/main/260.png?raw=true)
+
+* Performs detailed routing and honors the pre-processed route guides (made by global route) and uses MILP-based (Mixed Integer Linear Programming algorithm) panel routing scheme(uses panel as the grid guide for routing) with intra-layer parallel routing (routing happens simultaneously in a single layer) and inter-layer sequential layer (routing starts from bottom metal layer to top metal layer sequentially and not simultaneously).
+* The honors preferred the direction of a layer. Metal layer direction alternates (metal layer direction is specified in the LEF file, e.g., met1 Horizontal, met2 Vertical, etc.) to reduce overlapping wires between layers and reduce potential capacitance, which can degrade the signal.
+![Image](https://github.com/srsapireddy/Images/blob/main/261.png?raw=true)
+
 ### Acknowledgements
 Kunal Ghosh - Co-founder of VSD </br>
 Nickson Jose - Workshop Instructor
