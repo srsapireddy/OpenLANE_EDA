@@ -106,6 +106,14 @@ Example: Stopwatch app
 * Timing Verification: 
   * STA – To make sure that all the timing constraints are met. And the circuit will run at a designated clock frequency.
 
+### Files of Physical Design:
+* Tech file: .tech contains the metal layer, connectivity between layers, DRC rules, and other definitions needed by Magic layout tool to view a single cell. </br>
+
+* LEF file: .lef is combination of tech lef (contains metal layer geometries) and cell lef (contains geometries for all cells in the standard cell library). This lef file does not contain the logic part of cells, only the footprint that is needed by the PnR tool. </br>
+
+* DEF file: .def is derived from LEF file and is used to transfer the design data from one EDA tool to another EDA tool and contains connectivity of cells of the design and is just a footprint (does not contain the logic part of cells) that the PnR needs. Each EDA tool to run will need to read first the LEF file runs/[date]/tmp/merged.nom.lef and the DEF file output of the previous stage's EDA tool (e.g. CTS EDA tool TritonCTS must first read DEF file from placement stage). So before running a stage, make sure the $::env(CURRENT_DEF) points to DEF file of previous stage or else there will be bunch of errors. </br>
+
+
 ### 2.3. Introduction to OpenLANE and Strive chipsets
 * OpenLANE started as an open-source flow for a true open-source tape-out experiment.
 * striVe is a family of open sourcing everything, including SoCs. (Open PDK, Open EDA, Open RTL)
@@ -1001,7 +1009,9 @@ DAY 5
 * Then we need to do parasitic extraction to get the resistance and capacitance values of the wires.
 ![Image](https://github.com/srsapireddy/Images/blob/main/257.png?raw=true)
  
-
+### Acknowledgements
+Kunal Ghosh - Co-founder of VSD </br>
+Nickson Jose - Workshop Instructor
 
 
 
