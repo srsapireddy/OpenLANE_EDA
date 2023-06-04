@@ -1027,6 +1027,45 @@ DAY 5
 * The honors preferred the direction of a layer. Metal layer direction alternates (metal layer direction is specified in the LEF file, e.g., met1 Horizontal, met2 Vertical, etc.) to reduce overlapping wires between layers and reduce potential capacitance, which can degrade the signal. </br>
 ![Image](https://github.com/srsapireddy/Images/blob/main/261.png?raw=true) </br>
 
+### Power Distribution Networking and Routing
+* The power and ground rails have a pitch of 2.72um because the customized inverter cell has a height of 2.72, or else the power and ground rails will not be able to power up the cell. Looking at the LEF file `runs/[date]/tmp/merged.lef`, all the cells have a height of 2.72um with a difference in width.
+![Image](https://github.com/srsapireddy/Images/blob/main/262.png?raw=true)
+* The power and ground flow from power/ground pads to power/ground ring to power/ground straps to power/ground rails.
+* To run from the previous day: `prep -design picorv32a -tag date`
+![Image](https://github.com/srsapireddy/Images/blob/main/263.png?raw=true)
+* To run Power Distribution Network: run `gen_pdn`
+* Then run `run_routing`
+* This will do both global and detailed routing, taking multiple optimization iterations until the DRC violation is reduced to zero.
+![Image](https://github.com/srsapireddy/Images/blob/main/264.png?raw=true)
+
+### Checking Layout in MAGIC:
+* power rail, ground rail, input net route and output net route for a cell: 
+![Image](https://github.com/srsapireddy/Images/blob/main/265.png?raw=true)
+* Final Layout: magic -T /home/vsduser/Desktop/OpenLane/pdks/sky130A/libs.tech/magic/sky130A.tech lef read ../../tmp/merged.lef def read picorv32.def
+![Image](https://github.com/srsapireddy/Images/blob/main/266.png?raw=true)
+ 
+### SPEF Extraction and GDSII Streaming:
+* For post-routing STA: `run_parasitics_sta`
+* SPEF: Standard Parasitic Extraction Format
+* Multi-corner STA will be done with the extracted SPEF.
+* SPEF extraction and multi-corner STA will be done on all three corners (min, max, typical).
+* The extracted SPEF can be located under `runs/[date]/results/routing` and the STA log files under `runs/[date]/logs/signoff`.
+
+* Timing ECO should be followed to reduce slack to desired level.
+![Image](https://github.com/srsapireddy/Images/blob/main/267.png?raw=true)
+![Image](https://github.com/srsapireddy/Images/blob/main/268.png?raw=true)
+
+* Finally, run: `run_magic`. This will create the GDS file under: `runs/[date]/results/signoff/picorv32.gds`
+![Image](https://github.com/srsapireddy/Images/blob/main/269.png?raw=true) 
+
+
+
+
+ 
+
+
+
+
 ### Acknowledgements
 Kunal Ghosh - Co-founder of VSD </br>
 Nickson Jose - Workshop Instructor
