@@ -974,6 +974,46 @@ Checking procs in openlane tool:
 * Check skew: `report_clock_skew -hold/setup` 
 * To insert back buffer:  `set ::env(CTS_CLKBUFFER_LIST) [linsert ::env(CTS_CLKBUFFER_LIST) 0 sky_130_fd_sc_hd___clkbuf_1]`
 
+DAY 5
+### Routing
+* Routing means finding the best possible way to connect two components/cells.
+* Most of the routing tools are based on Lee's Algorithm. For more info on the algorithm, please refer here.
+* Routes with a minimum number of bends are preferred by the tool.
+* Two stages of Routing: Global and Detailed Routing.
+![Image](https://github.com/srsapireddy/Images/blob/main/250.png?raw=true)
+
+### DRC
+* There should be a minimum distance between wires when we route wires.
+* Rule: The optical wavelength of the wire is so small that the minimum width of the wire should be a minimum value. Wire width should be at least the minimum value. 
+![Image](https://github.com/srsapireddy/Images/blob/main/251.png?raw=true)
+* Rule: The minimum pitch between two wires. The center-to-center distance between two wires. What we see on the mask, we see the patterns on the silicon.
+![Image](https://github.com/srsapireddy/Images/blob/main/252.png?raw=true)
+* Rule: Minimum spacing between two wires at least this much. It can be more than this but it cant be less than this.
+![Image](https://github.com/srsapireddy/Images/blob/main/253.png?raw=true)
+* Rule:
+![Image](https://github.com/srsapireddy/Images/blob/main/254.png?raw=true) 
+* This might lead to functionality failure.
+* Solution: Consider the two nets are of metal 2. One more layer will be introduced on top of it, which is metal 3. Upper metals are wider than lower metals. 
+![Image](https://github.com/srsapireddy/Images/blob/main/255.png?raw=true)
+* Via width should be some minimum value. To connect two different metal layers.
+![Image](https://github.com/srsapireddy/Images/blob/main/256.png?raw=true)
+* Minimum spacing between two vias rule.
+* Then we need to do parasitic extraction to get the resistance and capacitance values of the wires.
+![Image](https://github.com/srsapireddy/Images/blob/main/257.png?raw=true)
+ 
+
+
+
+
+
+
+ 
+
+
+
+
+
+
 
 
 
