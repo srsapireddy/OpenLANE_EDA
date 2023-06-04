@@ -939,8 +939,8 @@ Checking procs in openlane tool:
 ### Analyze timing with a real clock using OpenSTA
 * Run `openroad` to do timing analysis. OpenSTA is integrated inside the openroad.
 * Here we need to read lef and def files to create db.
-![Image](https://github.com/srsapireddy/Images/blob/main/235.png?raw=true)
-![Image](https://github.com/srsapireddy/Images/blob/main/236.png?raw=true)
+![Image](https://github.com/srsapireddy/Images/blob/main/235.png?raw=true) </br>
+![Image](https://github.com/srsapireddy/Images/blob/main/236.png?raw=true) </br>
  
 * Create a db </br>
 ![Image](https://github.com/srsapireddy/Images/blob/main/237.png?raw=true)
