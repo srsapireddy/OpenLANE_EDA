@@ -1,3 +1,6 @@
+# OpenLANE-Sky130-Physical-Design-Workshop
+* This is the compilation of my notes for the 5 Day Workshop: Advanced Physical Design using OpenLANE/Sky130. The goal is to cover the complete RTL2GDS flow using the open-source flow OpenLane with SKY130nm PDK.
+
 ## Day 1
 ### 1. How to Talk to Computers?
 ![package](https://github.com/srsapireddy/Images/blob/main/1.PNG?raw=true)
