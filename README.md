@@ -895,7 +895,7 @@ PATH:   </br>
   - report_wns
   - report_tns
   - report_worst_slack -max
-  - write_verilog designs/picorv32a/runs/RUN_2022.09.14_05.18.35/results/synthesis/picorv32.v
+  - write_verilog designs/picorv32a/runs/date/results/synthesis/picorv32.v
 
 ### Clock Tree Synthesis
 ![Image](https://github.com/srsapireddy/Images/blob/main/224.png?raw=true) </br>
