@@ -913,9 +913,9 @@ We can see that the setup slack is MET.
 pre_sta.conf file: </br>
 ![Image](https://github.com/srsapireddy/Images/blob/main/303.png?raw=true) </br>
 my_base.sdc file </br>
-![Image](https://github.com/srsapireddy/Images/blob/main/304.png?raw=true) </br>
-PATH:   </br>
 ![Image](https://github.com/srsapireddy/Images/blob/main/305.png?raw=true) </br>
+PATH:   </br>
+![Image](https://github.com/srsapireddy/Images/blob/main/304.png?raw=true) </br>
 
 ### Run CTS using Triton CTS
 Overwriting Verilog file </br>
