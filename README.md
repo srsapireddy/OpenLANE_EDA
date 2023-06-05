@@ -887,15 +887,15 @@ PATH:   </br>
 * Set parameter for fanout:
 ![Image](https://github.com/srsapireddy/Images/blob/main/223.png?raw=true) </br>
 * Then run synthesis, floorplan, and placement to check slack.
-* Commands
-  - report_net -connections _02682_
-  - replace_cell _41882_ sky130_fd_sc_hd__buf_4
-  - report_checks -fields {cap slew nets} -digits 4
-  - report_checks -from _18671_ -to _18739_ -fields {cap slew nets} -digits 4
-  - report_wns
-  - report_tns
-  - report_worst_slack -max
-  - write_verilog designs/picorv32a/runs/date/results/synthesis/picorv32.v
+* Commands:
+`report_net -connections _02682_` </br>
+`replace_cell _41882_ sky130_fd_sc_hd__buf_4` </br>
+`report_checks -fields {cap slew nets} -digits 4` </br>
+`report_checks -from _18671_ -to _18739_ -fields {cap slew nets} -digits 4` </br>
+`report_wns` </br>
+`report_tns` </br>
+`report_worst_slack -max` </br>
+`write_verilog designs/picorv32a/runs/date/results/synthesis/picorv32.v` </br>
 
 ### Clock Tree Synthesis
 ![Image](https://github.com/srsapireddy/Images/blob/main/224.png?raw=true) </br>
