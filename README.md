@@ -986,17 +986,17 @@ Checking procs in openlane tool:
 * Both are met.
 
 Commands:
-`openroad </br>
-write_db pico_cts.db </br>
-read_db pico_cts.db </br>
-read_verilog /openLANE_flow/designs/picorv32a/runs/03-07_11-25/results/synthesis/picorv32a.synthesis_cts.v </br>
-read_lef /openLANE_flow/designs/picorv32a/runs/03-07_11-25/tmp/merged.lef </br>
-read_def /openLANE_flow/designs/picorv32a/runs/03-07_11-25/results/cts/pico32a.cts.def </br>
-read_liberty $::env(LIB_SYNTH_COMPLETE) </br>
-link_design picorv32a </br>
-read_sdc /openLANE_flow/designs/picorv32a/src/my_base.sdc </br>
-set_propagated_clock (all_clocks) </br>
-report_checks -path_delay min_max -format full_clock_expanded -digits 4` </br>
+`openroad` </br>
+`write_db pico_cts.db` </br>
+`read_db pico_cts.db` </br>
+`read_verilog /openLANE_flow/designs/picorv32a/runs/03-07_11-25/results/synthesis/picorv32a.synthesis_cts.v` </br>
+`read_lef /openLANE_flow/designs/picorv32a/runs/03-07_11-25/tmp/merged.lef` </br>
+`read_def /openLANE_flow/designs/picorv32a/runs/03-07_11-25/results/cts/pico32a.cts.def` </br>
+`read_liberty $::env(LIB_SYNTH_COMPLETE)` </br>
+`link_design picorv32a` </br>
+`read_sdc /openLANE_flow/designs/picorv32a/src/my_base.sdc` </br>
+`set_propagated_clock (all_clocks)` </br>
+`report_checks -path_delay min_max -format full_clock_expanded -digits 4` </br>
 
 * When openlane is building the CTS, it will try to meet the skew value from left to right clkbuf_1 to clkbuf_8. We want the skew values to be 10% of the clock period.
 * If we want to replace any element in tcl. `lreplace ::env(CTS_CLKBUFFER_LIST) 0 0`. This command removes the clock buffer 1. lreplace does not modify the list.
