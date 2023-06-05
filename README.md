@@ -904,6 +904,20 @@ SU = Setup uncertainty due to jitter which is temporary variation of clock perio
 * Clock Slew = Due to wire resistance and capacitance of the clock nets, there will be slew in signal at the clock endpoint where signal is not the same with the original input clock signal anymore. This can be solved by clock buffers. Clock buffer differs in regular cell buffers since clock buffers has equal rise and fall time.
 * Crosstalk = Clock shielding prevents crosstalk to nearby nets by breaking the coupling capacitance between the victim (clock net) and aggressor (nets near the clock net), the shield might be connected to VDD or ground since those will not switch. Shielding can also be done on critical data nets.
 ![Image](https://github.com/srsapireddy/Images/blob/main/227.png?raw=true) </br>
+
+Checking Timing analysis with ideal clocks using openSTA Lab: </br>
+![Image](https://github.com/srsapireddy/Images/blob/main/300.png?raw=true) </br>
+![Image](https://github.com/srsapireddy/Images/blob/main/301.png?raw=true) </br>
+![Image](https://github.com/srsapireddy/Images/blob/main/302.png?raw=true) </br>
+We can see that the setup slack is MET.
+pre_sta.conf file: </br>
+![Image](https://github.com/srsapireddy/Images/blob/main/303.png?raw=true) </br>
+my_base.sdc file </br>
+![Image](https://github.com/srsapireddy/Images/blob/main/304.png?raw=true) </br>
+PATH:   </br>
+![Image](https://github.com/srsapireddy/Images/blob/main/305.png?raw=true) </br>
+
+
  
 ### Run CTS using Triton CTS
 Overwriting Verilog file </br>
