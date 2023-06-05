@@ -494,7 +494,7 @@ Steps:
 5.	Attach the necessary power sources.
 6.	Apply the stimulus.
 7.	Vary output load capacitance.
-8.	Provide necessary simulation commands.
+8.	Provide necessary simulation.
 9.	Feed in all these inputs through a configuration file to characterization software called GUNA.
 ![characterization_3](https://github.com/srsapireddy/Images/blob/main/110.png?raw=true) </br>
 * GUNA – Generates timing, noise, and power.libs
@@ -997,6 +997,19 @@ Commands:
 `read_sdc /openLANE_flow/designs/picorv32a/src/my_base.sdc` </br>
 `set_propagated_clock (all_clocks)` </br>
 `report_checks -path_delay min_max -format full_clock_expanded -digits 4` </br>
+
+Checking Timing analysis with ideal clocks using openSTA output: </br>
+![Image](https://github.com/srsapireddy/Images/blob/main/400.png?raw=true) </br>
+![Image](https://github.com/srsapireddy/Images/blob/main/401.png?raw=true) </br>
+![Image](https://github.com/srsapireddy/Images/blob/main/402.png?raw=true) </br>
+We can see that the setup slack is MET. </br>
+pre_sta.conf file: </br>
+![Image](https://github.com/srsapireddy/Images/blob/main/403.png?raw=true) </br>
+my_base.sdc file </br>
+PATH:   </br>
+![Image](https://github.com/srsapireddy/Images/blob/main/404.png?raw=true) </br>
+![Image](https://github.com/srsapireddy/Images/blob/main/405.png?raw=true) </br>
+
 
 * When openlane is building the CTS, it will try to meet the skew value from left to right clkbuf_1 to clkbuf_8. We want the skew values to be 10% of the clock period.
 * If we want to replace any element in tcl. `lreplace ::env(CTS_CLK_BUFFER_LIST) 0 0`. This command removes the clock buffer 1. lreplace does not modify the list.
