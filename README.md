@@ -984,6 +984,20 @@ Checking procs in openlane tool:
 ![Image](https://github.com/srsapireddy/Images/blob/main/248.png?raw=true) </br>
 ![Image](https://github.com/srsapireddy/Images/blob/main/249.png?raw=true) </br>
 * Both are met.
+
+Commands:
+`openroad
+write_db pico_cts.db
+read_db pico_cts.db
+read_verilog /openLANE_flow/designs/picorv32a/runs/03-07_11-25/results/synthesis/picorv32a.synthesis_cts.v
+read_lef /openLANE_flow/designs/picorv32a/runs/03-07_11-25/tmp/merged.lef
+read_def /openLANE_flow/designs/picorv32a/runs/03-07_11-25/results/cts/pico32a.cts.def
+read_liberty $::env(LIB_SYNTH_COMPLETE)
+link_design picorv32a
+read_sdc /openLANE_flow/designs/picorv32a/src/my_base.sdc
+set_propagated_clock (all_clocks)
+report_checks -path_delay min_max -format full_clock_expanded -digits 4` </br>
+
 * When openlane is building the CTS, it will try to meet the skew value from left to right clkbuf_1 to clkbuf_8. We want the skew values to be 10% of the clock period.
 * If we want to replace any element in tcl. `lreplace ::env(CTS_CLKBUFFER_LIST) 0 0`. This command removes the clock buffer 1. lreplace does not modify the list.
 * To modify the list, we have to `set ::env(CTS_CLKBUFFER_LIST) [lreplace ::env(CTS_CLKBUFFER_LIST) 0 0]`
