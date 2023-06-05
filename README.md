@@ -868,18 +868,6 @@ SU = Setup uncertainty due to jitter which is temporary variation of clock perio
 ![Image](https://github.com/srsapireddy/Images/blob/main/221.png?raw=true) </br>
 ![Image](https://github.com/srsapireddy/Images/blob/main/222.png?raw=true) </br>
 
-Checking Timing analysis with ideal clocks using openSTA Lab: </br>
-![Image](https://github.com/srsapireddy/Images/blob/main/300.png?raw=true) </br>
-![Image](https://github.com/srsapireddy/Images/blob/main/301.png?raw=true) </br>
-![Image](https://github.com/srsapireddy/Images/blob/main/302.png?raw=true) </br>
-We can see that the setup slack is MET.
-pre_sta.conf file: </br>
-![Image](https://github.com/srsapireddy/Images/blob/main/303.png?raw=true) </br>
-my_base.sdc file </br>
-![Image](https://github.com/srsapireddy/Images/blob/main/304.png?raw=true) </br>
-PATH:   </br>
-![Image](https://github.com/srsapireddy/Images/blob/main/305.png?raw=true) </br>
-
 ### Optimize synthesis to reduce setup violations
 * Hold analysis have significance after CTS.
 * The delay of any cell is a function of input slew (input transition) and output load. More the values, more the delay.
@@ -947,6 +935,18 @@ Checking procs in openlane tool:
 ![Image](https://github.com/srsapireddy/Images/blob/main/234.png?raw=true) </br>
  
 * Skew = |delta 1 – delta 2|
+
+Checking Timing analysis with ideal clocks using openSTA Lab: </br>
+![Image](https://github.com/srsapireddy/Images/blob/main/300.png?raw=true) </br>
+![Image](https://github.com/srsapireddy/Images/blob/main/301.png?raw=true) </br>
+![Image](https://github.com/srsapireddy/Images/blob/main/302.png?raw=true) </br>
+We can see that the setup slack is MET.
+pre_sta.conf file: </br>
+![Image](https://github.com/srsapireddy/Images/blob/main/303.png?raw=true) </br>
+my_base.sdc file </br>
+![Image](https://github.com/srsapireddy/Images/blob/main/304.png?raw=true) </br>
+PATH:   </br>
+![Image](https://github.com/srsapireddy/Images/blob/main/305.png?raw=true) </br>
 
 ### Analyze timing with a real clock using OpenSTA
 * Run `openroad` to do timing analysis. OpenSTA is integrated inside the openroad.
