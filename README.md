@@ -902,7 +902,7 @@ SU = Setup uncertainty due to jitter which is temporary variation of clock perio
 
 * Clock Skew = In order to have minimum skew between clock endpoints, clock tree is used. This results in equal wirelength (thus equal latency/delay) for every path of the clock.
 * Clock Slew = Due to wire resistance and capacitance of the clock nets, there will be slew in signal at the clock endpoint where signal is not the same with the original input clock signal anymore. This can be solved by clock buffers. Clock buffer differs in regular cell buffers since clock buffers has equal rise and fall time.
-* Crosstalk = Clock shielding prevents crosstalk to nearby nets by breaking the coupling capacitance between the victim (clock net) and aggressor (nets near the clock net), the shield might be connected to VDD or ground since those will not switch. Shielding can also be done on critical data nets.
+* Crosstalk = Clock shielding prevents crosstalk to nearby nets by breaking the coupling capacitance between the victim (clock net) and aggressor (nets near the clock net), the shield might be connected to VDD or ground since those will not switch. Shielding can also be done on critical data nets. </br>
 ![Image](https://github.com/srsapireddy/Images/blob/main/227.png?raw=true) </br>
 
 Checking Timing analysis with ideal clocks using openSTA Lab: </br>
