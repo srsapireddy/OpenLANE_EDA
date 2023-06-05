@@ -999,9 +999,9 @@ Commands:
 `report_checks -path_delay min_max -format full_clock_expanded -digits 4` </br>
 
 * When openlane is building the CTS, it will try to meet the skew value from left to right clkbuf_1 to clkbuf_8. We want the skew values to be 10% of the clock period.
-* If we want to replace any element in tcl. `lreplace ::env(CTS_CLKBUFFER_LIST) 0 0`. This command removes the clock buffer 1. lreplace does not modify the list.
-* To modify the list, we have to `set ::env(CTS_CLKBUFFER_LIST) [lreplace ::env(CTS_CLKBUFFER_LIST) 0 0]`
-* The check `echo ::env(CTS_CLKBUFFER_LIST) `
+* If we want to replace any element in tcl. `lreplace ::env(CTS_CLK_BUFFER_LIST) 0 0`. This command removes the clock buffer 1. lreplace does not modify the list.
+* To modify the list, we have to `set ::env(CTS_CLKBUFFER_LIST) [lreplace ::env(CTS_CLK_BUFFER_LIST) 0 0]`
+* The check `echo ::env(CTS_CLK_BUFFER_LIST) `
 * Then again, run `run_cts`
 * To kill the process: type `top` then ‘kill -9 process_id’
 * To check current def run `echo $::env(CURRENT_DEF)`
@@ -1009,7 +1009,7 @@ Commands:
 * Then again, run `run_cts`
 * Then open openroad in openlane, create db, and follow the steps again with the updated db. But the area increased for the design.
 * Check skew: `report_clock_skew -hold/setup` 
-* To insert back buffer:  `set ::env(CTS_CLKBUFFER_LIST) [linsert ::env(CTS_CLKBUFFER_LIST) 0 sky_130_fd_sc_hd___clkbuf_1]`
+* To insert back buffer:  `set ::env(CTS_CLK_BUFFER_LIST) [linsert ::env(CTS_CLK_BUFFER_LIST) 0 sky_130_fd_sc_hd___clkbuf_1]`
 
 DAY 5
 ### Routing
