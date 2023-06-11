@@ -18,13 +18,18 @@ Other details </br>
   * ISA – The way we interact with computers.</br>
   
 ![macrovsip](https://github.com/srsapireddy/Images/blob/main/3.PNG?raw=true) </br>
+
 Suppose we want a C program to run on a particular layout. The C program is compiled into an assembly language program (RISC-V assembly language program). This assembly language program is converted into a machine language program (binary language program).  The bits here will be executed in a layout, and we will get the required output.
+
 ![riscvisa](https://github.com/srsapireddy/Images/blob/main/4.PNG?raw=true) </br>
+
 The interface between RISC-V architecture and the layout is hardware description language. We implement RISC-V specifications in RTL. </br>
 
 ### From software applications to hardware</br>
 The application software enters a block called system software. The system software converts the application software into binary language. </br>
+
 ![software](https://github.com/srsapireddy/Images/blob/main/5.PNG?raw=true) </br>
+
 ### The flow of System Software:</br>
  
 1. OPERATING SYSTEM </br>
@@ -34,8 +39,11 @@ The output of the operating system is the small functions in C, C++, Java, and V
 2. COMPILER </br>
 These functions are taken by the respective compiler and convert them into instructions. The syntax of the instructions will depend on the type of hardware used (If the hardware is ARM, then the instructions will be in the ARM format) - .exe file. </br>
 The instructions here will act as the abstract ISA between the hardware and the C programs. </br>
+
 ![stopwatch](https://github.com/srsapireddy/Images/blob/main/7.PNG?raw=true) </br>
+
 We need an RTL to implement instruction specifications. The RTL is converted into a synthesized netlist (high-level specification into synthesized netlist). This will be in the form of gates. Above netlist generation, we follow physical design implementation.</br>
+
 ![stopwatch](https://github.com/srsapireddy/Images/blob/main/8.PNG?raw=true) </br>
 
 3. ASSEMBLER</br>
