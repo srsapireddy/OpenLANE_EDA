@@ -74,7 +74,7 @@ The library building blocks, or the cells, have regular layouts. Typically, the 
 ![fp](https://github.com/srsapireddy/Images/blob/main/15.PNG?raw=true) </br>
 The objective here is to plan the silicon area and create robust power distribution to the circuits. 
 Chip floor-planning: Partition the chip die between different system building blocks and place the I/P pads.
-Macro Floor Planning: Dimensions, pin locations, rows or routing tracks are definition.
+Macro Floor Planning: Dimensions, pin locations, rows or routing tracks are definition.</br>
 ![pp](https://github.com/srsapireddy/Images/blob/main/16.PNG?raw=true) </br>
 In power planning the power network is constructed.
 A chip is powered by multiple VDD and GND pins. The power pins are connected to all the components through rings and horizontal/ vertical power straps. Such parallel structures are meant to reduce the resistance hence the IR Drop, and to address the electromigration problem. Usually, the power distribution network uses upper metal layers as they are thicker than the lower metal layers. Hence have less resistance. 
