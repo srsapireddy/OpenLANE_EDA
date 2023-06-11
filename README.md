@@ -16,6 +16,7 @@ Other details </br>
   * Macros – Digital logic blocks </br>
   * RISC-V Instruction Set Architecture </br>
   * ISA – The way we interact with computers.</br>
+  
 ![macrovsip](https://github.com/srsapireddy/Images/blob/main/3.PNG?raw=true) </br>
 Suppose we want a C program to run on a particular layout. The C program is compiled into an assembly language program (RISC-V assembly language program). This assembly language program is converted into a machine language program (binary language program).  The bits here will be executed in a layout, and we will get the required output.
 ![riscvisa](https://github.com/srsapireddy/Images/blob/main/4.PNG?raw=true) </br>
