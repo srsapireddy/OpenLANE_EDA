@@ -442,7 +442,7 @@ We use the de-coupling capacitor to charge the circuit. Whenever there is a swit
 ![multiple](https://github.com/srsapireddy/Images/blob/main/71.png?raw=true) </br>
  
 * All the default values of the variables are shown here.
-* To check all the variables associated with all PD stages.
+* To check all the variables associated with all PD stages.</br>
 
 * ![multiple](https://github.com/srsapireddy/Images/blob/main/72.png?raw=true) </br>
  
