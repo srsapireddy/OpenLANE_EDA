@@ -52,6 +52,7 @@ Digital ASIC design requires RTL IPs, EDA Tools (qflow, OpenROAD, OpenLANE), and
     -	Device Models</br>
     -	Digital Standard Cell Libraries</br>
     -	I/0 Libraries </br></br>
+    
 ![foss](https://github.com/srsapireddy/Images/blob/main/9.PNG?raw=true) </br>
  
 Google releaseD open-source PDK for ASIC implementation using open-source or close source tools.</br>
