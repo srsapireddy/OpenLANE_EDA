@@ -8,6 +8,7 @@ The chip will be sitting at the center of the package. Chip is connected to the 
   * PADS – To send the signals inside the chip inside or outside the chip. </br>
   * CORE – Where all the digital logic is placed.
   * DIE – The size of the entire chip. Die will be manufactured on the silicon wafer. </br>
+  
 ![core](https://github.com/srsapireddy/Images/blob/main/2.PNG?raw=true) </br>
 Other details </br>
   * Foundry – Place where the chips get manufactured. </br>
