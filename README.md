@@ -1590,8 +1590,8 @@ run_cts</br>
 magic -T /home/vsduser/Desktop/work/tools/openlane_working_dir/pdks/sky130A/libs.tech/magic/sky130A.tech lef read ../../tmp/merged.lef def read picorv32a.cts.def</br>
 
 
--
--
+
+
 openroad</br>
 read_lef /openLANE_flow/designs/picorv32a/runs/07-06_11-06/tmp/merged.lef</br>
 read_def /openLANE_flow/designs/picorv32a/runs/07-06_11-06/results/cts/picorv32a.cts.def</br>
@@ -1605,7 +1605,7 @@ read_verilog /openLANE_flow/designs/picorv32a/runs/07-06_11-06/results/synthesis
 link_design picorv32a</br>
 report_checks -path_delay min_max -format full_clock_expanded -digits 4</br>
 exit</br>
--
+
 
 init_floorplan</br>
 place_io</br>
@@ -1638,7 +1638,7 @@ echo $::env(CTS_CLK_BUFFER_LIST)</br>
 set $::env(CTS_CLK_BUFFER_LIST) [linsert ::env(CTS_CLK_BUFFER_LIST) 0 sky_130_fd_sc_hd__clkbuf_1]</br>
 echo $::env(CTS_CLK_BUFFER_LIST)</br>
 
--
+
 openroad</br>
 read_lef /openLANE_flow/designs/picorv32a/runs/07-06_11-06/tmp/merged.lef</br>
 read_def /openLANE_flow/designs/picorv32a/runs/07-06_11-06/results/cts/picorv32a.cts.def</br>
@@ -1653,7 +1653,7 @@ report_checks -path_delay min_max -format full_clock_expanded -digits 4</br>
 #report_clock_skew -setup</br>
 #report_clock_skew -setup</br>
 exit
--
+
 
 init_floorplan</br>
 place_io</br>
