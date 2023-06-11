@@ -1517,7 +1517,7 @@ cp sky130_fd_sc_hd__* /home/vsduser/Desktop/work/tools/openlane_working_dir/open
 
 
 CONFIG.TCL</br>
-#### Design</br>
+Design</br>
 
 set ::env(DESIGN_NAME) "picorv32a"</br>
 
