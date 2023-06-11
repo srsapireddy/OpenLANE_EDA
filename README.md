@@ -1468,7 +1468,6 @@ DAY 5
 ![Image](https://github.com/srsapireddy/Images/blob/main/266.png?raw=true)
  
 ### SPEF Extraction and GDSII Streaming:
-* For post-routing STA: `run_parasitics_sta`
 * SPEF: Standard Parasitic Extraction Format
 * Multi-corner STA will be done with the extracted SPEF.
 * SPEF extraction and multi-corner STA will be done on all three corners (min, max, typical).
