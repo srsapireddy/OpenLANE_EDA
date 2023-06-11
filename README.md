@@ -1515,9 +1515,10 @@ cp sky130_vsdinv.lef /home/vsduser/Desktop/work/tools/openlane_working_dir/openl
 
 cp sky130_fd_sc_hd__* /home/vsduser/Desktop/work/tools/openlane_working_dir/openlane/designs/picorv32a/src</br>
 
----
+
 CONFIG.TCL</br>
-# Design</br>
+#### Design</br>
+
 set ::env(DESIGN_NAME) "picorv32a"</br>
 
 set ::env(VERILOG_FILES) "./designs/picorv32a/src/picorv32a.v"</br>
@@ -1545,7 +1546,7 @@ if { [file exists $filename] == 1} {
 	source $filename
 }</br>
 
----
+
 
 prep -design picorv32a -tag 07-06_11-06 -overwrite</br>
 
@@ -1572,13 +1573,13 @@ tap_decap_or</br>
 run_placement</br>
 
 magic -T /home/vsduser/Desktop/work/tools/openlane_working_dir/pdks/sky130A/libs.tech/magic/sky130A.tech lef read ../../tmp/merged.lef def read picorv32a.placement.def</br>
--
+
 tkon: expand</br>
--
+
 
 add my_base.sdc and pre_sta.conf</br>
 sta pre_sta.conf</br>
--
+
 
 write_verilog designs/picorv32a/runs/07-06_11-06/results/synthesis/picorv32.v</br>
 
@@ -1665,7 +1666,7 @@ run_cts </br>
 
 echo $::env(CURRENT_DEF)</br>
 
--
+
 
 gen_pdn</br>
 run_routing</br>
