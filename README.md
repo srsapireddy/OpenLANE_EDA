@@ -1,4 +1,4 @@
-# OpenLANE-Sky130-Physical-Design-Workshop
+# OpenLANE-Sky130-Physical-Design
 This is the compilation of my notes for the  Physical Design using OpenLANE/Sky130. The goal is to cover the complete RTL2GDS flow using the open-source flow OpenLane with SKY130nm PDK. </br>
 
 ## Day 1
