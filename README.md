@@ -217,7 +217,7 @@ Dealing with Antenna Rules Violations:</br>
   * When a metal wire segment is fabricated, it can act as an antenna.</br>
     -	Reactive ion etching causes charge to accumulate on the wire.</br>
     -	Transistor gates can be damaged during fabrication.   </br>
-    -	
+     
 ![ANTENNA](https://github.com/srsapireddy/Images/blob/main/27.PNG?raw=true)  </br>
 
 Usually, this is the job of the router.</br>
