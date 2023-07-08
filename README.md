@@ -1502,8 +1502,6 @@ DAY 5
 
 ![Image](https://github.com/srsapireddy/Images/blob/main/269.png?raw=true) 
 
-#### Certificate: 
-![image](https://github.com/srsapireddy/OpenLANE_EDA/assets/32967087/e92758c4-9456-4e2a-a680-c50a45fbaa0d)
 
 
 
