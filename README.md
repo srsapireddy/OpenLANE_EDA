@@ -1,7 +1,19 @@
 # OpenLANE-Sky130-Physical-Design
+
+Author: Srinivas Rahul Sapireddy
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT) [![License: Zlib](https://img.shields.io/badge/License-Zlib-lightgrey.svg)](https://opensource.org/licenses/Zlib)
+
 This is the compilation of my notes for the  Physical Design using OpenLANE/Sky130. The goal is to cover the complete RTL2GDS flow using the open-source flow OpenLane with SKY130nm PDK. </br>
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT) [![License: Zlib](https://img.shields.io/badge/License-Zlib-lightgrey.svg)](https://opensource.org/licenses/Zlib)
+OpenLANE is an automated RTL to GDSII flow based on several components including OpenROAD, Yosys, Magic, Netgen, Fault, OpenPhySyn, SPEF-Extractor and custom methodology scripts for design exploration and optimization. The flow performs full ASIC implementation steps from RTL all the way down to GDSII .https://github.com/efabless/openlane.
+
+### Pre-requisite
+
+For local use of the openLANE tool a set of instructions are to be followed. The initial requirement is an Ubuntu based system with at least 25GB+disk space. This repository https://github.com/nickson-jose/openlane_build_script gives the detailed instruction for building openLANE into the local system.
+
+Introduction to QFN -48 package, chip, pads, core, die, IPs
+Integrated circuits or IC are devices where in number of componenets such as transistors, diodes, resistors capacitors etc are amalgameted /interconnected to a single semiconductor chip. A package/chip are small in size and can broadly be classified into surface mount type and through hole type. Some of the surface mount and through type ic are as shown in the figure below and is sourced from https://components101.com/articles/different-ic-package-types-and-which-one-should-you-select.
+![image](https://github.com/srsapireddy/OpenLANE_EDA/assets/32967087/50db4ff2-4515-4679-9cac-f04ff5042c11)
 
 ## Day 1
 ### 1. How to Talk to Computers?
@@ -257,6 +269,9 @@ Here, sky130: process name, 130 nm</br>
 Tool environment directory: </br>
 
 ![tool_directory](https://github.com/srsapireddy/Images/blob/main/35.png?raw=true) </br>
+
+### Get familiar with EDA tools
+Inorder to access the labs, labs instances is present in VSD_IAT flow which redirects to a vnc network. The vnc network allows us to remotely access the ubuntu terminal for performing the lab instances. The file required for carrying out the workshop are present in the path /work/tools/openlane_working_dir/. For running the openLANE flow, the treminal should be in the openlane path, /work/dir/openlane_working_dir/openLANE_flow. All the steps are to carried out along this path.
 
 ### Designing Preparation Step</br>
 #### Running OpenLANE EDA </br>
