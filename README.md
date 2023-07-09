@@ -11,13 +11,6 @@ OpenLANE is an automated RTL to GDSII flow based on several components including
 
 For local use of the openLANE tool a set of instructions are to be followed. The initial requirement is an Ubuntu based system with at least 25GB+disk space. This repository https://github.com/nickson-jose/openlane_build_script gives the detailed instruction for building openLANE into the local system.
 
-Introduction to QFN -48 package, chip, pads, core, die, IPs
-Integrated circuits or IC are devices where in number of componenets such as transistors, diodes, resistors capacitors etc are amalgameted /interconnected to a single semiconductor chip. A package/chip are small in size and can broadly be classified into surface mount type and through hole type. Some of the surface mount and through type ic are as shown in the figure below and is sourced from https://components101.com/articles/different-ic-package-types-and-which-one-should-you-select.
-
-</br>
-
-![image](https://github.com/srsapireddy/OpenLANE_EDA/assets/32967087/50db4ff2-4515-4679-9cac-f04ff5042c11)
-
 ## Day 1
 ### 1. How to Talk to Computers?
 ![package](https://github.com/srsapireddy/Images/blob/main/1.PNG?raw=true) </br>
