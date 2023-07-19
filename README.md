@@ -1,6 +1,6 @@
 # OpenLANE-Sky130-Physical-Design </br>
 
-Author: Srinivas Rahul Sapireddy
+Author: Srinivas Rahul Sapireddy </br>
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT) [![License: Zlib](https://img.shields.io/badge/License-Zlib-lightgrey.svg)](https://opensource.org/licenses/Zlib) </br>
 
 This is the compilation of my notes for the  Physical Design using OpenLANE/Sky130. The goal is to cover the complete RTL2GDS flow using the open-source flow OpenLane with SKY130nm PDK. </br>
