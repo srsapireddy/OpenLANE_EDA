@@ -3,13 +3,16 @@
 Author: Srinivas Rahul Sapireddy </br>
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT) [![License: Zlib](https://img.shields.io/badge/License-Zlib-lightgrey.svg)](https://opensource.org/licenses/Zlib) </br>
 
+![image](https://github.com/srsapireddy/OpenLANE_EDA/assets/32967087/67885d7b-f586-403f-8d6a-c13d92510b57)
+
+
 This is the compilation of my notes for the  Physical Design using OpenLANE/Sky130. The goal is to cover the complete RTL2GDS flow using the open-source flow OpenLane with SKY130nm PDK. </br>
 
-OpenLANE is an automated RTL to GDSII flow based on several components including OpenROAD, Yosys, Magic, Netgen, Fault, OpenPhySyn, SPEF-Extractor and custom methodology scripts for design exploration and optimization. The flow performs full ASIC implementation steps from RTL all the way down to GDSII .https://github.com/efabless/openlane.
+OpenLANE is an automated RTL to GDSII flow based on several components, including OpenROAD, Yosys, Magic, Netgen, Fault, OpenPhySyn, SPEF-Extractor, and custom methodology scripts for design exploration and optimization. The flow performs full ASIC implementation steps from RTL all the way down to GDSII .https://github.com/efabless/openlane.
 
 ### Pre-requisite
 
-For local use of the openLANE tool a set of instructions are to be followed. The initial requirement is an Ubuntu based system with at least 25GB+disk space. This repository https://github.com/nickson-jose/openlane_build_script gives the detailed instruction for building openLANE into the local system.
+For local use of the open lane tool, instructions are to be followed. The initial requirement is an Ubuntu-based system with at least 25GB+ disk space. This repository https://github.com/nickson-jose/openlane_build_script gives detailed instructions for building openLANE into the local system.
 
 ## Day 1
 ### 1. How to Talk to Computers?
@@ -22,7 +25,7 @@ The chip will be sitting at the center of the package. Chip is connected to the 
 ![core](https://github.com/srsapireddy/Images/blob/main/2.PNG?raw=true) </br>
 Other details </br>
   * Foundry – Place where the chips get manufactured. </br>
-  * IP (Intelligent Properties) – An Intellectual Property (IP) core in Semiconductors is a reusable unit of logic or functionality or a cell or a layout design that is normally developed with the idea of licencing to multiple vendor for using as building blocks in different chip designs. </br>
+  * IP (Intelligent Properties) – An Intellectual Property (IP) core in Semiconductors is a reusable unit of logic or functionality or a cell or a layout design normally developed with the idea of licensing to multiple vendors for use as building blocks in different chip designs. </br>
   * Macros – Digital logic blocks </br>
   * RISC-V Instruction Set Architecture </br>
   * ISA – The way we interact with computers.</br>
@@ -43,11 +46,11 @@ The application software enters a block called system software. The system softw
 ### The flow of System Software:</br>
  
 1. OPERATING SYSTEM </br>
-OS Handles IO operations and allocates memory and low-level system functions. Converts the app into an assembly language program and finally into the binary language program so that the hardware understands it. </br>
-The output of the operating system is the small functions in C, C++, Java, and VB.  </br> 
+OS Handles IO operations and allocates memory and low-level system functions. Converts the app into an assembly and binary language program so the hardware understands it. </br>
+The operating system's output is the small C, C++, Java, and VB functions.  </br> 
 
 2. COMPILER </br>
-These functions are taken by the respective compiler and convert them into instructions. The syntax of the instructions will depend on the type of hardware used (If the hardware is ARM, then the instructions will be in the ARM format) - .exe file. </br>
+The respective compiler takes these functions and converts them into instructions. The syntax of the instructions will depend on the type of hardware used (If the hardware is ARM, then the instructions will be in the ARM format) - .exe file. </br>
 The instructions here will act as the abstract ISA between the hardware and the C programs. </br>
 
 ![stopwatch](https://github.com/srsapireddy/Images/blob/main/7.PNG?raw=true) </br>
@@ -57,7 +60,7 @@ We need an RTL to implement instruction specifications. The RTL is converted int
 ![stopwatch](https://github.com/srsapireddy/Images/blob/main/8.PNG?raw=true) </br>
 
 3. ASSEMBLER</br>
-The job of the assembler is to take the instructions and convert them into binary numbers (machine language program). Based on machine language programs, the hardware executes the functions and accordingly generates the output. </br>
+The assembler's job is to convert the instructions into binary numbers (machine language program). Based on machine language programs, the hardware executes the functions and accordingly generates the output. </br>
 Example: Stopwatch app</br>
 
 ![stopwatch](https://github.com/srsapireddy/Images/blob/main/6.PNG?raw=true) </br>
@@ -106,14 +109,14 @@ The library building blocks, or the cells, have regular layouts. Typically, the 
 
 ![fp](https://github.com/srsapireddy/Images/blob/main/15.PNG?raw=true) </br>
 
-The objective here is to plan the silicon area and create robust power distribution to the circuits. </br>
+The objective here is to plan the silicon area and create robust circuit power distribution. </br>
 Chip floor-planning: Partition the chip die between different system building blocks and place the I/P pads.</br>
-Macro Floor Planning: Dimensions, pin locations, rows or routing tracks are definition.</br>
+Macro Floor Planning: Dimensions, pin locations, rows, or routing tracks are defined.</br>
 
 ![pp](https://github.com/srsapireddy/Images/blob/main/16.PNG?raw=true) </br>
 
-In power planning the power network is constructed.</br>
-A chip is powered by multiple VDD and GND pins. The power pins are connected to all the components through rings and horizontal/ vertical power straps. Such parallel structures are meant to reduce the resistance hence the IR Drop, and to address the electromigration problem. Usually, the power distribution network uses upper metal layers as they are thicker than the lower metal layers. Hence have less resistance. </br>
+In power planning, the power network is constructed.</br>
+Multiple VDD and GND pins power a chip. The power pins are connected to all the components through rings and horizontal/ vertical power straps. Such parallel structures are meant to reduce the IR Drop resistance and address the electromigration problem. Usually, the power distribution network uses upper metal layers as they are thicker than the lower metal layers. Hence have less resistance. </br>
 
 #### 3. Placement: </br>
 
@@ -130,14 +133,14 @@ Done in two steps: </br>
 
 ![CTS](https://github.com/srsapireddy/Images/blob/main/19.PNG?raw=true) </br>
 
-* Deliver the clock to all sequential elements (eg, FF) with minimum skew.</br>
+* Deliver the clock to all sequential elements (e.g., FF) with minimum skew.</br>
 * Clock skew – The arrival of the clock to the different components at different times.</br>
 
 #### 5. Routing: </br>
 
 ![Routing](https://github.com/srsapireddy/Images/blob/main/20.PNG?raw=true) </br>
 
-Given the placement and fixed number of metal layers, it’s required to find a valid pattern of horizontal and vertical wires to implement the nets that connect the cells together. The routing uses the available metal layers defined by the PDK. The PDK defines the pitch, tracks, and minimum width. Also, it defines the vias that are used to connect the wire signals present on the different metal layers. </br>
+Given the placement and fixed number of metal layers, finding a valid pattern of horizontal and vertical wires is required to implement the nets that connect the cells. The routing uses the available metal layers defined by the PDK. The PDK defines the pitch, tracks, and minimum width. Also, it defines the vias that are used to connect the wire signals on the different metal layers. </br>
 
 The Skywater 130 nm PDK defines six routing layers. The lowest layer is called the local interconnect layer (TiN layer). All the other metal layers are aluminum layers.  
 Most of the routers are grid routers. They construct the routing grid out of the metal layer tracks. As the routing grid is huge, we follow the divide-and-conquer method for routing.</br>
@@ -146,29 +149,29 @@ Most of the routers are grid routers. They construct the routing grid out of the
 Once done with routing, we can construct the final layout.</br>
 
 #### 6. Physical Verification: </br>
-* DRC -  To make sure that the final layout follows the design rules.</br>
+* DRC -  To ensure the final layout follows the design rules.</br>
 * LVS – To ensure the final layout matches the gate level netlist.</br>
 * Timing Verification: </br>
   * STA – To make sure that all the timing constraints are met. And the circuit will run at a designated clock frequency.</br>
 
 ### Files of Physical Design:</br>
-* Tech file: .tech contains the metal layer, connectivity between layers, DRC rules, and other definitions needed by Magic layout tool to view a single cell. </br>
+* Tech file: .tech contains the metal layer, connectivity between layers, DRC rules, and other definitions the Magic layout tool needs to view a single cell. </br>
 
-* LEF file: .lef is combination of tech lef (contains metal layer geometries) and cell lef (contains geometries for all cells in the standard cell library). This lef file does not contain the logic part of cells, only the footprint that is needed by the PnR tool. </br>
+* LEF file: .lef combines tech lef (contains metal layer geometries) and cell lef (contains geometries for all cells in the standard cell library). This lef file does not contain the logic part of cells, only the footprint that is needed by the PnR tool. </br>
 
-* DEF file: .def is derived from LEF file and is used to transfer the design data from one EDA tool to another EDA tool and contains connectivity of cells of the design and is just a footprint (does not contain the logic part of cells) that the PnR needs. Each EDA tool to run will need to read first the LEF file runs/[date]/tmp/merged.nom.lef and the DEF file output of the previous stage's EDA tool (e.g. CTS EDA tool TritonCTS must first read DEF file from placement stage). So before running a stage, make sure the $::env(CURRENT_DEF) points to DEF file of previous stage or else there will be bunch of errors. </br>
+* DEF file: .def is derived from the LEF file and is used to transfer the design data from one EDA tool to another EDA tool. It contains the connectivity of cells of the design and is just a footprint (does not contain the logic part of cells) that the PnR needs. Each EDA tool to run will need to read first the LEF file runs/[date]/tmp/merged.nom.lef and the DEF file output of the previous stage's EDA tool (e.g., CTS EDA tool TritonCTS must first read the DEF file from placement stage). So before running a stage, make sure the $::env(CURRENT_DEF) points to the DEF file of the previous stage, or else there will be a bunch of errors. </br>
 
 
 ### 2.3. Introduction to OpenLANE and Strive chipsets</br>
 OpenLANE started as an open-source flow for a true open-source tape-out experiment.</br>
-striVe is a family of open sourcing everything, including SoCs. (Open PDK, Open EDA, Open RTL)</br>
+striVe is a family of open-sourcing everything, including SoCs. (Open PDK, Open EDA, Open RTL)</br>
 
 ![striVe](https://github.com/srsapireddy/Images/blob/main/21.PNG?raw=true) </br>
 
 OpenLANE main goal: To produce a clean GDSII with no human intervention. Tuned for SkyWater 130nm Open PDK. Also, support XFAB180 and GF130G. It can harden Macros and Chips to generate the final layout.</br>
 Two modes of operation: </br>
   * autonomous – push button flow </br>
-  * Interactive – run commends one by one to check intermediate steps.</br>
+  * Interactive – run commands one by one to check intermediate steps.</br>
 
 ### 4. OpenLANE ASIC DESIGN FLOW</br>
 
@@ -179,7 +182,7 @@ The flow starts with the design RTL and generating the final layout in GDSII for
 
 ![source](https://github.com/srsapireddy/Images/blob/main/23.PNG?raw=true) </br>
 
-The flow starts with the RTL synthesis. The RTL is fed to yosys with the design constraints. Yosys translates the RTL to logic circuits. These circuits can be optimized and mapped into a standard cell library using the ABC tool. ABC should be guided during the optimization. This guidance will come in the form of the ABC script. OpenLANE comes with several open-source scripts. We refer to them as synthesis strategies. We have strategies to target the least area and for the best timing. Different designs can use different strategies to achieve the best objective. For this, we have synthesis exploration utility. This is used to generate a report that shows the design delay concerning the area effected by synthesis strategy. </br>
+The flow starts with the RTL synthesis. The RTL is fed to Yosys with the design constraints. Yosys translates the RTL to logic circuits. ABC tool can optimize and map these circuits into a standard cell library. ABC should be guided during the optimization. This guidance will come in the form of the ABC script. OpenLANE comes with several open-source scripts. We refer to them as synthesis strategies. We have strategies to target the least area and for the best timing. Different designs can use different strategies to achieve the best objective. For this, we have synthesis exploration utility. This is used to generate a report that shows the design delay concerning the area affected by the synthesis strategy. </br>
 
 ![strategies](https://github.com/srsapireddy/Images/blob/main/24.PNG?raw=true) </br>
 
@@ -188,7 +191,7 @@ OpenLANE also has the design exploration utility. This can be used to sweep the 
 
 ![Exploration](https://github.com/srsapireddy/Images/blob/main/25.PNG?raw=true) </br>
 
-This report shows the different design metrics. We have more than 35 of them in a report. It also shows the number of violations after generating the final layout. It is recommended to explore the design first and then use the best configurations for a particular design to result in a clean layout.</br>
+This report shows the different design metrics. We have more than 35 of them in a report. It also shows the number of violations after generating the final layout. Exploring the design first and then using the best configurations for a particular design to result in a clean layout is recommended.</br>
 Also, design exploration can be used for regression testing (CI). So, we can run the design on several exploration configurations to get the best-optimized configurations. Currently, we have 70 designs. This utility will generate a report as shown below. </br>
 
 ![testing](https://github.com/srsapireddy/Images/blob/main/26.PNG?raw=true) </br>
@@ -202,7 +205,7 @@ If we want our design to be tested after the fabrication, we can enable DFT. Thi
 After this comes the physical implementation, also called automated Place and Route, done by the OpenROAD application. </br>
 
 ### Logic Equivlence Check</br>
-We need to perform LEC checking using yosys. We compare the netlist resulting from the optimization step in PD flow with the gate-level netlist generated in synthesis. To make sure they are functionally equivalent. </br>
+We need to perform LEC checking using Yosys. We compare the netlist resulting from the optimization step in PD flow with the gate-level netlist generated in synthesis. To make sure they are functionally equivalent. </br>
 During the physical implementation, we have a step–fake antenna diodes insertion script to address the antenna rules violations. </br>
 
 ### ANTENNA Rules Violations</br>
@@ -216,7 +219,7 @@ Dealing with Antenna Rules Violations:</br>
 Usually, this is the job of the router.</br>
    * Solutions:</br>
      1. Bridging – Attaches a higher layer intermediary. Requires the router awareness.</br>
-     2.  Antenna diode – Add antenna diode cell to leak away charges. Antenna diodes are provided by the SCL. </br>
+     2.  Antenna diode – Add antenna diode cell to leak away charges. The SCL provides antenna diodes. </br>
      3.  
 ![diode](https://github.com/srsapireddy/Images/blob/main/28.PNG?raw=true)  </br>
 
@@ -224,8 +227,8 @@ Fake Antenna Diode Cells are used for every cell input after placement and run a
 
 ### STA, DRC and LVS</br>
 The final steps in OpenLANE involve STA, DrC, and LVS.</br>
-  * Timing sign-off involves doing RC extraction from the routed layout using OpenSTA to highlight any timing violations, if there are any.</br>
-  * DRC – Magic has used for DRC and SPICE extraction from the layout.</br>
+  * Timing sign-off involves doing RC extraction from the routed layout using OpenSTA to highlight any timing violations if there are any.</br>
+  * DRC – Magic has been used for DRC and SPICE extraction from the layout.</br>
   * LVS – Magic and Netgen are used for LVS. Extracted SPICE by MAGIC vs. Verilog netlist.</br>
 
 ## Open Source EDA Tools</br>
@@ -237,7 +240,7 @@ sky130A directory: The PDK that is made compatible with our open-source environm
 
 ![sky130A](https://github.com/srsapireddy/Images/blob/main/29.png?raw=true) </br>
 
-  * libs.ref: contains all the process-specific files (timing, lef and cell lef)</br>
+  * libs.ref: contains all the process-specific files (timing, lef, and cell lef)</br>
   * libs.tech: specific to the tool </br>
    
 ![libs](https://github.com/srsapireddy/Images/blob/main/30.png?raw=true) </br>
@@ -267,7 +270,7 @@ Tool environment directory: </br>
 ![tool_directory](https://github.com/srsapireddy/Images/blob/main/35.png?raw=true) </br>
 
 ### Get familiar with EDA tools
-Inorder to access the labs, labs instances is present in VSD_IAT flow which redirects to a vnc network. The vnc network allows us to remotely access the ubuntu terminal for performing the lab instances. The file required for carrying out the workshop are present in the path /work/tools/openlane_working_dir/. For running the openLANE flow, the treminal should be in the openlane path, /work/dir/openlane_working_dir/openLANE_flow. All the steps are to carried out along this path.
+To access the labs, labs instances are present in the VSD_IAT flow, which redirects to a vnc network. The vnc network allows us to remotely access the Ubuntu terminal for performing the lab instances. The file required for the workshop is in the path /work/tools/openlane_working_dir/. For running the openLANE flow, the terminal should be in the openlane path, /work/dir/openlane_working_dir/openLANE_flow. All the steps are to be carried out along this path.
 
 ### Designing Preparation Step</br>
 #### Running OpenLANE EDA </br>
@@ -295,11 +298,11 @@ Setting up the file system for the design: </br>
 
 ![Setting](https://github.com/srsapireddy/Images/blob/main/41.PNG?raw=true) </br>
 
-  - Here the tech.lef (layer level information) and cell level lef merged into one.</br>
+  - Here is the tech.lef (layer level information) and cell level lef merged into one.</br>
 
-#### Reviewing files after design prep and run synthesis</br>
-Here the runs directory has been created after running command `run-synthesis`.</br>
-tmp folder: where the temporary files are stored, and the rest of the folders will be empty. </br>
+#### Reviewing files after design prep and running synthesis</br>
+Here the runs directory has been created after running the command `run-synthesis`.</br>
+tmp folder: where the temporary files are stored and the rest of the folders will be empty. </br>
 
 ![runs](https://github.com/srsapireddy/Images/blob/main/42.png?raw=true)  </br>
 
@@ -313,7 +316,7 @@ OpenLANE project Git link: https://github.com/efabless/openlane</br>
 
 Calculating the D-Flip Flop count for the design: 1613/14876= 10.8 %</br>
 
-If we check the synthesis folder for results after running run_synthesis we can see that there is a new file generated named picorv32a.synthesios.v </br>
+If we check the synthesis folder for results after running run_synthesis, we can see that a new file is generated named picorv32a.synthesios.v </br>
 
 ![results](https://github.com/srsapireddy/Images/blob/main/44.png?raw=true)  </br>
 
@@ -333,11 +336,11 @@ To check the synthesis statistic report  </br>
 ![Utilization](https://github.com/srsapireddy/Images/blob/main/47.PNG?raw=true)  </br>
 
 * To get the dimensions of the core and die, we are interested in the dimensions of the standard cells, not considering the wires in between them.
-* Standard cells are given rough dimensions as shown below.
+* Standard cells are given rough dimensions, as shown below.
 
 ![calculate](https://github.com/srsapireddy/Images/blob/main/48.PNG?raw=true)  </br>
 
-* Let’s calculate the area occupied by the below netlist on a silicon wafer by bringing the cells together. </br>
+* Let’s calculate the area the below netlist occupies on a silicon wafer by bringing the cells together. </br>
  
 * What is the core and die section of a chip? </br>
 * 
@@ -348,14 +351,14 @@ To check the synthesis statistic report  </br>
   
 ![die](https://github.com/srsapireddy/Images/blob/main/50.PNG?raw=true)  </br>
  
-* As we can see that the netlist of 4 sq units occupies a complete area of the core. This means we have utilized the core 100%. </br>
+* As we can see, the netlist of 4 sq units occupies a complete core area. This means we have utilized the core 100%. </br>
 
 ![units](https://github.com/srsapireddy/Images/blob/main/51.PNG?raw=true)  </br>
 
 * Utilization Factor: Area occupied by netlist/ Total area of the core = 4 x 1sq.unit/ 2 unit x 2 unit = 1
 * In practice, we go for a 50 to 60% utilization.
 * Aspect Ratio = Height/ width = 2 unit/ 2 unit = 1
-* When the aspect ratio is 1, the chip is squared in shape.
+* The chip is squared in shape When the aspect ratio is 1.
 Ex:
 ![Factor](https://github.com/srsapireddy/Images/blob/main/52.PNG?raw=true)  </br>
 
@@ -382,25 +385,25 @@ Ex:
 ![netlist](https://github.com/srsapireddy/Images/blob/main/57.png?raw=true)  </br>
 
 * These blocks can be used multiple times in the netlist. This concept is useful when we want the blocks to be reused. Similarly, we can have other IPs also available.
-* All these blocks can be implemented once and can be instantiated multiple times on to a netlist.
+* All these blocks can be implemented once and instantiated multiple times onto a netlist.
 
 ![instantiated](https://github.com/srsapireddy/Images/blob/main/58.PNG?raw=true)  </br>
 
-* The placement of these cells on the top-level netlist is fixed. They are called pre-placed cells since they are placed before placement and routing. Once these locations are placed, they are not moved by automated placement or routing tools. 
+* The placement of these cells on the top-level netlist is fixed. They are called pre-placed cells since they are placed before placement and routing. Once these locations are placed, automated placement or routing tools do not move them. 
 
 ### De-coupling Capacitors
-* These pre-placed cells should be surrounded by de-coupling capacitors.
+* De-coupling capacitors should surround these pre-placed cells.
  
 #### De-coupling Capacitors
 
 ![power](https://github.com/srsapireddy/Images/blob/main/61.jpg?raw=true) </br>
 
-* If there is a large distance between the power supply and a circuit in the design, there might be a voltage drop across the wire from vdd to the circuit due to the resistance, inductance, and capacitance of the wire being used. This problem is solved using de-coupling capacitors.   
+* If there is a large distance between the power supply and a circuit in the design, there might be a voltage drop across the wire from Vdd to the circuit due to the resistance, inductance, and capacitance of the wire being used. This problem is solved using de-coupling capacitors.   
 
 ![noise](https://github.com/srsapireddy/Images/blob/main/60.PNG?raw=true)  </br>
 
-* De-coupling capacitors are huge capacitors that are filled with charge. The voltage across the de-coupling capacitor is like that across the power supply. Whenever the circuit switches, the de-coupling capacitance provides a power supply to the circuit. This means the de-coupling capacitor de-couples the circuit from the main supply. Whenever the switching happens, the de-coupling capacitor will send the current to the circuit. These decoupling capacitors are placed close to the circuit to reduce the voltage drop. The de-coupling capacitor supplies the amount of current needed by the circuit during switching. 
-We use the de-coupling capacitor to charge the circuit. Whenever there is a switching activity, the de-coupling capacitor loses some charge to the circuit. Whenever there is no switching activity, the de-coupling capacitor replenishes its charge from the power supply.</br>
+* De-coupling capacitors are huge capacitors that are filled with charge. The voltage across the de-coupling capacitor is like that across the power supply. Whenever the circuit switches, the de-coupling capacitance provides a power supply to the circuit. This means the de-coupling capacitor de-couples the circuit from the main supply. The de-coupling capacitor will send the current to the circuit whenever the switching happens. These decoupling capacitors are placed close to the circuit to reduce the voltage drop. The de-coupling capacitor supplies the current the circuit needs during switching. 
+We use the de-coupling capacitor to charge the circuit. Whenever there is a switching activity, the de-coupling capacitor loses some charge to the circuit. The de-coupling capacitor replenishes its charge from the power supply whenever there is no switching activity.</br>
 
 ![Capacitors](https://github.com/srsapireddy/Images/blob/main/59.PNG?raw=true)  </br>
 
@@ -412,26 +415,26 @@ We use the de-coupling capacitor to charge the circuit. Whenever there is a swit
 
 ![Power](https://github.com/srsapireddy/Images/blob/main/62.PNG?raw=true) </br>
 
-* To retain the same signal from the driver to the load, we need the power supply. In this region, we don’t have any de-coupling capacitor that will take the power supply switching. So, there is a possibility of voltage drop across the line (shown in orange). Let’s assume that the line from driver to load is a 16-bit bus. </br>
+* We need the power supply to retain the same signal from the driver to the load. In this region, we don’t have any de-coupling capacitor that will take the power supply switching. So, there is a possibility of voltage drop across the line (shown in orange). Let’s assume the line from driver to load is a 16-bit bus. </br>
 
 ![supply](https://github.com/srsapireddy/Images/blob/main/63.PNG?raw=true) </br>
 
-* The capacitors shown here are charged to Vdd for logic 1 and GND for logic 0. When we pass this 16-bit bus as input to the inverter, we get the inverted output. So all the capacitors with logic 0 as output is discharged, and with logic 1 will be charged to Vdd. 
+* The capacitors shown here are charged to Vdd for logic 1 and GND for logic 0. We get the inverted output when we pass this 16-bit bus as input to the inverter. So all the capacitors with logic 0 as output is discharged, and with logic 1 will be charged to Vdd. 
 
 ![discharged](https://github.com/srsapireddy/Images/blob/main/64.PNG?raw=true) </br>
 
-* We have a single ground line for the 16-bit bus. Due to this, there is a bump over the ground line. If the size of the bump exceeds the noise margin, it will enter an undefined state. Due to the undefined state, it might logic 1 or logic 0. This phenomenon is called a ground bounce. 
-* When all the capacitance is charged from logic 0 to logic 1 we have a voltage droop as all the capacitors are demanding the power supply at the same time. Here the voltage droop can get into to undefined region.
+* We have a single ground line for the 16-bit bus. Due to this, there is a bump over the ground line. If the size of the bump exceeds the noise margin, it will enter an undefined state. Due to the undefined state, it might be logic 1 or logic 0. This phenomenon is called a ground bounce. 
+* When all the capacitance is charged from logic 0 to logic 1, we have a voltage droop as all the capacitors are demanding the power supply at the same time. Here the voltage droop can get into to undefined region.
 
 ![logic](https://github.com/srsapireddy/Images/blob/main/65.PNG?raw=true) </br>
 
 * The problem arises as the power supply is provided from one point. 
   * Solution:
-    - Instead of having single power supply we need to have multiple power supplies.
+    - Instead of having a single power supply, we need to have multiple power supplies.
     
 ![multiple](https://github.com/srsapireddy/Images/blob/main/66.PNG?raw=true) </br>
 
-* Then the current demanded by the circuit can be taken from the nearest power supply. Or it will drop the current to the nearest ground. This is the reason we have multiple power and ground pins in chips.
+* Then, the current demanded by the circuit can be taken from the nearest power supply. Or it will drop the current to the nearest ground. This is the reason we have multiple power and ground pins in chips.
 
 ![current](https://github.com/srsapireddy/Images/blob/main/68.PNG?raw=true) </br>
 
@@ -440,17 +443,17 @@ We use the de-coupling capacitor to charge the circuit. Whenever there is a swit
 ![placement](https://github.com/srsapireddy/Images/blob/main/69.png?raw=true) </br>
 
 * The connectivity information between the gates is coded using VHDL/ Verilog language called the “netlist.”
-* The placement of input and output ports depends according to the cell placement in the core. And no FFs can be placed in this area where the blocks are placed. The backend team must decide on the pin placement. 
-* The CLK ports are bigger in size than the data ports. The reason for this is the CLK is the one driving all the FFs in the core. So, we need the least resistance path for clocks 1 and 2. Bigger the size lowers the resistance. 
+* The input and output ports' placement depends on the cell placement in the core. And no FFs can be placed in this area where the blocks are placed. The backend team must decide on the pin placement. 
+* The CLK ports are bigger in size than the data ports. This is because the CLK is the one driving all the FFs in the core. So, we need the least resistance path for clocks 1 and 2. Bigger the size lowers the resistance. 
 * We do logical placement blockage for blocking the area so that the automated place and route tool doesn’t place cells in this area, as this area is reserved for the pin locations. 
 
 ### Running floorplan in OpenLANE
-* Standard cells placement is done in the placement stage.
+* Standard cell placement is done in the placement stage.
 
 ![multiple](https://github.com/srsapireddy/Images/blob/main/70.png?raw=true) </br>
 
-* Here we have all the variables for the floorplan stage in the READ.md file.
-* These variables are also called as switches in the floorplan stage.
+* Here, we have all the variables for the floorplan stage in the READ.md file.
+* These variables are also called switches in the floorplan stage.
 
 ![multiple](https://github.com/srsapireddy/Images/blob/main/71.png?raw=true) </br>
  
@@ -512,11 +515,11 @@ We use the de-coupling capacitor to charge the circuit. Whenever there is a swit
 
 ![Tap](https://github.com/srsapireddy/Images/blob/main/86.png?raw=true) </br>
 
-* Standard cell are placed during the placement stage
+* Standard cells are placed during the placement stage
 
 ### Placement and Routing
-* Here binding the netlist with physical cells takes place. All the gates have a physical view while representing the core like an FF, which is square in shape.
-* In the real world, we give physical dimensions for all the gates by giving width and height. So every component of the netlist is given a proper width and height.
+* Here, binding the netlist with physical cells takes place. All the gates have a physical view while representing the core like an FF, which is square in shape.
+* In the real world, we give all gates physical dimensions by giving width and height. So every component of the netlist is given a proper width and height.
 
 ![Placement_1](https://github.com/srsapireddy/Images/blob/main/87.PNG?raw=true) </br>
 
@@ -524,7 +527,7 @@ We use the de-coupling capacitor to charge the circuit. Whenever there is a swit
 
 ![Placement_2](https://github.com/srsapireddy/Images/blob/main/88.PNG?raw=true) </br>
 
-* The dimensions of the cells in a design are present in a library. Library also have the timing information of all the gates. 
+* The dimensions of the cells in a design are present in a library. The library also has the timing information of all the gates. 
   * Library files are divided into two categories:
     1.	Library files containing the shapes and sizes of cells.
     2.	Timing information of the cells.
@@ -554,23 +557,23 @@ We use the de-coupling capacitor to charge the circuit. Whenever there is a swit
 
 ### Need for library characterization:
 1. Logic Synthesis: Convert functionality into legal hardware. The output of logic synthesis is an arrangement of gates that represent the original functionality described using an RTL. This is the proper connection of the gates to represent the original functionality.2
-2. Floorplanning: We import the netlist that we get from logic synthesis and decide the size of the core and the die. So the width and height of the core and die are dependent on the number of gates and their sizes. 
-3. Placement: We place the logic cells in the chip in such a fashion that the initial timing is met. 
-4. CTS: We want the clock signal to be spread to the logic cells simultaneously at an equal time. The buffers in the figure will take care of the clock signal has got equal rise and fall times.
-5. Routing: Routing the cells. There are certain properties of the cell that should be taken care of while routing.
+2. Floorplanning: We import the netlist from logic synthesis and decide the core and the die size. So the width and height of the core and die are dependent on the number of gates and their sizes. 
+3. Placement: We place the logic cells in the chip to meet the initial timing. 
+4. CTS: We want the clock signal to be simultaneously spread to the logic cells. The buffers in the figure will ensure the clock signal has equal rise and fall times.
+5. Routing: Routing the cells. Certain properties of the cell should be taken care of while routing.
 6. STA: Here, we find the maximum achievable frequency of the circuit. 
 
 ![library_2](https://github.com/srsapireddy/Images/blob/main/93.PNG?raw=true) </br>
 ![library](https://github.com/srsapireddy/Images/blob/main/94.PNG?raw=true) </br>
 
-* One thing that is common across all stages is GATES or Cells. The collection of these cells is referred to as library. The EDA tool needs to understand are timing characteristics of the gate and how it is represented in a tool.
+* One thing that is common across all stages is GATES or Cells. The collection of these cells is referred to as a library. The EDA tool needs to understand are timing characteristics of the gate and how it is represented in a tool.
 
 ![librar#](https://github.com/srsapireddy/Images/blob/main/95.PNG?raw=true) </br>
 
 ### OpenLANE Placement
 * Placement takes place in 2 stages:
 1.	Global Placement: Corse placement and there is no legalization. 
-Legalization: The standard cell should be placed inside the standard cell rows, with no overlaps. We require legalization from a timing point of view. 
+Legalization: The standard cell should be placed inside the standard cell rows with no overlaps. We require legalization from a timing point of view. 
 2.	Detailed placement
 * Command: `run_placement`
 * Then global placement happens. In OpenLANE, the placement takes place using a half-parameter wire length. Our objective is to reduce the overflow. If the overflow value converges, we can assume the placement is right.
@@ -582,13 +585,13 @@ Legalization: The standard cell should be placed inside the standard cell rows, 
 
 ![librar#](https://github.com/srsapireddy/Images/blob/main/98.png?raw=true) </br>
 
-* We know that in placement the standard cells are placed and fixed. 
+* We know that the standard cells are placed and fixed in placement. 
 * The power and ground network will be created during the placement. 
 
 * Standard cells are placed in a section called a library. We also have DECAP cells and MACROS placed in the library. 
 
 * The library also contains different gates with different functionality. It also got cells of different sizes. 
-Based on the sizes of cells, we can decide the drive strength of cells. The bigger cells have larger drive strength. For example, the smaller buffers have the least drive strength. It also contains cells with different threshold voltages. The variation in threshold voltage decides the speed of the cell. For example, a 0.4 Vth inverter takes more time to switch than a 0.3 Vth inverter.
+Based on the sizes of cells, we can decide the drive strength of cells. The more giant cells have larger drive strength. For example, the smaller buffers have the most minor drive strength. It also contains cells with different threshold voltages. The variation in threshold voltage decides the speed of the cell. For example, switching a 0.4 Vth inverter takes more time than a 0.3 Vth inverter.
 
 
 ### CELL DESIGN FLOW
@@ -603,7 +606,7 @@ SPICE model parameters: We get these parameters from the foundry.</br>
 ![FLOW_2](https://github.com/srsapireddy/Images/blob/main/100.PNG?raw=true) </br>
 
 ### Library and User-defined Specs:
-* The separation between the power rail and the ground rail decides the cell height. The cell width is dependent on the timing information. This depends on the drive strength of the cell. Lowering the value of the drive strength of the cell can drive a few other cells at the output. 
+* The separation between the power and ground rail decides the cell height. The cell width is dependent on the timing information. This depends on the drive strength of the cell. Lowering the value of the drive strength of the cell can drive a few other cells at the output. 
 
 * The library developer must consider the supply voltage to design the cell, and they also need to take care of noise margin levels to take care of the supply voltage of the cell.
 * Certain libraries should be built on certain metal layers. This should be taken into consideration.
@@ -611,30 +614,30 @@ SPICE model parameters: We get these parameters from the foundry.</br>
 
 ![FLOW_3](https://github.com/srsapireddy/Images/blob/main/101.PNG?raw=true) </br>
  
-The library developer is responsible for taking these inputs and developing a library cell that adheres to these inputs.
+The library developer takes these inputs and develops a library cell that adheres to these inputs.
 2.	Design steps: circuit design, layout design, and characterization
 Circuit Design: We should design PMOS and NMOS transistors in such a fashion to meet the library requirements. These are mostly based on SPICE simulations.
 
 ![FLOW_4](https://github.com/srsapireddy/Images/blob/main/102.PNG?raw=true) </br>
 ![FLOW_5](https://github.com/srsapireddy/Images/blob/main/103.PNG?raw=true) </br>
 
-* Characterization: This is a step to get timing, noise, and power information (power.libs) and circuit functionality.
+* Characterization: This is a step to get timing, noise, power information (power.libs) and circuit functionality.
 
 * Layout Design: 
 
 ![layout_6](https://github.com/srsapireddy/Images/blob/main/104.PNG?raw=true) </br>
 
-* First, we need to implement the function and derive the pmos and nmos network graphs. 
+* First, we must implement the function and derive the pmos and nmos network graphs. 
 * Art of layout – Euler’s path + stick diagram
 * Euler’s path: The path that is traced out only once.
 
 ![layout_6](https://github.com/srsapireddy/Images/blob/main/105.PNG?raw=true) </br>
 
-* Based on Euler’s path we need to draw a stick diagram out of it. 
+* Based on Euler’s path, we need to draw a stick diagram. 
 
 ![layout_6](https://github.com/srsapireddy/Images/blob/main/106.png?raw=true) </br>
 
-* Then we convert this stick diagram into a layout that adheres to the DRC rules given by the foundry.
+* Then, we convert this stick diagram into a layout that adheres to the DRC rules given by the foundry.
 
 ![layout_6](https://github.com/srsapireddy/Images/blob/main/107.png?raw=true) </br>
 
@@ -658,7 +661,7 @@ Steps:
 6.	Apply the stimulus.
 7.	Vary output load capacitance.
 8.	Provide necessary simulation.
-9.	Feed in all these inputs through a configuration file to characterization software called GUNA.
+9.	Feed all these inputs through a configuration file to the characterization software GUNA.
 
 ![characterization_3](https://github.com/srsapireddy/Images/blob/main/110.png?raw=true) </br>
 
@@ -698,21 +701,21 @@ Timing threshold definitions: variables related to waveform
 
 ![Timing_7](https://github.com/srsapireddy/Images/blob/main/118.PNG?raw=true) </br>
 
-* Below are the timing variables for slew. This is two inverters in series, red is output of first inverter and blue is output of second inverter:
+* Below are the timing variables for slew. This is two inverters in series; red is the output of the first inverter, and blue is the output of the second inverter:
 
 ![Timing_9](https://github.com/srsapireddy/Images/blob/main/119.png?raw=true) </br>
 
-* Below are the timing variables for propagation delay. The red is input waveform and blue is output waveform of the buffer. The left side is rise delay and right side is fall delay.
+* Below are the timing variables for propagation delay. The red is the input waveform, and the blue is the output waveform of the buffer. The left side is rise delay, and the right side is fall delay.
 
 ![Timing_10](https://github.com/srsapireddy/Images/blob/main/120.png?raw=true) </br>
 
-* Negative propagation delay is unexpected. That means the output comes before the input so designer needs to choose correct threshold point to produce positive delay. Delay threshold is usually 50% and slew rate threshold is usually 20%-80%.
+* Negative propagation delay is unexpected. That means the output comes before the input, so the designer needs to choose the correct threshold point to produce a positive delay. The delay threshold is usually 50%, and the slew rate threshold is usually 20%-80%.
 
 ### IO Placer
 * PnR is an iterative flow.
 * Run synthesis and floorplan steps.
 * How to change input and output pins along the core?
-* After floorplan input and output pins are placed randomly around the core area.
+* After the floorplan, input and output pins are placed randomly around the core area.
 
 ![Placer_1](https://github.com/srsapireddy/Images/blob/main/121.png?raw=true) </br>
 
@@ -729,20 +732,20 @@ Timing threshold definitions: variables related to waveform
 ![Placer_4](https://github.com/srsapireddy/Images/blob/main/124.png?raw=true) </br>
 ![Placer_5](https://github.com/srsapireddy/Images/blob/main/125.png?raw=true) </br>
 
-* From floorplan.tcl we can see that the IO pins are placed with mode 1 with `set ::env(FP_IO_MODE)` variable. With mode 1 all IO’s are placed with equal distance.
+* From floorplan.tcl we can see that the IO pins are placed with mode 1 with `set ::env(FP_IO_MODE)` variable. With mode 1, all IO’s are placed with equal distance.
 * Set this variable to 2 and run the floorplan again.
-* Then again check the IO placement with the MAGIC layout tool.
+* Then again, check the IO placement with the MAGIC layout tool.
 
 ![Placer_6](https://github.com/srsapireddy/Images/blob/main/126.png?raw=true) </br>
 
-* From the layout, we can see that the IO pins are stacked on top of one another.
+* The layout shows that the IO pins are stacked on top of one another.
 
 ### VTC – SPICE Simulations (Spice deck creation for CMOS inverter)
 * SPICE deck </br>
 
 ![VTC_1](https://github.com/srsapireddy/Images/blob/main/127.png?raw=true) </br>
 
-1. connectivity information about the netlist. It also has the inputs that are to be provided to the simulation and tap points from where we collect the output.
+1. connectivity information about the netlist. It also has the input to the simulation and tap points from where we collect the output.
 In the SPICE deck, we need to mention the connectivity of the substrate too. 
 Here we take the example of the inverter and assume the Cload value is 10fF.
 2. Define component values: The values for PMOS and NMOS. Ideally, the size of PMOS should be bigger than the NMOS. Define the values of input gate voltage. The voltages are kept in the multiples of channel length. Also, assume the supply voltage is 2.5V.
@@ -764,16 +767,16 @@ Here we take the example of the inverter and assume the Cload value is 10fF.
 
 ![VTC_2](https://github.com/srsapireddy/Images/blob/main/132.png?raw=true) </br>
 
-### CMOS robustness depends on:
-* Switching threshold = Vin is equal to Vout. This the point where both PMOS and NMOS is in saturation or kind of turned on, and leakage current is high. If PMOS is thicker than NMOS, the CMOS will have higher switching threshold (1.2V vs 1V) while threshold will be lower when NMOS becomes thicker.
+### CMOS robustness depends on the following:
+* Switching threshold = Vin is equal to Vout. This is where both PMOS and NMOS are in saturation or turned on, and the leakage current is high. If PMOS is thicker than NMOS, the CMOS will have a higher switching threshold (1.2V vs 1V), while the threshold will be lower when NMOS becomes thicker.
 * Propagation delay = rise or fall delay
-* DC transfer analysis is used for finding switching threshold. SPICE DC analysis below uses DC input of 2.5V. Simulation operation is DC sweep from 0V to 2.5V by 0.05V steps
+* DC transfer analysis is used for finding the switching threshold. SPICE DC analysis below uses a DC input of 2.5V. The simulation operation is a DC sweep from 0V to 2.5V by 0.05V steps
 
 ### Dynamic Simulation of CMOS Inverter
 
 ![Dynamic_1](https://github.com/srsapireddy/Images/blob/main/133.png?raw=true) </br>
 
-* Here we do a transient analysis of a CMOS inverter with a pulse as an input waveform.
+* Here, we do a transient analysis of a CMOS inverter with a pulse as an input waveform.
 
 ![Dynamic_2](https://github.com/srsapireddy/Images/blob/main/134.png?raw=true) </br>
 
@@ -808,33 +811,33 @@ Here we take the example of the inverter and assume the Cload value is 10fF.
 ![Dynamic_9](https://github.com/srsapireddy/Images/blob/main/141.png?raw=true) </br>
 
 ### CMOS Fabrication Process (16-Mask CMOS Process):
-1. Selecting a substrate = Layer where the IC is fabricated. Most commonly used is P-type substrate
+1. Selecting a substrate = Layer where the IC is fabricated. The most commonly used is the P-type substrate
 2. Creating active region for transistor = Separate the transistor regions using SiO2 as isolation
 
 Mask 1 = Covers the photoresist layer that must not be etched away (protects the two transistor active regions)
 Photoresist layer = Can be etched away via UV light
-Si3N4 layer = Protection layer to prevent SiO2 layer to grow during oxidation (oxidation furnace)
+Si3N4 layer = Protection layer to prevent SiO2 layer from growing during oxidation (oxidation furnace)
 SiO2 layer = Grows during oxidation (LOCOS = Local Oxidation of Silicon) and will act as isolation regions between transistors or active regions
 
 ![cell_1](https://github.com/srsapireddy/Images/blob/main/142.png?raw=true)
 
 3. N-Well and P-Well Fabrication = Fabricate the substrate needed by PMOS (N-Well) and NMOS (P-Well)
 
-Phosporus (5 valence electron) is used to form N-well
-Boron (3 valence electron) is used to form P-Well.
-Mask 2 protects the N-Well (PMOS side) while P-Well (NMOS side) is being fabricated then Mask 3 while N-Well (PMOS side) is being fabricated
+Phosphorus (5 valence electron) is used to form N-well
+Boron (3 valence electrons) is used to form P-Well.
+Mask 2 protects the N-Well (PMOS side) while P-Well (NMOS side) is being fabricated, then Mask 3 while N-Well (PMOS side) is being fabricated
 
 ![cell_2](https://github.com/srsapireddy/Images/blob/main/143.png?raw=true) </br>
 
-4. Formation of Gate = Gate fabrication affects threshold voltage. Factors affecting threshold voltage includes:
+4. Formation of Gate = Gate fabrication affects threshold voltage. Factors affecting threshold voltage include:
 
 ![cell_3](https://github.com/srsapireddy/Images/blob/main/144.png?raw=true) </br>
 
-Main parameters are:
+The main parameters are:
 
 Doping Concentration = Controlled by ion implantation (Mask 4 for Boron implantation in NMOS P-Well and Mask 5 for Arsenic implantation in PMOS N-Well)
-Oxide capacitance = Controlled by oxide thickness (SiO2 layer is removed then rebuilt to the desire thickness)
-Mask 6 is for gate formation using polysilicon layer.
+Oxide capacitance = Controlled by oxide thickness (SiO2 layer is removed then rebuilt to the desired thickness)
+Mask 6 is for gate formation using a polysilicon layer.
 
 ![cell_4](https://github.com/srsapireddy/Images/blob/main/145.png?raw=true) </br>
 
@@ -842,14 +845,14 @@ Mask 6 is for gate formation using polysilicon layer.
 
 Mask 7 for N- implantation (lightly doped N-type) for NMOS
 Mask 8 for P- implantation (lightly doped P-type) for PMOS.
-Heavily doped impurity (N+ for NMOS and P+ for PMOS) is for the actual source and drain but the lightly doped impurity will help maintain spacing between the source and drain and prevent hot electron effect and short channel effect.
+Heavily doped impurity (N+ for NMOS and P+ for PMOS) is for the actual source and drain, but the lightly doped impurity will help maintain spacing between the source and drain and prevent hot electron effect and short channel effect.
 
 ![cell_5](https://github.com/srsapireddy/Images/blob/main/146.png?raw=true) </br>
 
 6. Source and Drain Formation = Mask 9 is for N+ implantation and Mask 10 for P+ implantation
 
-Channeling is when implantations dig too deep into substrate so add screen oxide before implantation
-The side-wall spacers maintains the N-/P- while implanting the N+/P+
+Channeling is when implantations dig too deep into the substrate so add screen oxide before implantation
+The side-wall spacers maintain the N-/P- while implanting the N+/P+
 
 ![cell_6](https://github.com/srsapireddy/Images/blob/main/147.png?raw=true) </br>
 
@@ -857,23 +860,23 @@ The side-wall spacers maintains the N-/P- while implanting the N+/P+
 
 ![cell_7](https://github.com/srsapireddy/Images/blob/main/148.png?raw=true) </br>
 
-8. Higher Level Metal Formation = We need to planarize first the layer via CMP before adding a metal interconnect. Aluminum contact is used to connect the lower contact to higher metal layer. Process is repeated until the contact reached the outermost layer.
+8. Higher Level Metal Formation = We need to planarize the layer via CMP before adding a metal interconnect. Aluminum contact is used to connect the lower contact to the higher metal layer. The process is repeated until the contact reached the outermost layer.
 
-Mask 12 is for first contact hole
-Mask 13 is for first Aluminum contact layer
-Mask 14 is for second contact hole
-Mask 15 is for second Aluminum contact layer. Mask 16 is for making contact to topmost layer.
+Mask 12 is for the first contact hole
+Mask 13 is for the first Aluminum contact layer
+Mask 14 is for the second contact hole
+Mask 15 is for the second Aluminum contact layer. Mask 16 is for making contact with the topmost layer.
 
 ![Cell_8](https://github.com/srsapireddy/Images/blob/main/149.png?raw=true) </br>
 
 ### MAGIC Inverter Layout
-* In MAGIC the first layer is the local interconnect layer (locali). 
+* In MAGIC, the first layer is the local interconnect layer (locali). 
   - metal 1: purple color
   - metal 2: pink color
   - nwell: solid dashed lines
   - ndiff: green color
   - pdiff:   brown color
-* When a poly crosses a ndiff it’s a nmos. Similarly, when a ploy crosses a pdiff it’s a pmos.
+* When a poly crosses a ndiff, it’s a nmos. Similarly, when a ploy crosses a pdiff it’s a pmos.
 
 ![Image](https://github.com/srsapireddy/Images/blob/main/150.png?raw=true) </br>
 
@@ -902,7 +905,7 @@ PMOS </br>
 
 ![Image](https://github.com/srsapireddy/Images/blob/main/155.jpg?raw=true) </br>
 
-* licon is the connectivity between the iocali layer and metal 1.  There need to be a contact between the nwell and licon. The crossed line is the n-substrate contact (first contact). This is the contact between nwell and locali.
+* licon is the connectivity between the iocali layer and metal 1.  There needs to be a contact between the nwell and licon. The crossed line is the n-substrate contact (first contact). This is the contact between nwell and locali.
 * PMOS: Nwell -> above that locali layer -> above that metal 1
 * Nwell and locali connection by nsubstrate contact. 
 * For locali and Metal 1, we have licon.
@@ -934,7 +937,7 @@ PMOS </br>
 
 ![Image](https://github.com/srsapireddy/Images/blob/main/160.png?raw=true) </br>
 
-* The minimum value of the layout window using single grid in layout:
+* The minimum value of the layout window using a single grid in the layout:
 
 ![Image](https://github.com/srsapireddy/Images/blob/main/161.png?raw=true) </br>
 
@@ -944,7 +947,7 @@ PMOS </br>
 ![Image](https://github.com/srsapireddy/Images/blob/main/162.png?raw=true) </br>
 
 * We must also include the definitions for the supply voltages and commands for transient analysis.
-* We also need to change the model files in SPICE file for PMOS and NMOS.
+* We also need to change the model files in the SPICE file for PMOS and NMOS.
 
 ![Image](https://github.com/srsapireddy/Images/blob/main/163.png?raw=true) </br>
 ![Image](https://github.com/srsapireddy/Images/blob/main/164.png?raw=true) </br>
@@ -981,7 +984,7 @@ For 80%
 
 * Around 0.061ns
 4. rise cell delay (propagation delay): the time difference between the  50% of the output
-We need to use the layout and create a LEF file and use this file in openlane and plug it in PICORV 32 core.
+We need to use the layout and create a LEF file and use this file in Openlane and plug it in PICORV 32 core.
 
 ### MAGIC VLSI Layout Tool (efabless): http://opencircuitdesign.com/
 
@@ -1028,7 +1031,7 @@ We need to use the layout and create a LEF file and use this file in openlane an
 ![Image](https://github.com/srsapireddy/Images/blob/main/182.png?raw=true) </br>
 ![Image](https://github.com/srsapireddy/Images/blob/main/183.png?raw=true) </br>
 
-* DRC section starts on 4072 line
+* DRC section starts on the 4072 line
 
 ![Image](https://github.com/srsapireddy/Images/blob/main/184.png?raw=true) </br>
 
@@ -1036,7 +1039,7 @@ We need to use the layout and create a LEF file and use this file in openlane an
 
 ![Image](https://github.com/srsapireddy/Images/blob/main/185.png?raw=true) </br>
 
-* Adding spacing to add whats missing in the file
+* Adding spacing to add what's missing in the file
 * Changing all the contact rules pertaining to poly
 
 ![Image](https://github.com/srsapireddy/Images/blob/main/186.png?raw=true) </br>
@@ -1050,7 +1053,7 @@ DAY 4
 ![Image](https://github.com/srsapireddy/Images/blob/main/189.png?raw=true) </br>
 
 * LEF file have the information about the input, power, and ground ports.
-* We need to extract LEF file from the .mag file.
+* We need to extract the LEF file from the .mag file.
 1.The input port and output port must lie on the vertical and horizontal tracks.
 2.Width of the standard cell must be in odd multiples of the track pitch.
 3.Height should be in the order of vertical pitch.
@@ -1063,18 +1066,18 @@ DAY 4
 
 ![Image](https://github.com/srsapireddy/Images/blob/main/191.png?raw=true) </br>
 
-* Input A and output Y are on the horizontal and vertical tracks as shown in figure. This ensures that the route can reach that port for X and Y directions.
+* Input A and output Y are on the horizontal and vertical tracks as shown in the figure. This ensures that the route can reach that port for X and Y directions.
 
 ![Image](https://github.com/srsapireddy/Images/blob/main/192.png?raw=true) </br>
 
-### Convert magic layout to std cell LEF
+### Convert the magic layout to std cell LEF
 * The width of the standard cell should be in the odd multiples of the X-pitch.
 * Port information is required only when we need to extract the LEF file. When we extract the LEF file, these ports are defined as pins of the macro.
 * Converting labels to ports:
 
 ![Image](https://github.com/srsapireddy/Images/blob/main/193.png?raw=true) </br>
 
-* How does the tool know A is input and Y is an output port?
+* How does the tool know A is the input and Y is the output port?
 * We use port class and port use attributes.
 * Once these parameters are set, we can extract the LEF file from a cell/ macro.
 * Before extracting the LEF, we need to give the cell a custom name.
@@ -1091,7 +1094,7 @@ DAY 4
 
 ![Image](https://github.com/srsapireddy/Images/blob/main/198.png?raw=true) </br>
 
-* We need to have a library which has our cell definition for synthesis.
+* We need to have a library that has our cell definition for synthesis.
 * Here the tool should map vsdinverter cell to the synthesis flow.
 
 ![Image](https://github.com/srsapireddy/Images/blob/main/199.png?raw=true) </br>
@@ -1109,13 +1112,13 @@ DAY 4
 
 ![Image](https://github.com/srsapireddy/Images/blob/main/203.png?raw=true) </br>
 
-* We can see that 1554 instances of our custom cell is added to the picorv32a design.
+* We can see that 1554 instances of our custom cell are added to the picorv32a design.
 
 ### Introduction to delay tables
 
 ![Image](https://github.com/srsapireddy/Images/blob/main/204.png?raw=true) </br>
 
-* There are advantages of these AND gates in clock tree to reduce the power dissipation.
+* There are advantages of these AND gates in the clock tree to reduce power dissipation.
 
 ![Image](https://github.com/srsapireddy/Images/blob/main/205.png?raw=true) </br>
 
@@ -1126,7 +1129,7 @@ We have varying input transitions at the input of the buffer and varying output 
 
 ![Image](https://github.com/srsapireddy/Images/blob/main/207.png?raw=true) </br>
 
-* There are advantages of these AND gates in clock tree to reduce the power dissipation.
+* There are advantages of these AND gates in the clock tree to reduce power dissipation.
 
 ![Image](https://github.com/srsapireddy/Images/blob/main/208.png?raw=true) </br>
 
@@ -1147,27 +1150,27 @@ SYNTH_DRIVING_CELL: Cell that drives the input port. </br>
 ![Image](https://github.com/srsapireddy/Images/blob/main/211.png?raw=true)  </br>
 
 Settings to reduce tns and wns.
-Run synthesis, floorplan and placement steps.  </br>
+Run synthesis, floorplan, and placement steps.  </br>
 
 ![Image](https://github.com/srsapireddy/Images/blob/main/212.png?raw=true) </br>
 ![Image](https://github.com/srsapireddy/Images/blob/main/213.png?raw=true) </br>
  
-Check if vsd inverter is added after floorplan stage.
-Check layout after placement stage
+Check if vsd inverter is added after the floorplan stage.
+Check layout after the placement stage
 
 ![Image](https://github.com/srsapireddy/Images/blob/main/214.png?raw=true) </br>
 ![Image](https://github.com/srsapireddy/Images/blob/main/215.png?raw=true) </br>
 ![Image](https://github.com/srsapireddy/Images/blob/main/216.png?raw=true)  </br>
 
-We can see that vsd inverter is inserted after placement stage.
+We can see that vsd inverter is inserted after the placement stage.
 Abatement between the cells takes place to share power and ground between the cells.
 
 ![Image](https://github.com/srsapireddy/Images/blob/main/217.png?raw=true) </br>
 
 ### Static Timing Analysis (With Ideal Clocks)
-* In ideal clock network clock tree is not yet built.
+* In an ideal clock network clock tree is not yet built.
 * Identifying combinational path:
-* Pre-layout STA will not yet include effects of clock buffers and net-delay due to RC parasitics (wire delay will be derived from PDK library wire model).
+* Pre-layout STA will not yet include the effects of clock buffers and net delay due to RC parasitics (wire delay will be derived from the PDK library wire model).
 
 ![Image](https://github.com/srsapireddy/Images/blob/main/218.png?raw=true) </br>
 * Setup timing analysis equation is:
@@ -1175,11 +1178,11 @@ Abatement between the cells takes place to share power and ground between the ce
 Θ < T - S - SU
 Θ = Combinational delay which includes clk to Q delay of launch flop and internal propagation delay of all gates between launch and capture flop
 T = Time period, also called the required time
-S = Setup time. As demonstrated below, signal must settle on the middle (input of Mux 2) before clock transits to 1 so the delay due to Mux 1 must be considered, this delay is the setup time.
+S = Setup time. As demonstrated below, the signal must settle on the middle (input of Mux 2) before the clock transits to 1 so the delay due to Mux 1 must be considered, this delay is the setup time.
 
 ![Image](https://github.com/srsapireddy/Images/blob/main/219.png?raw=true) </br>
 
-SU = Setup uncertainty due to jitter which is temporary variation of clock period. This is due to non-idealities of PLL/clock source.
+SU = Setup uncertainty due to jitter which is a temporary variation of the clock period. This is due to non-idealities of the PLL/clock source.
 
 ![Image](https://github.com/srsapireddy/Images/blob/main/220.png?raw=true) </br>
 ![Image](https://github.com/srsapireddy/Images/blob/main/221.png?raw=true) </br>
@@ -1205,13 +1208,13 @@ PATH:   </br>
 ![Image](https://github.com/srsapireddy/Images/blob/main/304.png?raw=true) </br>
 
 ### Optimize synthesis to reduce setup violations
-* Hold analysis have significance after CTS.
-* The delay of any cell is a function of input slew (input transition) and output load. More the values, more the delay.
+* Hold analysis has significance after CTS.
+* The delay of any cell is a function of input slew (input transition) and output load. More the values, the more the delay.
 * Optimizing the fanout value:
 * Set parameter for fanout:
 
 ![Image](https://github.com/srsapireddy/Images/blob/main/223.png?raw=true) </br>
-* Then run synthesis, floorplan, and placement to check slack.
+* Then run synthesis, floorplan, and placement to check Slack.
 * Commands:
 `report_net -connections _02682_` </br>
 `replace_cell _41882_ sky130_fd_sc_hd__buf_4` </br>
@@ -1241,11 +1244,11 @@ PATH:   </br>
 
 ![Image](https://github.com/srsapireddy/Images/blob/main/226.png?raw=true) </br>
 
-* Shielding protect the design from glitches. Shielding will be connected with VDD or GND so that there are no glitches and crosstalk.
+* Shielding protects the design from glitches. Shielding will be connected with VDD or GND so that there are no glitches and crosstalk.
 * There are three parameters that we need to consider when building a clock tree:
 
-* Clock Skew = In order to have minimum skew between clock endpoints, clock tree is used. This results in equal wirelength (thus equal latency/delay) for every path of the clock.
-* Clock Slew = Due to wire resistance and capacitance of the clock nets, there will be slew in signal at the clock endpoint where signal is not the same with the original input clock signal anymore. This can be solved by clock buffers. Clock buffer differs in regular cell buffers since clock buffers has equal rise and fall time.
+* Clock Skew = In order to have minimum skew between clock endpoints, a clock tree is used. This results in equal wire length (thus equal latency/delay) for every path of the clock.
+* Clock Slew = Due to wire resistance and capacitance of the clock nets, there will be a slew in signal at the clock endpoint where the signal is not the same as the original input clock signal anymore. This can be solved by clock buffers. Clock buffer differs from regular cell buffers since clock buffers have equal rise and fall time.
 * Crosstalk = Clock shielding prevents crosstalk to nearby nets by breaking the coupling capacitance between the victim (clock net) and aggressor (nets near the clock net), the shield might be connected to VDD or ground since those will not switch. Shielding can also be done on critical data nets. </br>
 
 ![Image](https://github.com/srsapireddy/Images/blob/main/227.png?raw=true) </br>
@@ -1269,7 +1272,7 @@ CTS procs: where the command gets to run from.
 
 ![Image](https://github.com/srsapireddy/Images/blob/main/230.png?raw=true) </br>
 
-or_cts.tcl file contents. Where the CTS commends gets executed
+or_cts.tcl file contents. Where the CTS commends get executed
 
 ![Image](https://github.com/srsapireddy/Images/blob/main/231.png?raw=true) </br>
 
@@ -1294,7 +1297,7 @@ Checking procs in openlane tool:
 
 ### Analyze timing with a real clock using OpenSTA
 * Run `openroad` to do timing analysis. OpenSTA is integrated inside the openroad.
-* Here we need to read lef and def files to create db.
+* Here we need to read lef and def files to create DB.
 
 ![Image](https://github.com/srsapireddy/Images/blob/main/235.png?raw=true) </br>
 ![Image](https://github.com/srsapireddy/Images/blob/main/236.png?raw=true) </br>
@@ -1307,11 +1310,11 @@ Checking procs in openlane tool:
 
 ![Image](https://github.com/srsapireddy/Images/blob/main/238.png?raw=true) </br>
 
-* Read db , Verilog, and library files
+* Read db, Verilog, and library files
 
 ![Image](https://github.com/srsapireddy/Images/blob/main/239.png?raw=true) </br>
 
-* read_liberty $::env(LIB_SYNTH_COMPLETE) // we are not using LIB_MAX & LIB_MIN because we ran our cts for one corner that is the typical corner. </br>
+* read_liberty $::env(LIB_SYNTH_COMPLETE) //We are not using LIB_MAX & LIB_MIN because we ran our cts for one corner that is the typical corner. </br>
 
 ![Image](https://github.com/srsapireddy/Images/blob/main/240.png?raw=true) </br>
 
@@ -1416,7 +1419,7 @@ DAY 5
 
 ![Image](https://github.com/srsapireddy/Images/blob/main/252.png?raw=true) </br>
 
-* Rule: Minimum spacing between two wires at least this much. It can be more than this but it cant be less than this. </br>
+* Rule: Minimum spacing between two wires at least this much. It can be more than this but it can't be less than this. </br>
 
 ![Image](https://github.com/srsapireddy/Images/blob/main/253.png?raw=true) </br>
 
@@ -1472,7 +1475,7 @@ DAY 5
 ![Image](https://github.com/srsapireddy/Images/blob/main/264.png?raw=true)
 
 ### Checking Layout in MAGIC:
-* power rail, ground rail, input net route and output net route for a cell: 
+* power rail, ground rail, input net route, and output net route for a cell: 
 
 ![Image](https://github.com/srsapireddy/Images/blob/main/265.png?raw=true)
 
@@ -1486,7 +1489,7 @@ DAY 5
 * SPEF extraction and multi-corner STA will be done on all three corners (min, max, typical).
 * The extracted SPEF can be located under `runs/[date]/results/routing`
 
-* Timing ECO should be followed to reduce slack to desired level.
+* Timing ECO should be followed to reduce slack to the desired level.
 
 ![Image](https://github.com/srsapireddy/Images/blob/main/267.png?raw=true)
 ![Image](https://github.com/srsapireddy/Images/blob/main/268.png?raw=true)
